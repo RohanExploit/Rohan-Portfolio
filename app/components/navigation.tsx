@@ -32,8 +32,8 @@ export function Navigation() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 font-mono text-xl font-bold">
-            <span className="text-accent">&lt;RG</span>
+          <Link href="/" className="flex items-center gap-2 font-mono text-xl font-bold hover:opacity-80 transition-opacity">
+            <span className="text-github-green">&lt;RG</span>
             <span className="text-text-primary">/&gt;</span>
           </Link>
 
@@ -46,8 +46,8 @@ export function Navigation() {
                   href={item.href}
                   className={`px-3 py-2 font-mono text-sm transition-all duration-300 ${
                     isActive(item.href)
-                      ? 'text-accent'
-                      : 'text-text-secondary hover:text-accent'
+                      ? 'text-github-green'
+                      : 'text-text-secondary hover:text-github-green'
                   }`}
                 >
                   {item.label}
@@ -72,9 +72,9 @@ export function Navigation() {
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className="h-6 w-6 text-accent" />
+              <X className="h-6 w-6 text-github-green" />
             ) : (
-              <Menu className="h-6 w-6 text-accent" />
+              <Menu className="h-6 w-6 text-github-green" />
             )}
           </button>
         </div>
@@ -89,8 +89,8 @@ export function Navigation() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 font-mono text-sm transition-all duration-300 ${
                   isActive(item.href)
-                    ? 'text-accent'
-                    : 'text-text-secondary hover:text-accent'
+                    ? 'text-github-green'
+                    : 'text-text-secondary hover:text-github-green'
                 }`}
               >
                 {item.label}

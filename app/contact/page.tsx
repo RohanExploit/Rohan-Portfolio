@@ -157,7 +157,7 @@ export default function Contact() {
                   value={formState.name}
                   onChange={handleChange}
                   required
-                  className="w-full rounded-lg border border-slate-600 bg-obsidian px-4 py-2 text-text-primary placeholder-text-tertiary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
+                  className="w-full rounded-lg border border-slate-600 bg-obsidian px-4 py-2 text-text-primary placeholder-text-tertiary focus:border-github-green focus:outline-none focus:ring-2 focus:ring-github-green/20 transition-all"
                   placeholder="Your name"
                 />
               </div>
@@ -174,7 +174,7 @@ export default function Contact() {
                   value={formState.email}
                   onChange={handleChange}
                   required
-                  className="w-full rounded-lg border border-slate-600 bg-obsidian px-4 py-2 text-text-primary placeholder-text-tertiary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
+                  className="w-full rounded-lg border border-slate-600 bg-obsidian px-4 py-2 text-text-primary placeholder-text-tertiary focus:border-github-green focus:outline-none focus:ring-2 focus:ring-github-green/20 transition-all"
                   placeholder="your@email.com"
                 />
               </div>
@@ -191,7 +191,7 @@ export default function Contact() {
                   value={formState.subject}
                   onChange={handleChange}
                   required
-                  className="w-full rounded-lg border border-slate-600 bg-obsidian px-4 py-2 text-text-primary placeholder-text-tertiary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
+                  className="w-full rounded-lg border border-slate-600 bg-obsidian px-4 py-2 text-text-primary placeholder-text-tertiary focus:border-github-green focus:outline-none focus:ring-2 focus:ring-github-green/20 transition-all"
                   placeholder="What's this about?"
                 />
               </div>
@@ -216,15 +216,15 @@ export default function Contact() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full rounded-lg border border-accent bg-accent px-6 py-3 font-mono font-semibold text-obsidian transition-all duration-300 hover:bg-accent-dark hover:border-accent-dark disabled:opacity-50"
+                className="w-full rounded-lg border border-github-green bg-github-green px-6 py-3 font-mono font-semibold text-obsidian transition-all duration-300 hover:bg-github-green-dark hover:border-github-green-dark disabled:opacity-50"
                 disabled={submitted}
               >
-                {submitted ? 'Message Sent! 📨' : 'Send Message'}
+                {submitted ? 'Message Sent!' : 'Send Message'}
               </button>
 
               {submitted && (
-                <div className="rounded-lg border border-green-500/30 bg-green-500/10 p-4">
-                  <p className="text-sm text-green-400">Thank you! I'll get back to you soon.</p>
+                <div className="rounded-lg border border-github-green/30 bg-github-green/10 p-4">
+                  <p className="text-sm text-github-green">Thank you! I'll get back to you as soon as possible.</p>
                 </div>
               )}
             </form>
@@ -232,8 +232,8 @@ export default function Contact() {
         </div>
 
         {/* Availability */}
-        <div className="mt-16 rounded-lg border border-slate-600 bg-steel p-8 text-center">
-          <p className="font-mono text-sm uppercase text-accent">Availability</p>
+        <div className="mt-16 rounded-lg border border-github-green bg-github-green/5 p-8 text-center">
+          <p className="font-mono text-sm uppercase text-github-green">Availability</p>
           <p className="mt-2 text-2xl font-bold text-text-primary">
             Open to collaborations, internships, and exciting opportunities
           </p>

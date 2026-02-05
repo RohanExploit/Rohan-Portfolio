@@ -12,17 +12,17 @@ export default function Experience() {
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'Internship':
-        return 'bg-accent/10 text-accent'
+        return 'bg-github-green/10 text-github-green'
       case 'Leadership':
-        return 'bg-green-500/10 text-green-400'
+        return 'bg-github-green/10 text-github-green'
       case 'Open Source':
-        return 'bg-purple-500/10 text-purple-400'
+        return 'bg-info/10 text-info'
       case 'Project-Based':
-        return 'bg-blue-500/10 text-blue-400'
+        return 'bg-accent-secondary/10 text-accent-secondary'
       case 'Mentorship':
-        return 'bg-cyan-500/10 text-cyan-400'
+        return 'bg-github-green/10 text-github-green'
       default:
-        return 'bg-accent/10 text-accent'
+        return 'bg-github-green/10 text-github-green'
     }
   }
 
@@ -31,7 +31,7 @@ export default function Experience() {
       <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
-          <p className="font-mono text-sm text-accent">/experience</p>
+          <p className="font-mono text-sm text-github-green">/experience</p>
           <h1 className="mt-2 font-mono text-4xl font-bold text-text-primary">Professional Journey</h1>
           <p className="mt-4 text-text-secondary">
             1.5+ years of diverse experience across internships, leadership roles, and open-source contributions.
@@ -44,7 +44,7 @@ export default function Experience() {
             <div key={job.id} className="relative">
               {/* Timeline Line */}
               {index !== experience.length - 1 && (
-                <div className="absolute left-6 top-16 bottom-0 w-[2px] bg-gradient-to-b from-accent to-transparent" />
+                <div className="absolute left-6 top-16 bottom-0 w-[2px] bg-gradient-to-b from-github-green to-transparent" />
               )}
 
               {/* Experience Card */}
@@ -54,8 +54,8 @@ export default function Experience() {
                   <div className="flex gap-4">
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-accent bg-accent/10">
-                        <Briefcase className="h-6 w-6 text-accent" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-github-green bg-github-green/10">
+                        <Briefcase className="h-6 w-6 text-github-green" />
                       </div>
                     </div>
 

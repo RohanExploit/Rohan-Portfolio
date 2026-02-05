@@ -13,17 +13,18 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rohan-portfolio.vercel.app/'),
+  metadataBase: new URL('https://rohangaikwad.in/'),
   alternates: {
     canonical: '/'
   },
   title: {
-    default: 'Rohan Gaikwad - Software Developer',
+    default: 'Rohan Gaikwad - Full-Stack Developer & AI Enthusiast',
     template: '%s | Rohan Gaikwad'
   },
-  description: 'Full-stack developer, AI enthusiast, and open-source contributor. Explore my projects and experience.',
-  keywords: ['developer', 'software engineer', 'AI', 'machine learning', 'open source'],
+  description: 'Full-stack developer and AI enthusiast with 1.5+ years of experience. Specializing in scalable applications, machine learning, and open-source contributions.',
+  keywords: ['developer', 'full-stack', 'AI', 'machine learning', 'open source', 'Python', 'React', 'TypeScript'],
   creator: 'Rohan Gaikwad',
+  authors: [{ name: 'Rohan Gaikwad', url: 'https://rohangaikwad.in' }],
 };
 
 const jetbrainsMono = JetBrains_Mono({

@@ -15,7 +15,7 @@ export default function About() {
       <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
-          <p className="font-mono text-sm text-accent">/about</p>
+          <p className="font-mono text-sm text-github-green">/about</p>
           <h1 className="mt-2 font-mono text-4xl font-bold text-text-primary">{about.title}</h1>
         </div>
 
@@ -33,8 +33,8 @@ export default function About() {
         {/* Highlights Grid */}
         <div className="mb-16 grid gap-6 md:grid-cols-2">
           {about.highlights.map((item, index) => (
-            <div key={index} className="rounded-lg border border-slate-600 bg-steel p-6">
-              <p className="font-mono text-xs uppercase text-accent">{item.label}</p>
+            <div key={index} className="rounded-lg border border-slate-600 bg-steel p-6 transition-all duration-300 hover:border-github-green">
+              <p className="font-mono text-xs uppercase text-github-green">{item.label}</p>
               <p className="mt-3 font-mono text-lg font-semibold text-text-primary">{item.value}</p>
             </div>
           ))}
@@ -59,7 +59,7 @@ export default function About() {
               },
             ].map((value, index) => (
               <div key={index} className="space-y-2">
-                <h3 className="font-mono font-semibold text-accent">{value.title}</h3>
+                <h3 className="font-mono font-semibold text-github-green">{value.title}</h3>
                 <p className="text-sm text-text-secondary">{value.description}</p>
               </div>
             ))}
@@ -70,14 +70,14 @@ export default function About() {
         <div className="flex flex-wrap gap-4">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 rounded-lg border border-accent bg-accent px-6 py-3 font-mono text-sm font-semibold text-obsidian transition-all duration-300 hover:bg-accent-dark"
+            className="inline-flex items-center gap-2 rounded-lg border border-github-green bg-github-green px-6 py-3 font-mono text-sm font-semibold text-obsidian transition-all duration-300 hover:bg-github-green-dark hover:border-github-green-dark"
           >
             View Projects
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-600 px-6 py-3 font-mono text-sm font-semibold text-accent transition-all duration-300 hover:border-accent hover:bg-accent/10"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-600 px-6 py-3 font-mono text-sm font-semibold text-github-green transition-all duration-300 hover:border-github-green hover:bg-github-green/10"
           >
             Connect
           </Link>

@@ -22,7 +22,7 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
-          <p className="font-mono text-sm text-accent">/projects</p>
+          <p className="font-mono text-sm text-github-green">/projects</p>
           <h1 className="mt-2 font-mono text-4xl font-bold text-text-primary">Featured Projects</h1>
           <p className="mt-4 text-text-secondary">A selection of projects spanning full-stack development, AI/ML, and open-source contributions.</p>
         </div>
@@ -128,8 +128,8 @@ export default function Projects() {
             { label: 'Contributions', value: 'Open Source', color: 'text-info' },
             { label: 'Focus', value: 'AI & Full-Stack', color: 'text-github-green' },
           ].map((stat, index) => (
-            <div key={index} className="rounded-lg border border-slate-600 bg-steel p-6 text-center transition-all duration-300 hover:border-accent-secondary">
-              <p className="font-mono text-sm text-accent">{stat.label}</p>
+            <div key={index} className="rounded-lg border border-slate-600 bg-steel p-6 text-center transition-all duration-300 hover:border-github-green">
+              <p className="font-mono text-sm text-github-green">{stat.label}</p>
               <p className={`mt-2 font-mono text-2xl font-bold ${stat.color}`}>{stat.value}</p>
             </div>
           ))}
