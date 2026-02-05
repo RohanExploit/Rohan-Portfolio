@@ -140,7 +140,7 @@ vercel
 
 - **GitHub**: https://github.com/RohanExploit
 - **LinkedIn**: https://linkedin.com/in/rohanvijaygaikwad
-- **Email**: rohan@example.com
+- **Email**: itzrohan007@gmail.com
 
 ## License
 
