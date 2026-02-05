@@ -80,7 +80,7 @@ export default function Projects() {
 
               {/* Expanded Content */}
               {expandedId === project.id && (
-                <div className="space-y-6 border-t border-slate-600 pt-6">
+                <div className="space-y-6 border-t border-slate-600 pt-6 mt-6">
                   <div>
                     <h4 className="font-mono font-semibold text-github-green mb-3 text-lg">Full Description</h4>
                     <p className="text-text-secondary leading-relaxed">{project.fullDescription}</p>
@@ -117,6 +117,7 @@ export default function Projects() {
                   </div>
                 </div>
               )}
+              </div>
             </div>
           ))}
         </div>

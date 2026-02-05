@@ -15,7 +15,7 @@ const eslintConfig = [
     "next/typescript",
     "plugin:prettier/recommended",
   ),
-  "plugin:mdx/recommended",
+  ...compat.extends("plugin:mdx/recommended"),
 ];
 
 export default eslintConfig;
