@@ -2,7 +2,7 @@
 
 import React from "react"
 
-import { Mail, Github, Linkedin, Twitter, MessageSquare, Phone, Download } from 'lucide-react'
+import { Mail, Github, Linkedin, Twitter, MessageSquare, Phone, Download, Copy } from 'lucide-react'
 import { useState } from 'react'
 import { ROHAN_DATA } from '@/lib/portfolio-data'
 
@@ -68,6 +68,21 @@ export default function Contact() {
                 {ROHAN_DATA.contact.email}
               </a>
               <p className="mt-2 text-sm text-text-secondary">Preferred for inquiries and collaborations</p>
+            </div>
+
+            {/* Phone */}
+            <div className="rounded-lg border border-slate-600 bg-steel p-6 transition-all duration-300 hover:border-github-green hover:bg-steel">
+              <div className="mb-3 flex items-center gap-3">
+                <Phone className="h-6 w-6 text-github-green" />
+                <h3 className="font-mono font-bold text-text-primary">Phone</h3>
+              </div>
+              <a
+                href={`tel:${ROHAN_DATA.contact.phone}`}
+                className="inline-flex items-center gap-2 text-github-green hover:underline font-semibold"
+              >
+                {ROHAN_DATA.contact.phone}
+              </a>
+              <p className="mt-2 text-sm text-text-secondary">Call or WhatsApp</p>
             </div>
 
             {/* Location */}

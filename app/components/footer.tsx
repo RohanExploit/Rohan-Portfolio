@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import { Github, Linkedin, Mail, Twitter, Phone } from 'lucide-react'
 import { ROHAN_DATA } from '@/lib/portfolio-data'
 
 export function Footer() {
@@ -76,6 +76,13 @@ export function Footer() {
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
+              </a>
+              <a
+                href={`tel:${ROHAN_DATA.contact.phone}`}
+                className="text-text-secondary hover:text-github-green transition-colors"
+                aria-label="Phone"
+              >
+                <Phone className="h-5 w-5" />
               </a>
             </div>
           </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import { ArrowRight, Github, Linkedin, Mail, Twitter, Phone } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { ROHAN_DATA } from '@/lib/portfolio-data'
 
@@ -107,6 +107,13 @@ export default function Home() {
                   aria-label="Email"
                 >
                   <Mail className="h-6 w-6" />
+                </a>
+                <a
+                  href={`tel:${ROHAN_DATA.contact.phone}`}
+                  className="text-text-secondary hover:text-github-green transition-colors"
+                  aria-label="Phone"
+                >
+                  <Phone className="h-6 w-6" />
                 </a>
               </div>
             </div>

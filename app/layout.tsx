@@ -10,6 +10,8 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   themeColor: '#0d0d0d',
+  colorScheme: 'dark',
+  interactiveWidget: 'resizes-content',
 }
 
 export const metadata: Metadata = {
@@ -22,9 +24,32 @@ export const metadata: Metadata = {
     template: '%s | Rohan Gaikwad'
   },
   description: 'Full-stack developer and AI enthusiast with 1.5+ years of experience. Specializing in scalable applications, machine learning, and open-source contributions.',
-  keywords: ['developer', 'full-stack', 'AI', 'machine learning', 'open source', 'Python', 'React', 'TypeScript'],
+  keywords: ['developer', 'full-stack', 'AI', 'machine learning', 'open source', 'Python', 'React', 'TypeScript', 'Node.js', 'Docker'],
   creator: 'Rohan Gaikwad',
   authors: [{ name: 'Rohan Gaikwad', url: 'https://rohangaikwad.in' }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://rohangaikwad.in',
+    siteName: 'Rohan Gaikwad',
+    title: 'Rohan Gaikwad - Full-Stack Developer & AI Enthusiast',
+    description: 'Full-stack developer and AI enthusiast with 1.5+ years of experience.',
+    images: [{
+      url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile%20photo-IUkJLFFn1HXs8tLuGH52CML8IR36Pu.jpg',
+      width: 512,
+      height: 512,
+      alt: 'Rohan Gaikwad',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@rohan_critic',
+    creator: '@rohan_critic',
+    title: 'Rohan Gaikwad - Full-Stack Developer & AI Enthusiast',
+    description: 'Full-stack developer and AI enthusiast with 1.5+ years of experience.',
+    images: ['https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile%20photo-IUkJLFFn1HXs8tLuGH52CML8IR36Pu.jpg'],
+  },
+  manifest: '/manifest.json',
 };
 
 const jetbrainsMono = JetBrains_Mono({

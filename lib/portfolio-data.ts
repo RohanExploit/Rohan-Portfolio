@@ -363,6 +363,7 @@ export const ROHAN_DATA = {
 
   contact: {
     email: 'itzrohan007@gmail.com',
+    phone: '+917057200895',
     location: 'Satara, Maharashtra, India',
     social: [
       { platform: 'GitHub', url: 'https://github.com/RohanExploit', icon: 'Github' },
@@ -371,4 +372,6 @@ export const ROHAN_DATA = {
     ],
     resume: 'https://drive.google.com/file/d/1alaSYAR5b2zUzTa0ZMlaSnZY-RDQ68Og/view?usp=sharing',
   },
+
+  profilePhoto: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile%20photo-IUkJLFFn1HXs8tLuGH52CML8IR36Pu.jpg',
 }

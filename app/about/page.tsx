@@ -1,6 +1,7 @@
 import { ROHAN_DATA } from '@/lib/portfolio-data'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'About - Rohan Gaikwad',
@@ -17,6 +18,20 @@ export default function About() {
         <div className="mb-12">
           <p className="font-mono text-sm text-github-green">/about</p>
           <h1 className="mt-2 font-mono text-4xl font-bold text-text-primary">{about.title}</h1>
+        </div>
+
+        {/* Profile Photo */}
+        <div className="mb-12 flex justify-center">
+          <div className="relative h-64 w-64 overflow-hidden rounded-lg border border-github-green shadow-2xl">
+            <Image
+              src={ROHAN_DATA.profilePhoto}
+              alt="Rohan Gaikwad"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, 256px"
+            />
+          </div>
         </div>
 
         {/* Introduction */}

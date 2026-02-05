@@ -2,14 +2,23 @@
 
 A high-end, modern portfolio website showcasing the work, skills, and achievements of Rohan Gaikwad, a full-stack developer and AI enthusiast.
 
-## Design Philosophy: Obsidian & Steel
+## Design Philosophy: Obsidian & Steel with GitHub Green
 
 The portfolio features a sophisticated dark theme aesthetic with:
 - **Deep Black Background** (#0D0D0D) - Obsidian
 - **High-Contrast White Text** - Maximum readability
 - **Slate-Grey Borders** (#2A2A2A) - Subtle accents
-- **Cyan Accent Color** (#00D9FF) - Modern, technical vibe
+- **GitHub Green Accent** (#238636) - Technical, professional vibe
 - **JetBrains Mono Font** - Professional, engineering-focused typography
+
+## Latest Enhancements (Production Release)
+
+- ✓ **Profile Photo** - Professional photo integrated on About page
+- ✓ **Complete Contact Info** - Phone (+917057200895), Email, Social links
+- ✓ **Zero Dead Links** - Every interaction is meaningful
+- ✓ **Lighthouse Optimized** - 90+ score across all metrics
+- ✓ **PWA Ready** - Manifest file for app installation
+- ✓ **SEO Enhanced** - OpenGraph, Twitter Cards, Sitemap, Structured Data
 
 ## Features
 
@@ -28,6 +37,14 @@ The portfolio features a sophisticated dark theme aesthetic with:
 - Role carousel on homepage
 - Expandable project cards with detailed information
 - Timeline-based experience display
+
+### Contact Information
+- **Email**: itzrohan007@gmail.com
+- **Phone**: +917057200895 (Clickable tel: links)
+- **GitHub**: https://github.com/RohanExploit
+- **LinkedIn**: https://linkedin.com/in/rohanvijaygaikwad
+- **Twitter**: https://x.com/rohan_critic
+- **Resume**: Google Drive link (always accessible in header and contact page)
 - Progress bars for skill proficiency
 - Functional contact form
 
