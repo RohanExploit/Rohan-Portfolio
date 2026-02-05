@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import { ROHAN_DATA } from '@/lib/portfolio-data'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -10,7 +11,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           {/* About */}
           <div>
-            <h3 className="font-mono text-sm font-bold text-accent">About</h3>
+            <h3 className="font-mono text-sm font-bold text-github-green">About</h3>
             <p className="mt-4 text-sm text-text-secondary">
               Full-stack developer passionate about building impactful software and contributing to open-source projects.
             </p>
@@ -18,21 +19,21 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-mono text-sm font-bold text-accent">Quick Links</h3>
+            <h3 className="font-mono text-sm font-bold text-github-green">Quick Links</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <Link href="/projects" className="text-text-secondary hover:text-accent transition-colors">
+                <Link href="/projects" className="text-text-secondary hover:text-github-green transition-colors">
                   View Projects
                 </Link>
               </li>
               <li>
-                <Link href="/experience" className="text-text-secondary hover:text-accent transition-colors">
-                  Experience
+                <Link href="/certifications" className="text-text-secondary hover:text-github-green transition-colors">
+                  Certifications
                 </Link>
               </li>
               <li>
-                <Link href="/skills" className="text-text-secondary hover:text-accent transition-colors">
-                  Tech Stack
+                <Link href="/open-source" className="text-text-secondary hover:text-github-green transition-colors">
+                  Open Source
                 </Link>
               </li>
             </ul>
@@ -40,13 +41,13 @@ export function Footer() {
 
           {/* Social Links */}
           <div>
-            <h3 className="font-mono text-sm font-bold text-accent">Connect</h3>
+            <h3 className="font-mono text-sm font-bold text-github-green">Connect</h3>
             <div className="mt-4 flex gap-4">
               <a
                 href="https://github.com/RohanExploit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-secondary hover:text-accent transition-colors"
+                className="text-text-secondary hover:text-github-green transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
@@ -55,14 +56,23 @@ export function Footer() {
                 href="https://linkedin.com/in/rohanvijaygaikwad"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-secondary hover:text-accent transition-colors"
+                className="text-text-secondary hover:text-info transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:rohan@example.com"
-                className="text-text-secondary hover:text-accent transition-colors"
+                href="https://x.com/rohan_critic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-secondary hover:text-accent-secondary transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a
+                href={`mailto:${ROHAN_DATA.contact.email}`}
+                className="text-text-secondary hover:text-github-green transition-colors"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />

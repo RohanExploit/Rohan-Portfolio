@@ -60,7 +60,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* Obsidian & Steel Color System (takes precedence) */
+  /* Obsidian & Steel Color System with GitHub Green (takes precedence) */
   --background: #0d0d0d;
   --surface: #1a1a1a;
   --surface-alt: #262626;
@@ -69,18 +69,23 @@
   --text-tertiary: #808080;
   --border: #2a2a2a;
   --border-subtle: #1f1f1f;
-  --accent: #00d9ff;
-  --accent-dark: #0099cc;
+  --accent: #1f6feb;
+  --accent-secondary: #238636;
+  --accent-dark: #0d419d;
+  --github-green: #238636;
+  --github-green-dark: #1a7f37;
   --error: #ff6b6b;
-  --success: #51cf66;
+  --success: #238636;
+  --warning: #d29922;
+  --info: #1f6feb;
   
   /* Syntax highlighting */
-  --sh-class: #00d9ff;
+  --sh-class: #238636;
   --sh-sign: #b0b0b0;
-  --sh-string: #51cf66;
-  --sh-keyword: #00d9ff;
+  --sh-string: #238636;
+  --sh-keyword: #1f6feb;
   --sh-comment: #808080;
-  --sh-jsxliterals: #00d9ff;
+  --sh-jsxliterals: #238636;
   --sh-property: #b0b0b0;
   --sh-entity: #ffd700;
 }
@@ -174,11 +179,27 @@
   }
 
   .text-accent {
-    @apply text-[#00d9ff];
+    @apply text-[#238636];
+  }
+
+  .text-accent-blue {
+    @apply text-[#1f6feb];
   }
 
   .ring-accent {
-    @apply ring-[#00d9ff]/30;
+    @apply ring-[#238636]/30;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg border border-[#238636] bg-[#238636] px-6 py-3 font-mono text-sm font-semibold text-[#0d0d0d] transition-all duration-300 hover:bg-[#1a7f37] hover:border-[#1a7f37];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-lg border border-[#1f6feb] px-6 py-3 font-mono text-sm font-semibold text-[#1f6feb] transition-all duration-300 hover:border-[#238636] hover:text-[#238636];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-lg border border-[#2a2a2a] px-6 py-3 font-mono text-sm font-semibold text-[#b0b0b0] transition-all duration-300 hover:border-[#238636] hover:text-[#238636];
   }
 }
 

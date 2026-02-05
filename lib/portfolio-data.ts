@@ -315,4 +315,60 @@ export const ROHAN_DATA = {
       role: 'Community Recognition',
     },
   ],
+
+  openSourceContributions: [
+    {
+      id: 1,
+      name: 'GSSoC 25 & ECWoC 25',
+      description: 'Active contributor in global open-source programs with focus on system architecture and code quality',
+      contributions: [
+        'Architected microservices with optimized REST APIs',
+        'Refactored monolithic modules into scalable components',
+        'Implemented state-driven React components with TypeScript',
+        'Enhanced CI/CD pipelines with GitHub Actions',
+        'Authored comprehensive API documentation',
+      ],
+      technologies: ['React', 'TypeScript', 'Docker', 'GitHub Actions', 'Node.js'],
+      link: 'https://github.com/RohanExploit',
+    },
+    {
+      id: 2,
+      name: 'Elite Coders Winter of Code',
+      description: 'Project Administrator managing repository architecture and developer guidance',
+      contributions: [
+        'Designed modular system architecture',
+        'Managed GitHub workflows and CI/CD pipelines',
+        'Reviewed and merged 50+ pull requests',
+        'Mentored 20+ junior developers',
+        'Established coding standards and best practices',
+      ],
+      technologies: ['Git', 'System Design', 'Code Review', 'Leadership', 'DevOps'],
+      link: 'https://github.com/RohanExploit',
+    },
+    {
+      id: 3,
+      name: 'Community Contributions',
+      description: 'Technical contributions and mentorship across multiple platforms',
+      contributions: [
+        'Multiple merged pull requests across open-source projects',
+        'Active GitHub contributor with consistent commit history',
+        'Technical mentorship for junior developers',
+        'Bug fixes and feature implementations',
+        'Documentation improvements',
+      ],
+      technologies: ['Python', 'JavaScript', 'System Design', 'Documentation', 'Testing'],
+      link: 'https://github.com/RohanExploit',
+    },
+  ],
+
+  contact: {
+    email: 'itzrohan007@gmail.com',
+    location: 'Satara, Maharashtra, India',
+    social: [
+      { platform: 'GitHub', url: 'https://github.com/RohanExploit', icon: 'Github' },
+      { platform: 'LinkedIn', url: 'https://linkedin.com/in/rohanvijaygaikwad', icon: 'Linkedin' },
+      { platform: 'Twitter', url: 'https://x.com/rohan_critic', icon: 'Twitter' },
+    ],
+    resume: 'https://drive.google.com/file/d/1alaSYAR5b2zUzTa0ZMlaSnZY-RDQ68Og/view?usp=sharing',
+  },
 }

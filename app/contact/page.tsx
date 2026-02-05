@@ -2,8 +2,9 @@
 
 import React from "react"
 
-import { Mail, Github, Linkedin, Twitter, MessageSquare, Phone } from 'lucide-react'
+import { Mail, Github, Linkedin, Twitter, MessageSquare, Phone, Download } from 'lucide-react'
 import { useState } from 'react'
+import { ROHAN_DATA } from '@/lib/portfolio-data'
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -34,36 +35,49 @@ export default function Contact() {
       <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
-          <p className="font-mono text-sm text-accent">/contact</p>
-          <h1 className="mt-2 font-mono text-4xl font-bold text-text-primary">Let's Connect</h1>
+          <p className="font-mono text-sm text-github-green">/contact</p>
+          <h1 className="mt-2 font-mono text-4xl font-bold text-text-primary">Get in Touch</h1>
           <p className="mt-4 text-text-secondary">
-            I'm always open to discussing new projects, opportunities, or just having a conversation.
+            I'm always open to discussing new projects, opportunities, collaboration, or having a conversation.
           </p>
+        </div>
+
+        {/* Resume CTA */}
+        <div className="mb-12 flex justify-center">
+          <a
+            href={ROHAN_DATA.contact.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#1f6feb] px-8 py-4 font-mono text-base font-bold text-white transition-all duration-300 hover:bg-[#0d419d] shadow-lg"
+          >
+            <Download className="h-5 w-5" />
+            Download Resume
+          </a>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Contact Info */}
           <div className="space-y-8">
             {/* Email */}
-            <div className="rounded-lg border border-slate-600 bg-steel p-6">
+            <div className="rounded-lg border border-slate-600 bg-steel p-6 transition-all duration-300 hover:border-github-green hover:bg-steel">
               <div className="mb-3 flex items-center gap-3">
-                <Mail className="h-6 w-6 text-accent" />
+                <Mail className="h-6 w-6 text-github-green" />
                 <h3 className="font-mono font-bold text-text-primary">Email</h3>
               </div>
-              <a href="mailto:rohan@example.com" className="text-accent hover:underline">
-                rohan@example.com
+              <a href={`mailto:${ROHAN_DATA.contact.email}`} className="text-github-green hover:underline font-semibold">
+                {ROHAN_DATA.contact.email}
               </a>
               <p className="mt-2 text-sm text-text-secondary">Preferred for inquiries and collaborations</p>
             </div>
 
-            {/* Phone */}
-            <div className="rounded-lg border border-slate-600 bg-steel p-6">
+            {/* Location */}
+            <div className="rounded-lg border border-slate-600 bg-steel p-6 transition-all duration-300 hover:border-info hover:bg-steel">
               <div className="mb-3 flex items-center gap-3">
-                <Phone className="h-6 w-6 text-accent" />
-                <h3 className="font-mono font-bold text-text-primary">Phone</h3>
+                <MessageSquare className="h-6 w-6 text-info" />
+                <h3 className="font-mono font-bold text-text-primary">Location</h3>
               </div>
-              <p className="text-accent">+91 XXXX XXXX XXX</p>
-              <p className="mt-2 text-sm text-text-secondary">Available for calls during business hours (IST)</p>
+              <p className="text-info font-semibold">{ROHAN_DATA.contact.location}</p>
+              <p className="mt-2 text-sm text-text-secondary">India (IST timezone)</p>
             </div>
 
             {/* Social Links */}
@@ -76,18 +90,24 @@ export default function Contact() {
                     label: 'GitHub',
                     url: 'https://github.com/RohanExploit',
                     handle: '@RohanExploit',
+                    color: 'text-github-green',
+                    hoverColor: 'hover:border-github-green',
                   },
                   {
                     icon: Linkedin,
                     label: 'LinkedIn',
                     url: 'https://linkedin.com/in/rohanvijaygaikwad',
                     handle: 'rohanvijaygaikwad',
+                    color: 'text-info',
+                    hoverColor: 'hover:border-info',
                   },
                   {
                     icon: Twitter,
-                    label: 'Twitter',
-                    url: 'https://twitter.com/rohan',
-                    handle: '@rohan',
+                    label: 'Twitter / X',
+                    url: 'https://x.com/rohan_critic',
+                    handle: '@rohan_critic',
+                    color: 'text-text-secondary',
+                    hoverColor: 'hover:border-accent-secondary',
                   },
                 ].map((social, index) => {
                   const Icon = social.icon
@@ -97,12 +117,12 @@ export default function Contact() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 rounded-lg border border-slate-600 bg-obsidian p-3 transition-all duration-300 hover:border-accent hover:bg-accent/5"
+                      className={`flex items-center gap-3 rounded-lg border border-slate-600 bg-obsidian p-3 transition-all duration-300 ${social.hoverColor} hover:bg-accent/5`}
                     >
-                      <Icon className="h-5 w-5 text-accent" />
+                      <Icon className={`h-5 w-5 ${social.color}`} />
                       <div>
                         <p className="text-sm font-mono text-text-primary">{social.label}</p>
-                        <p className="text-xs text-text-tertiary">{social.handle}</p>
+                        <p className={`text-xs font-mono ${social.color}`}>{social.handle}</p>
                       </div>
                     </a>
                   )
@@ -111,10 +131,10 @@ export default function Contact() {
             </div>
 
             {/* Response Time */}
-            <div className="rounded-lg border border-accent/30 bg-accent/5 p-6">
+            <div className="rounded-lg border border-github-green/30 bg-github-green/5 p-6">
               <div className="mb-2 flex items-center gap-2">
-                <MessageSquare className="h-5 w-5 text-accent" />
-                <h3 className="font-mono font-bold text-accent">Response Time</h3>
+                <MessageSquare className="h-5 w-5 text-github-green" />
+                <h3 className="font-mono font-bold text-github-green">Response Time</h3>
               </div>
               <p className="text-sm text-text-secondary">
                 I typically respond to inquiries within 24-48 hours. For urgent matters, please mention it in your subject line.
