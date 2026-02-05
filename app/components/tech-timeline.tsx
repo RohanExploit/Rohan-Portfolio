@@ -24,7 +24,7 @@ export function TechTimeline() {
       description: 'Building scalable systems and leading projects',
     },
     {
-      period: 'Future',
+      period: '2026+',
       icon: Package,
       title: 'Advanced Architecture',
       techs: ['Distributed Systems', 'Cloud Native', 'LLMs'],
