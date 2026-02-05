@@ -1,6 +1,7 @@
-'use client'
-import { TextEffect } from '@/components/ui/text-effect'
-import Link from 'next/link'
+"use client";
+import { TextEffect } from "@/components/ui/text-effect";
+import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Header() {
   return (
@@ -19,6 +20,7 @@ export function Header() {
           Design Engineer
         </TextEffect>
       </div>
+      <ThemeToggle />
     </header>
-  )
+  );
 }
