@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { XIcon } from "lucide-react";
+import { XIcon, Download } from "lucide-react";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Magnetic } from "@/components/ui/magnetic";
 import {
@@ -11,6 +11,7 @@ import {
   MorphingDialogContainer,
 } from "@/components/ui/morphing-dialog";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatedBackground } from "@/components/ui/animated-background";
 import {
   PROJECTS,
@@ -137,11 +138,34 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <div className="flex-1">
-          <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
-          </p>
+        <div className="flex flex-col gap-8 md:flex-row md:items-center">
+          <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full md:h-32 md:w-32">
+            <Image
+              src="/rohan.jpg"
+              alt="Rohan Gaikwad"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="flex-1 space-y-4">
+            <p className="text-zinc-600 dark:text-zinc-400">
+              I’m currently building a social-impact startup focused on civic
+              technology. Active contributor at Eliter Coders Winter of Code and
+              GirlScript Summer of Code. I enjoy problem-solving on LeetCode &
+              CodeChef and love doomcoding under pressure.
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="https://drive.google.com/file/d/1alaSYAR5b2zUzTa0ZMlaSnZY-RDQ68Og/view?usp=sharing"
+                target="_blank"
+                className="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+              >
+                <Download className="h-4 w-4" />
+                Download Resume
+              </a>
+            </div>
+          </div>
         </div>
       </motion.section>
 

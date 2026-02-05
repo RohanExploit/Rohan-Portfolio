@@ -12,16 +12,16 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nim-fawn.vercel.app/"),
+  metadataBase: new URL("https://rohan-gaikwad.vercel.app/"),
   alternates: {
     canonical: "/",
   },
   title: {
-    default: "Nim - Personal website template",
-    template: "%s | Nim",
+    default: "Rohan Gaikwad - Software Engineering Intern",
+    template: "%s | Rohan Gaikwad",
   },
   description:
-    "Nim is a free and open-source personal website template built with Next.js 15, React 19 and Motion-Primitives.",
+    "Rohan Gaikwad is a Software Engineering Intern and Open Source Contributor passionate about civic tech and AI.",
 };
 
 const geist = Geist({

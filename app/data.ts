@@ -1,126 +1,95 @@
-type Project = {
-  name: string;
-  description: string;
-  link: string;
-  video: string;
-  id: string;
-};
-
-type WorkExperience = {
-  company: string;
-  title: string;
-  start: string;
-  end: string;
-  link: string;
-  id: string;
-};
-
-type BlogPost = {
-  title: string;
-  description: string;
-  link: string;
-  uid: string;
-};
-
-type SocialLink = {
-  label: string;
-  link: string;
-};
-
-export const PROJECTS: Project[] = [
+export const PROJECTS = [
   {
-    name: "Motion Primitives Pro",
+    name: "Vishwaguru",
     description:
-      "Advanced components and templates to craft beautiful websites.",
-    link: "https://pro.motion-primitives.com/",
+      "AI-powered public grievance reporting platform that automatically routes complaints to the correct authority using Geolocation and REST APIs.",
+    link: "https://github.com/RohanExploit/Vishwaguru",
     video:
-      "https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0",
+      "https://cdn.dribbble.com/userupload/3247029/file/original-b181b53986950348e30b1e4c9c22262d.mp4", // Placeholder video
     id: "project1",
   },
   {
-    name: "Motion Primitives",
-    description: "UI kit to make beautiful, animated interfaces.",
-    link: "https://motion-primitives.com/",
+    name: "Heart Disease Prediction",
+    description:
+      "Machine learning pipeline to predict cardiac risk from clinical parameters using Scikit-Learn and Pandas.",
+    link: "https://github.com/RohanExploit/Heart_diseases",
     video:
-      "https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0",
+      "https://cdn.dribbble.com/userupload/12591604/file/original-5347b703e387c47d760777085c0747b0.mp4", // Placeholder video
     id: "project2",
+  },
+  {
+    name: "Amazon Data Analytics",
+    description:
+      "Exploratory data analysis on Amazon sales to derive business insights using Python, Pandas, and Plotly.",
+    link: "https://github.com/RohanExploit/amazon_data_analytics",
+    video:
+      "https://cdn.dribbble.com/userupload/13010329/file/original-f86a20e29d663b65261353995f548d7d.mp4", // Placeholder video
+    id: "project3",
+  },
+  {
+    name: "Nourish India",
+    description:
+      "Bridging the gap between food wastage and hunger by connecting food companies to food banks.",
+    link: "https://github.com/RohanExploit/Nourish-India",
+    video:
+      "https://cdn.dribbble.com/userupload/2740209/file/original-5374a44400a402360293064e43f16773.mp4", // Placeholder video
+    id: "project4",
   },
 ];
 
-export const WORK_EXPERIENCE: WorkExperience[] = [
+export const WORK_EXPERIENCE = [
   {
-    company: "Reglazed Studio",
-    title: "CEO",
-    start: "2024",
+    company: "Confidential",
+    title: "Software Engineering Intern",
+    start: "2023",
     end: "Present",
-    link: "https://ibelick.com",
+    link: "#",
     id: "work1",
   },
   {
-    company: "Freelance",
-    title: "Design Engineer",
-    start: "2022",
-    end: "2024",
-    link: "https://ibelick.com",
+    company: "GirlScript Summer of Code",
+    title: "Open Source Contributor",
+    start: "2023",
+    end: "2023",
+    link: "https://gssoc.girlscript.tech/",
     id: "work2",
   },
   {
-    company: "Freelance",
-    title: "Front-end Developer",
-    start: "2017",
-    end: "Present",
-    link: "https://ibelick.com",
+    company: "Eliter Coders Winter of Code",
+    title: "Open Source Contributor",
+    start: "2023",
+    end: "2023",
+    link: "#",
     id: "work3",
   },
 ];
 
-export const BLOG_POSTS: BlogPost[] = [
+export const BLOG_POSTS = [
   {
-    title: "Exploring the Intersection of Design, AI, and Design Engineering",
-    description: "How AI is changing the way we design",
-    link: "/blog/exploring-the-intersection-of-design-ai-and-design-engineering",
+    title: "Hi, I'm Rohan Gaikwad",
+    description: "A glimpse into my journey and skills.",
+    link: "https://puzzling-cart-919.notion.site/Hi-I-m-Rohan-Gaikwad-235ba2784a3880af8d5cd0ed1f790a0a?pvs=141",
     uid: "blog-1",
   },
-  {
-    title: "Why I left my job to start my own company",
-    description:
-      "A deep dive into my decision to leave my job and start my own company",
-    link: "/blog/exploring-the-intersection-of-design-ai-and-design-engineering",
-    uid: "blog-2",
-  },
-  {
-    title: "What I learned from my first year of freelancing",
-    description:
-      "A look back at my first year of freelancing and what I learned",
-    link: "/blog/exploring-the-intersection-of-design-ai-and-design-engineering",
-    uid: "blog-3",
-  },
-  {
-    title: "How to Export Metadata from MDX for Next.js SEO",
-    description:
-      "A guide on exporting metadata from MDX files to leverage Next.js SEO features.",
-    link: "/blog/example-mdx-metadata",
-    uid: "blog-4",
-  },
 ];
 
-export const SOCIAL_LINKS: SocialLink[] = [
-  {
-    label: "Github",
-    link: "https://github.com/ibelick",
-  },
-  {
-    label: "Twitter",
-    link: "https://twitter.com/ibelick",
-  },
+export const SOCIAL_LINKS = [
   {
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/ibelick",
+    link: "https://www.linkedin.com/in/rohanvijaygaikwad",
   },
   {
-    label: "Instagram",
-    link: "https://www.instagram.com/ibelick",
+    label: "GitHub",
+    link: "https://github.com/RohanExploit",
+  },
+  {
+    label: "LeetCode",
+    link: "https://leetcode.com/u/rohanexploit/",
+  },
+  {
+    label: "Notion",
+    link: "https://puzzling-cart-919.notion.site/Hi-I-m-Rohan-Gaikwad-235ba2784a3880af8d5cd0ed1f790a0a?pvs=141",
   },
 ];
 
-export const EMAIL = "your@email.com";
+export const EMAIL = "itzrohan007@gmail.com";
