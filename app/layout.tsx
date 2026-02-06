@@ -8,7 +8,7 @@ import { ThemeProvider } from 'next-themes'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   themeColor: '#0d0d0d',
   colorScheme: 'dark',
@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://rohangaikwad.in/'),
   alternates: {
-    canonical: '/'
+    canonical: "/",
   },
   title: {
     default: 'Rohan Gaikwad - Full-Stack Developer & AI Enthusiast',
@@ -67,7 +67,7 @@ const inter = Inter({
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
@@ -90,5 +90,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

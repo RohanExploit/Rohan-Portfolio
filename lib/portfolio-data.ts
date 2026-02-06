@@ -245,7 +245,7 @@ export const ROHAN_DATA = {
     },
     {
       id: 2,
-      title: 'Accenture - Data Analytics and Visualization',
+      title: '(Virtual)Accenture - Data Analytics and Visualization',
       issuer: 'Accenture',
       date: 'May 2025',
       description: 'Professional certification in data analytics and visualization techniques',
@@ -320,7 +320,7 @@ export const ROHAN_DATA = {
     {
       id: 1,
       name: 'GSSoC 25 & ECWoC 25',
-      description: 'Active contributor in global open-source programs with focus on system architecture and code quality',
+      description: 'Active Project Admin & contributor in global open-source programs with focus on system architecture and code quality',
       contributions: [
         'Architected microservices with optimized REST APIs',
         'Refactored monolithic modules into scalable components',
