@@ -37,7 +37,6 @@ export default function Achievements() {
 
   const certifications = achievements.filter((a) => a.type === "Certification");
   const programs = achievements.filter((a) => a.type === "Program");
-  const awards = achievements.filter((a) => a.type === "Award");
 
   return (
     <div className="min-h-screen bg-obsidian">

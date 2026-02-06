@@ -28,7 +28,7 @@ export default function Home() {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [mounted]);
+  }, [mounted, roles.length]);
 
   return (
     <div className="min-h-screen bg-obsidian">

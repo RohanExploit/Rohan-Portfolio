@@ -10,7 +10,6 @@ import {
   MessageSquare,
   Phone,
   Download,
-  Copy,
 } from "lucide-react";
 import { useState } from "react";
 import { ROHAN_DATA } from "@/lib/portfolio-data";
@@ -51,7 +50,7 @@ export default function Contact() {
             Get in Touch
           </h1>
           <p className="mt-4 text-text-secondary">
-            I'm always open to discussing new projects, opportunities,
+            I&apos;m always open to discussing new projects, opportunities,
             collaboration, or having a conversation.
           </p>
         </div>
@@ -291,7 +290,7 @@ export default function Contact() {
               {submitted && (
                 <div className="rounded-lg border border-github-green/30 bg-github-green/10 p-4">
                   <p className="text-sm text-github-green">
-                    Thank you! I'll get back to you as soon as possible.
+                    Thank you! I&apos;ll get back to you as soon as possible.
                   </p>
                 </div>
               )}
@@ -308,8 +307,9 @@ export default function Contact() {
             Open to collaborations, internships, and exciting opportunities
           </p>
           <p className="mt-4 text-text-secondary">
-            Let's build something amazing together. Whether you have a project
-            in mind or just want to chat about tech, I'd love to hear from you!
+            Let&apos;s build something amazing together. Whether you have a
+            project in mind or just want to chat about tech, I&apos;d love to
+            hear from you!
           </p>
         </div>
       </div>
