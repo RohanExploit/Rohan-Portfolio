@@ -14,14 +14,8 @@ const eslintConfig = [
     "next/core-web-vitals",
     "next/typescript",
     "plugin:prettier/recommended",
-    "plugin:mdx/recommended"
   ),
-  {
-    files: ["**/*.mdx"],
-    rules: {
-      "react/jsx-no-undef": "off",
-    },
-  },
+  ...compat.extends("plugin:mdx/recommended"),
 ];
 
 export default eslintConfig;

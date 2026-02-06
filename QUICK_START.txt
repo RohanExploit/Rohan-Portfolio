@@ -1,0 +1,227 @@
+╔════════════════════════════════════════════════════════════════╗
+║         ROHAN GAIKWAD - PORTFOLIO WEBSITE                       ║
+║         QUICK START GUIDE                                       ║
+║         Obsidian & Steel Design Aesthetic                       ║
+╚════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚀 GET STARTED IN 3 STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. INSTALL DEPENDENCIES
+   $ npm install
+
+2. RUN DEVELOPMENT SERVER
+   $ npm run dev
+
+3. OPEN IN BROWSER
+   http://localhost:3000
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 WHAT YOU GET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ 7 Professional Pages
+  • Home (Landing page with role carousel)
+  • About (Personal introduction)
+  • Projects (5 featured projects)
+  • Experience (6 professional roles)
+  • Skills (Tech stack & proficiency)
+  • Achievements (Certifications & recognition)
+  • Contact (Contact form & info)
+
+✓ Modern Design
+  • Obsidian & Steel aesthetic
+  • Dark mode optimized
+  • High contrast (accessibility)
+  • Smooth animations
+
+✓ Fully Responsive
+  • Mobile-first design
+  • Desktop optimized
+  • Tablet friendly
+
+✓ Production Ready
+  • TypeScript type safety
+  • SEO optimized
+  • Performance optimized
+  • Accessibility compliant
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Start here →
+  1. README.md ........................... Overview & features
+  2. PORTFOLIO_SUMMARY.md ............... Complete breakdown
+  3. SETUP_GUIDE.md ..................... Customization guide
+  4. DESIGN_TOKENS.md .................. Design system
+  5. PROJECT_INDEX.md .................. File navigation
+  6. COMPLETION_REPORT.md .............. What was built
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔧 CUSTOMIZATION QUICK TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Update Content:
+  File: lib/portfolio-data.ts
+  • Change name, projects, experience, skills
+  • Update social media links
+  • Add certifications
+
+Update Colors:
+  File: app/globals.css
+  • CSS custom properties in :root
+  • Easy theme customization
+
+Update Navigation:
+  File: app/components/navigation.tsx
+  • Add/remove navigation items
+  • Modify links
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🌐 SITE PAGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+/ ........................... Homepage
+/about ...................... About page
+/projects ................... Projects showcase
+/experience ................. Experience timeline
+/skills ..................... Skills & tech stack
+/achievements ............... Certifications
+/contact .................... Contact form
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🛠️ COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+npm install ................. Install dependencies
+npm run dev ................. Start development server
+npm run build ............... Build for production
+npm run start ............... Run production build
+npm run lint ................ Check code quality
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚀 DEPLOYMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+To Vercel (Recommended):
+  $ npm run build
+  $ vercel deploy
+
+Or connect your GitHub repo to Vercel dashboard
+and it will deploy automatically on push.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 PROJECT STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+app/
+  ├── page.tsx ........................... Homepage
+  ├── about/page.tsx ..................... About page
+  ├── projects/page.tsx ................. Projects
+  ├── experience/page.tsx ............... Experience
+  ├── skills/page.tsx ................... Skills
+  ├── achievements/page.tsx ............. Achievements
+  ├── contact/page.tsx .................. Contact
+  ├── components/
+  │   ├── navigation.tsx ................ Navigation bar
+  │   ├── footer.tsx .................... Footer
+  │   └── tech-timeline.tsx ............. Timeline
+  ├── layout.tsx ........................ Root layout
+  └── globals.css ....................... Design tokens
+
+lib/
+  └── portfolio-data.ts ................. All content
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💻 TECH STACK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Framework:      Next.js 15
+React:          React 19
+Language:       TypeScript
+Styling:        Tailwind CSS v4
+Icons:          Lucide React
+Fonts:          JetBrains Mono, Inter
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✨ HIGHLIGHTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Obsidian & Steel Design
+  • Deep black background (#0D0D0D)
+  • Steel surfaces (#1A1A1A)
+  • Cyan accents (#00D9FF)
+
+✓ Fully Responsive
+  • Mobile: 320px+
+  • Tablet: 768px+
+  • Desktop: 1024px+
+
+✓ Interactive Features
+  • Role carousel on homepage
+  • Expandable project cards
+  • Experience timeline
+  • Contact form
+  • Smooth animations
+
+✓ Best Practices
+  • TypeScript strict mode
+  • WCAG AA+ accessibility
+  • SEO optimized
+  • Performance optimized
+  • Mobile-first design
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔗 LINKS & RESOURCES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GitHub:     https://github.com/RohanExploit
+LinkedIn:   https://linkedin.com/in/rohanvijaygaikwad
+Email:      rohan@example.com
+
+Next.js:    https://nextjs.org/docs
+React:      https://react.dev
+Tailwind:   https://tailwindcss.com
+TypeScript: https://typescriptlang.org
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❓ NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Read README.md for overview
+2. Check SETUP_GUIDE.md for customization
+3. Review DESIGN_TOKENS.md for styling
+4. See PROJECT_INDEX.md for file reference
+5. Check PORTFOLIO_SUMMARY.md for complete breakdown
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎉 READY TO LAUNCH!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Run: npm install
+2. Run: npm run dev
+3. Open: http://localhost:3000
+4. Customize: Edit lib/portfolio-data.ts
+5. Deploy: npm run build && vercel deploy
+
+Happy building! 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Status: ✅ Production Ready
+Version: 1.0
+Built: February 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

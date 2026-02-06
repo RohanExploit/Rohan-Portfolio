@@ -1,296 +1,243 @@
 "use client";
-import { motion } from "motion/react";
-import { XIcon, Download } from "lucide-react";
-import { Spotlight } from "@/components/ui/spotlight";
-import { Magnetic } from "@/components/ui/magnetic";
-import {
-  MorphingDialog,
-  MorphingDialogTrigger,
-  MorphingDialogContent,
-  MorphingDialogClose,
-  MorphingDialogContainer,
-} from "@/components/ui/morphing-dialog";
+
 import Link from "next/link";
-import Image from "next/image";
-import { AnimatedBackground } from "@/components/ui/animated-background";
 import {
-  PROJECTS,
-  WORK_EXPERIENCE,
-  BLOG_POSTS,
-  EMAIL,
-  SOCIAL_LINKS,
-} from "./data";
+  ArrowRight,
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+  Phone,
+} from "lucide-react";
+import { useEffect, useState } from "react";
+import { ROHAN_DATA } from "@/lib/portfolio-data";
 
-const VARIANTS_CONTAINER = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
+export default function Home() {
+  const [mounted, setMounted] = useState(false);
 
-const VARIANTS_SECTION = {
-  hidden: { opacity: 0, y: 20, filter: "blur(8px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-};
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-const TRANSITION_SECTION = {
-  duration: 0.3,
-};
+  const roles = ["Developer", "AI Enthusiast", "Open Source Contributor"];
+  const [currentRole, setCurrentRole] = useState(0);
 
-type ProjectVideoProps = {
-  src: string;
-};
+  useEffect(() => {
+    if (!mounted) return;
+    const interval = setInterval(() => {
+      setCurrentRole((prev) => (prev + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [mounted]);
 
-function ProjectVideo({ src }: ProjectVideoProps) {
   return (
-    <MorphingDialog
-      transition={{
-        type: "spring",
-        bounce: 0,
-        duration: 0.3,
-      }}
-    >
-      <MorphingDialogTrigger>
-        <video
-          src={src}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="aspect-video w-full cursor-zoom-in rounded-xl"
-        />
-      </MorphingDialogTrigger>
-      <MorphingDialogContainer>
-        <MorphingDialogContent className="relative aspect-video rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
-          <video
-            src={src}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="aspect-video h-[50vh] w-full rounded-xl md:h-[70vh]"
-          />
-        </MorphingDialogContent>
-        <MorphingDialogClose
-          className="fixed top-6 right-6 h-fit w-fit rounded-full bg-white p-1"
-          variants={{
-            initial: { opacity: 0 },
-            animate: {
-              opacity: 1,
-              transition: { delay: 0.3, duration: 0.1 },
-            },
-            exit: { opacity: 0, transition: { duration: 0 } },
-          }}
-        >
-          <XIcon className="h-5 w-5 text-zinc-500" />
-        </MorphingDialogClose>
-      </MorphingDialogContainer>
-    </MorphingDialog>
-  );
-}
-
-function MagneticSocialLink({
-  children,
-  link,
-}: {
-  children: React.ReactNode;
-  link: string;
-}) {
-  return (
-    <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
-      <a
-        href={link}
-        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
-      >
-        {children}
-        <svg
-          width="15"
-          height="15"
-          viewBox="0 0 15 15"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-3 w-3"
-        >
-          <path
-            d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
-            fill="currentColor"
-            fillRule="evenodd"
-            clipRule="evenodd"
-          ></path>
-        </svg>
-      </a>
-    </Magnetic>
-  );
-}
-
-export default function Personal() {
-  return (
-    <motion.main
-      className="space-y-24"
-      variants={VARIANTS_CONTAINER}
-      initial="hidden"
-      animate="visible"
-    >
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <div className="flex flex-col gap-8 md:flex-row md:items-center">
-          <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full md:h-32 md:w-32">
-            <Image
-              src="/rohan.jpg"
-              alt="Rohan Gaikwad"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-          <div className="flex-1 space-y-4">
-            <p className="text-zinc-600 dark:text-zinc-400">
-              I’m currently building a social-impact startup focused on civic
-              technology. Active contributor at Eliter Coders Winter of Code and
-              GirlScript Summer of Code. I enjoy problem-solving on LeetCode &
-              CodeChef and love doomcoding under pressure.
-            </p>
-            <div className="flex gap-4">
-              <a
-                href="https://drive.google.com/file/d/1alaSYAR5b2zUzTa0ZMlaSnZY-RDQ68Og/view?usp=sharing"
-                target="_blank"
-                className="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
-              >
-                <Download className="h-4 w-4" />
-                Download Resume
-              </a>
-            </div>
-          </div>
-        </div>
-      </motion.section>
-
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {PROJECTS.map((project) => (
-            <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
-              </div>
-              <div className="px-1">
-                <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                  href={project.link}
-                  target="_blank"
-                >
-                  {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
-                </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  {project.description}
+    <div className="min-h-screen bg-obsidian">
+      {/* Hero Section */}
+      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8">
+          {/* Left Content */}
+          <div className="flex flex-col justify-center">
+            <div className="space-y-6">
+              <div>
+                <p className="font-mono text-sm text-github-green">
+                  Welcome to my portfolio
                 </p>
+                <h1 className="mt-4 font-mono text-4xl font-bold text-text-primary sm:text-5xl">
+                  Rohan
+                  <span className="block text-github-green">Gaikwad</span>
+                </h1>
+              </div>
+
+              <div className="h-12">
+                {mounted && (
+                  <p className="font-mono text-lg text-text-secondary transition-opacity duration-500">
+                    {roles[currentRole]}
+                  </p>
+                )}
+              </div>
+
+              <p className="max-w-lg text-text-secondary">
+                Building scalable software solutions with a focus on AI,
+                full-stack development, and open-source impact. Currently
+                interning at Destiny Solutions and mentoring at Elite Coders.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Link
+                  href="/projects"
+                  className="inline-flex items-center gap-2 rounded-lg border border-github-green bg-github-green px-6 py-3 font-mono text-sm font-semibold text-obsidian transition-all duration-300 hover:bg-github-green-dark hover:border-github-green-dark"
+                >
+                  View My Work
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <a
+                  href={ROHAN_DATA.contact.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-info bg-info/10 px-6 py-3 font-mono text-sm font-semibold text-info transition-all duration-300 hover:bg-info/20"
+                >
+                  Download Resume
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex gap-4 pt-4">
+                <a
+                  href="https://github.com/RohanExploit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-secondary hover:text-github-green transition-colors"
+                  aria-label="GitHub"
+                >
+                  <Github className="h-6 w-6" />
+                </a>
+                <a
+                  href="https://linkedin.com/in/rohanvijaygaikwad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-secondary hover:text-info transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </a>
+                <a
+                  href="https://x.com/rohan_critic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-secondary hover:text-accent-secondary transition-colors"
+                  aria-label="Twitter"
+                >
+                  <Twitter className="h-6 w-6" />
+                </a>
+                <a
+                  href={`mailto:${ROHAN_DATA.contact.email}`}
+                  className="text-text-secondary hover:text-accent-secondary transition-colors"
+                  aria-label="Email"
+                >
+                  <Mail className="h-6 w-6" />
+                </a>
+                <a
+                  href={`tel:${ROHAN_DATA.contact.phone}`}
+                  className="text-text-secondary hover:text-github-green transition-colors"
+                  aria-label="Phone"
+                >
+                  <Phone className="h-6 w-6" />
+                </a>
               </div>
             </div>
-          ))}
-        </div>
-      </motion.section>
+          </div>
 
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
-        <div className="flex flex-col space-y-2">
-          {WORK_EXPERIENCE.map((job) => (
-            <a
-              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
-              href={job.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={job.id}
-            >
-              <Spotlight
-                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
-                size={64}
-              />
-              <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
-                <div className="relative flex w-full flex-row justify-between">
-                  <div>
-                    <h4 className="font-normal dark:text-zinc-100">
-                      {job.title}
-                    </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
-                      {job.company}
-                    </p>
-                  </div>
-                  <p className="text-zinc-600 dark:text-zinc-400">
-                    {job.start} - {job.end}
-                  </p>
-                </div>
+          {/* Right Side - Stats/Highlights */}
+          <div className="flex flex-col justify-center gap-6">
+            <div className="group rounded-lg border border-slate-600 bg-steel p-6 transition-all duration-300 hover:border-github-green hover:bg-steel">
+              <p className="font-mono text-xs uppercase text-github-green">
+                Experience
+              </p>
+              <h3 className="mt-2 font-mono text-2xl font-bold text-text-primary">
+                1.5+ Years
+              </h3>
+              <p className="mt-2 text-sm text-text-secondary">
+                Across internships, open-source contributions, and leadership
+                roles
+              </p>
+            </div>
+
+            <div className="group rounded-lg border border-slate-600 bg-steel p-6 transition-all duration-300 hover:border-github-green hover:bg-steel">
+              <p className="font-mono text-xs uppercase text-info">Projects</p>
+              <h3 className="mt-2 font-mono text-2xl font-bold text-text-primary">
+                15+
+              </h3>
+              <p className="mt-2 text-sm text-text-secondary">
+                From AI models to full-stack web applications
+              </p>
+            </div>
+
+            <div className="group rounded-lg border border-slate-600 bg-steel p-6 transition-all duration-300 hover:border-github-green hover:bg-steel">
+              <p className="font-mono text-xs uppercase text-github-green">
+                Tech Stack
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {["Python", "React", "TypeScript", "Docker", "ML"].map(
+                  (tech) => (
+                    <span
+                      key={tech}
+                      className="inline-block rounded-full border border-github-green/30 bg-github-green/10 px-3 py-1 font-mono text-xs text-github-green font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ),
+                )}
               </div>
-            </a>
-          ))}
+            </div>
+          </div>
         </div>
-      </motion.section>
+      </div>
 
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-            transition={{
-              type: "spring",
-              bounce: 0,
-              duration: 0.2,
-            }}
-          >
-            {BLOG_POSTS.map((post) => (
+      {/* Featured Sections */}
+      <div className="border-t border-slate-600 bg-steel py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="font-mono text-3xl font-bold text-text-primary">
+              Featured Areas
+            </h2>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                title: "Projects",
+                description:
+                  "Explore my portfolio of full-stack applications, AI models, and open-source contributions.",
+                href: "/projects",
+                icon: "◊",
+                color: "text-github-green",
+                hoverColor: "hover:border-github-green",
+              },
+              {
+                title: "Experience",
+                description:
+                  "My journey through internships, mentorship, and professional development.",
+                href: "/experience",
+                icon: "▪",
+                color: "text-info",
+                hoverColor: "hover:border-info",
+              },
+              {
+                title: "Certifications",
+                description:
+                  "Professional credentials and program participation demonstrating continuous learning.",
+                href: "/certifications",
+                icon: "★",
+                color: "text-accent-secondary",
+                hoverColor: "hover:border-accent-secondary",
+              },
+            ].map((item, index) => (
               <Link
-                key={post.uid}
-                className="-mx-3 rounded-xl px-3 py-3"
-                href={post.link}
-                data-id={post.uid}
+                key={index}
+                href={item.href}
+                className={`group rounded-lg border border-slate-600 bg-obsidian p-6 transition-all duration-300 ${item.hoverColor} hover:bg-steel`}
               >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
-                    {post.description}
-                  </p>
+                <div className={`text-2xl ${item.color}`}>{item.icon}</div>
+                <h3
+                  className={`mt-4 font-mono text-lg font-bold text-text-primary group-hover:${item.color}`}
+                >
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm text-text-secondary">
+                  {item.description}
+                </p>
+                <div
+                  className={`mt-4 flex items-center gap-2 text-sm ${item.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
+                >
+                  Explore <ArrowRight className="h-4 w-4" />
                 </div>
               </Link>
             ))}
-          </AnimatedBackground>
+          </div>
         </div>
-      </motion.section>
-
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-5 text-lg font-medium">Connect</h3>
-        <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Feel free to contact me at{" "}
-          <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
-            {EMAIL}
-          </a>
-        </p>
-        <div className="flex items-center justify-start space-x-3">
-          {SOCIAL_LINKS.map((link) => (
-            <MagneticSocialLink key={link.label} link={link.link}>
-              {link.label}
-            </MagneticSocialLink>
-          ))}
-        </div>
-      </motion.section>
-    </motion.main>
+      </div>
+    </div>
   );
 }
