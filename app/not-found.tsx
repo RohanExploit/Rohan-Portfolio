@@ -1,20 +1,15 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-obsidian flex items-center justify-center">
       <div className="max-w-md text-center px-4">
         <div className="mb-8">
-          <p className="font-mono text-6xl font-bold text-github-green mb-4">
-            404
-          </p>
-          <h1 className="font-mono text-3xl font-bold text-text-primary mb-2">
-            Page Not Found
-          </h1>
+          <p className="font-mono text-6xl font-bold text-github-green mb-4">404</p>
+          <h1 className="font-mono text-3xl font-bold text-text-primary mb-2">Page Not Found</h1>
           <p className="text-text-secondary">
-            The page you&apos;re looking for doesn&apos;t exist or has been
-            moved. Let me help you get back on track.
+            The page you're looking for doesn't exist or has been moved. Let me help you get back on track.
           </p>
         </div>
 
@@ -31,9 +26,9 @@ export default function NotFound() {
             <p className="text-sm text-text-secondary mb-4">Quick Links:</p>
             <div className="flex flex-col gap-2">
               {[
-                { href: "/projects", label: "Projects" },
-                { href: "/experience", label: "Experience" },
-                { href: "/contact", label: "Contact" },
+                { href: '/projects', label: 'Projects' },
+                { href: '/experience', label: 'Experience' },
+                { href: '/contact', label: 'Contact' },
               ].map((link) => (
                 <Link
                   key={link.href}
@@ -48,5 +43,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
+  )
 }

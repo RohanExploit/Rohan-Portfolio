@@ -20,7 +20,7 @@
 ### 2. Profile Photo Added
 - **Location**: About page (centered, high-quality)
 - **Image**: Professional presentation photo from event
-- **Optimization**:
+- **Optimization**: 
   - Using Next.js `Image` component with optimization
   - Responsive sizing with proper aspect ratio
   - Border styling with GitHub green accent

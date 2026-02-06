@@ -7,7 +7,7 @@
 - Check analytics dashboard
 - Respond to contact form submissions
 
-### Weekly
+### Weekly  
 - Verify all links are working
 - Check Google Search Console
 - Review performance metrics
