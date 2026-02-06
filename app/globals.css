@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
+
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:is(.dark *));
-
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @layer base {
   *,
@@ -78,7 +78,7 @@
   --success: #238636;
   --warning: #d29922;
   --info: #1f6feb;
-  
+
   /* Syntax highlighting */
   --sh-class: #238636;
   --sh-sign: #b0b0b0;
@@ -164,7 +164,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
- 
+
 @layer components {
   .bg-obsidian {
     @apply bg-[#0d0d0d];
