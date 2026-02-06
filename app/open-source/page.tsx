@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import { ROHAN_DATA } from '@/lib/portfolio-data'
-import { Github, ExternalLink, GitBranch, Users } from 'lucide-react'
+import { ROHAN_DATA } from "@/lib/portfolio-data";
+import { Github, ExternalLink, GitBranch, Users } from "lucide-react";
 
 export default function OpenSource() {
-  const { openSourceContributions } = ROHAN_DATA
+  const { openSourceContributions } = ROHAN_DATA;
 
   return (
     <div className="min-h-screen bg-obsidian">
@@ -12,8 +12,13 @@ export default function OpenSource() {
         {/* Header */}
         <div className="mb-16">
           <p className="font-mono text-sm text-github-green">/open-source</p>
-          <h1 className="mt-2 font-mono text-4xl font-bold text-text-primary">Open Source Contributions</h1>
-          <p className="mt-4 max-w-2xl text-text-secondary">Active participation in global open-source initiatives with focus on system architecture, code quality, and developer mentorship.</p>
+          <h1 className="mt-2 font-mono text-4xl font-bold text-text-primary">
+            Open Source Contributions
+          </h1>
+          <p className="mt-4 max-w-2xl text-text-secondary">
+            Active participation in global open-source initiatives with focus on
+            system architecture, code quality, and developer mentorship.
+          </p>
         </div>
 
         {/* Contributions Grid */}
@@ -33,7 +38,9 @@ export default function OpenSource() {
                         {contrib.name}
                       </h3>
                     </div>
-                    <p className="mt-3 text-text-secondary">{contrib.description}</p>
+                    <p className="mt-3 text-text-secondary">
+                      {contrib.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -49,7 +56,9 @@ export default function OpenSource() {
                   <ul className="space-y-3">
                     {contrib.contributions.map((contribution, idx) => (
                       <li key={idx} className="flex gap-3 text-text-secondary">
-                        <span className="text-github-green flex-shrink-0">→</span>
+                        <span className="text-github-green flex-shrink-0">
+                          →
+                        </span>
                         <span>{contribution}</span>
                       </li>
                     ))}
@@ -93,35 +102,46 @@ export default function OpenSource() {
         <div className="mt-16 rounded-lg border border-slate-600 bg-steel p-12">
           <div className="mb-8 flex items-center gap-3">
             <Users className="h-6 w-6 text-github-green" />
-            <h2 className="font-mono text-2xl font-bold text-text-primary">Community Impact</h2>
+            <h2 className="font-mono text-2xl font-bold text-text-primary">
+              Community Impact
+            </h2>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
-                metric: '20+',
-                label: 'Junior Developers Mentored',
-                description: 'Guided junior developers through implementation strategies and code reviews',
+                metric: "20+",
+                label: "Junior Developers Mentored",
+                description:
+                  "Guided junior developers through implementation strategies and code reviews",
               },
               {
-                metric: '50+',
-                label: 'Pull Requests Reviewed',
-                description: 'Ensured code quality and architectural consistency across projects',
+                metric: "50+",
+                label: "Pull Requests Reviewed",
+                description:
+                  "Ensured code quality and architectural consistency across projects",
               },
               {
-                metric: '100%',
-                label: 'Merged Contribution Rate',
-                description: 'All contributed code merged successfully with positive community feedback',
+                metric: "100%",
+                label: "Merged Contribution Rate",
+                description:
+                  "All contributed code merged successfully with positive community feedback",
               },
             ].map((impact, index) => (
               <div key={index} className="space-y-2">
-                <p className="font-mono text-3xl font-bold text-github-green">{impact.metric}</p>
-                <h4 className="font-mono font-semibold text-text-primary">{impact.label}</h4>
-                <p className="text-sm text-text-secondary">{impact.description}</p>
+                <p className="font-mono text-3xl font-bold text-github-green">
+                  {impact.metric}
+                </p>
+                <h4 className="font-mono font-semibold text-text-primary">
+                  {impact.label}
+                </h4>
+                <p className="text-sm text-text-secondary">
+                  {impact.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
