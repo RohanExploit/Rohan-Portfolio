@@ -2,7 +2,7 @@
 
 import React from "react"
 
-import { Mail, Github, Linkedin, Twitter, MessageSquare, Phone, Download, Copy } from 'lucide-react'
+import { Mail, Github, Linkedin, Twitter, MessageSquare, Phone, Download, Copy, Code2, Globe } from 'lucide-react'
 import { useState } from 'react'
 import { ROHAN_DATA } from '@/lib/portfolio-data'
 
@@ -123,6 +123,22 @@ export default function Contact() {
                     handle: '@rohan_critic',
                     color: 'text-text-secondary',
                     hoverColor: 'hover:border-accent-secondary',
+                  },
+                  {
+                    icon: Code2,
+                    label: 'LeetCode',
+                    url: 'https://leetcode.com/u/rohanexploit/',
+                    handle: 'leetcode.com/u/rohanexploit',
+                    color: 'text-github-green',
+                    hoverColor: 'hover:border-github-green',
+                  },
+                  {
+                    icon: Globe,
+                    label: 'Portfolio',
+                    url: 'https://puzzling-cart-919.notion.site/Hi-I-m-RohanGaikwad-235ba2784a3880af8d5cd0ed1f790a0a',
+                    handle: 'Notion portfolio',
+                    color: 'text-info',
+                    hoverColor: 'hover:border-info',
                   },
                 ].map((social, index) => {
                   const Icon = social.icon

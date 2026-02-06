@@ -1,17 +1,22 @@
 export const ROHAN_DATA = {
   about: {
     title: 'About Me',
-    intro: 'I am a passionate full-stack developer with a strong foundation in AI/ML, currently pursuing a B.Tech in Computer Engineering.',
+    intro:
+      'B.Tech’27 computer engineering student and AI/ML-focused full-stack developer with internship, mentorship, and open-source leadership experience across civic tech, analytics, and community programs.',
     bio: [
       'With 1.5+ years of hands-on experience across internships, open-source contributions, and leadership roles, I have developed a deep expertise in building scalable software solutions.',
       'My journey began with a focus on machine learning and data analytics, but I have evolved into a full-stack engineer capable of architecting complete systems from backend microservices to responsive frontends.',
       'I am driven by the opportunity to create meaningful impact through technology, whether it is improving civic transparency, advancing healthcare through AI, or building tools that empower developers.',
     ],
     highlights: [
-      { label: 'Role', value: 'Full-Stack Developer & AI Enthusiast' },
+      {
+        label: 'Role',
+        value:
+          'AI Core Intern @ Destiny Solutions | Google Student Ambassador | Oracle Certified AI Associate',
+      },
       { label: 'Location', value: 'Satara, Maharashtra, India' },
       { label: 'Education', value: 'B.Tech Computer Engineering (2023-2027)' },
-      { label: 'Certifications', value: 'Oracle Cloud AI Associate, ISC2 Candidate' },
+      { label: 'Certifications', value: 'Oracle Cloud AI Associate, ISC2 Candidate, BCG GenAI' },
     ],
   },
 
@@ -100,6 +105,24 @@ export const ROHAN_DATA = {
         'Business recommendations',
       ],
       impact: 'Demonstrates ability to extract valuable insights from large datasets',
+    },
+    {
+      id: 6,
+      title: 'Portfolio Hub',
+      subtitle: 'Next.js Developer Showcase',
+      description: 'Interactive portfolio highlighting projects, certifications, and contact touchpoints.',
+      fullDescription:
+        'A central hub that brings together professional experience, certifications, and social links with a responsive Next.js frontend and MDX-driven content.',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MDX'],
+      github: 'https://github.com/RohanExploit/Rohan-Portfolio',
+      features: [
+        'Live contact and resume CTAs',
+        'Projects grid with rich detail views',
+        'MDX-powered content sections',
+        'Responsive, accessible layout',
+        'Deployed for fast, reliable access',
+      ],
+      impact: 'Single destination for collaborators, recruiters, and community connections',
     },
   ],
 
@@ -193,6 +216,70 @@ export const ROHAN_DATA = {
       ],
       skills: ['Data Analysis', 'ETL', 'BI Dashboards', 'SQL', 'Python'],
     },
+    {
+      id: 7,
+      title: 'Google Student Ambassador',
+      company: 'Google',
+      period: 'Aug 2025 - Present',
+      type: 'Program',
+      description: [
+        'Conduct Gemini trials and demos through ambassador web app',
+        'Promote Google technologies with data-driven tracking',
+        'Engage campus community through events and trials',
+      ],
+      skills: ['Community Outreach', 'Program Execution', 'Data Tracking'],
+    },
+    {
+      id: 8,
+      title: 'Open Source Contributor',
+      company: 'GSSoC JEC Jabalpur',
+      period: 'Jul 2025 - Jan 2026',
+      type: 'Open Source',
+      description: [
+        'Integrated high-throughput microservices with optimized REST APIs',
+        'Refactored monolith modules into clean, scalable architecture',
+        'Enhanced CI/CD pipelines with automated tests and linting',
+        'Authored developer documentation and contribution workflows',
+      ],
+      skills: ['Microservices', 'Clean Architecture', 'CI/CD', 'Documentation'],
+    },
+    {
+      id: 9,
+      title: 'Machine Learning Intern',
+      company: 'iNeuron.ai',
+      period: 'Aug 2024 - Sep 2024',
+      type: 'Internship',
+      description: [
+        'Built CNN-based mushroom classification models with preprocessing and augmentation',
+        'Evaluated models using accuracy and precision metrics to optimize performance',
+        'Improved inference speed and reliability for production readiness',
+      ],
+      skills: ['CNN', 'TensorFlow', 'Model Evaluation', 'Image Processing'],
+    },
+    {
+      id: 10,
+      title: 'Sales & Marketing Associate',
+      company: 'Excellent Packaging - India',
+      period: 'Jan 2024 - Feb 2025',
+      type: 'Project-Based',
+      description: [
+        'Drove sales growth and marketing reach across interstate regions',
+        'Collaborated with stakeholders to expand customer acquisition',
+      ],
+      skills: ['Sales Strategy', 'Marketing', 'Stakeholder Management'],
+    },
+    {
+      id: 11,
+      title: 'Social Media Coordinator',
+      company: 'DIPEX Official',
+      period: 'Jan 2024 - Jun 2024',
+      type: 'Project-Based',
+      description: [
+        'Managed social media presence for ABVP TSVK - DIPEX forum',
+        'Coordinated campaigns to grow regional engagement',
+      ],
+      skills: ['Social Media', 'Campaign Management', 'Content Planning'],
+    },
   ],
 
   skills: {
@@ -220,6 +307,10 @@ export const ROHAN_DATA = {
       {
         category: 'Database',
         items: ['PostgreSQL', 'MongoDB', 'Supabase', 'Data Modeling', 'Query Optimization'],
+      },
+      {
+        category: 'Version Control',
+        items: ['Git', 'GitLab', 'Git Bash'],
       },
     ],
     soft: [
@@ -299,6 +390,30 @@ export const ROHAN_DATA = {
       description: 'Corporate Analyst Development Program certification',
       type: 'Program',
     },
+    {
+      id: 9,
+      title: 'Goldman Sachs - Controllers Job Simulation',
+      issuer: 'Goldman Sachs',
+      date: 'Sep 2024',
+      description: 'Completed virtual job simulation focused on controllers and financial analysis workflows',
+      type: 'Program',
+    },
+    {
+      id: 10,
+      title: 'TISS Q-Riosity 2.0 of VAISHVIK 2023',
+      issuer: 'Tata Institute of Social Sciences',
+      date: '2023',
+      description: 'Recognized for performance in VAISHVIK 2023 Q-Riosity 2.0 competition',
+      type: 'Certification',
+    },
+    {
+      id: 11,
+      title: 'Certificate of Excellence - Challenge 20 (Weekly Coding Challenge)',
+      issuer: 'Weekly Coding Challenge',
+      date: '2024',
+      description: 'Earned excellence certificate for Challenge 20 in Weekly Coding Challenge series',
+      type: 'Certification',
+    },
   ],
 
   testimonials: [
@@ -363,12 +478,18 @@ export const ROHAN_DATA = {
 
   contact: {
     email: 'itzrohan007@gmail.com',
-    phone: '+917057200895',
+    phone: '7057200895',
     location: 'Satara, Maharashtra, India',
     social: [
       { platform: 'GitHub', url: 'https://github.com/RohanExploit', icon: 'Github' },
       { platform: 'LinkedIn', url: 'https://linkedin.com/in/rohanvijaygaikwad', icon: 'Linkedin' },
       { platform: 'Twitter', url: 'https://x.com/rohan_critic', icon: 'Twitter' },
+      { platform: 'LeetCode', url: 'https://leetcode.com/u/rohanexploit/', icon: 'Code2' },
+      {
+        platform: 'Portfolio',
+        url: 'https://puzzling-cart-919.notion.site/Hi-I-m-RohanGaikwad-235ba2784a3880af8d5cd0ed1f790a0a',
+        icon: 'Globe',
+      },
     ],
     resume: 'https://drive.google.com/file/d/1alaSYAR5b2zUzTa0ZMlaSnZY-RDQ68Og/view?usp=sharing',
   },

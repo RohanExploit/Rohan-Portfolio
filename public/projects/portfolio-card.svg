@@ -1,0 +1,38 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="32" fill="#0B1221"/>
+  <rect x="40" y="40" width="1120" height="550" rx="28" fill="url(#gradient)" stroke="#1F6FEB" stroke-width="2"/>
+  <path d="M120 200H1080" stroke="#23314F" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="160" cy="160" r="10" fill="#1F6FEB"/>
+  <circle cx="200" cy="160" r="10" fill="#4ADE80"/>
+  <circle cx="240" cy="160" r="10" fill="#A855F7"/>
+  <text x="160" y="260" fill="#D1E9FF" font-family="Inter, 'SF Mono', monospace" font-size="60" font-weight="700">
+    Rohan Gaikwad
+  </text>
+  <text x="160" y="320" fill="#8BA3C7" font-family="Inter, 'SF Mono', monospace" font-size="28">
+    AI/ML &amp; Full-Stack Developer · Portfolio Hub
+  </text>
+  <text x="160" y="380" fill="#9EF0B2" font-family="Inter, 'SF Mono', monospace" font-size="22">
+    Projects · Certifications · Contact · Resume
+  </text>
+  <text x="160" y="440" fill="#C7D2FE" font-family="Inter, 'SF Mono', monospace" font-size="20">
+    Next.js · TypeScript · Tailwind CSS · MDX
+  </text>
+  <g transform="translate(820 250)">
+    <rect width="240" height="140" rx="16" fill="#0F172A" stroke="#1F6FEB" stroke-width="2"/>
+    <text x="20" y="45" fill="#9EF0B2" font-family="Inter, 'SF Mono', monospace" font-size="18" font-weight="700">
+      Contact
+    </text>
+    <text x="20" y="75" fill="#D1E9FF" font-family="Inter, 'SF Mono', monospace" font-size="16">
+      Satara · 7057200895
+    </text>
+    <text x="20" y="105" fill="#D1E9FF" font-family="Inter, 'SF Mono', monospace" font-size="16">
+      itzrohan007@gmail.com
+    </text>
+  </g>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#0B1221"/>
+    </linearGradient>
+  </defs>
+</svg>
