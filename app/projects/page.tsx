@@ -2,7 +2,7 @@
 
 import { ROHAN_DATA } from '@/lib/portfolio-data'
 import Image from 'next/image'
-import { Github } from 'lucide-react'
+import { Github, ExternalLink } from 'lucide-react'
 import { useState } from 'react'
 
 const projectImages: { [key: number]: string } = {
@@ -11,6 +11,7 @@ const projectImages: { [key: number]: string } = {
   3: '/projects/heart-disease.png',
   4: '/projects/mushroom-classification.jpg',
   5: '/projects/amazon-analytics.jpg',
+  6: '/projects/anti-gravity.jpg',
 }
 
 export default function Projects() {
@@ -109,6 +110,17 @@ export default function Projects() {
                               <Github className="h-4 w-4" />
                               Source Code
                             </a>
+                            {project.link && (
+                              <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-outline"
+                              >
+                                <ExternalLink className="h-4 w-4" />
+                                Live Demo
+                              </a>
+                            )}
                           </div>
                         </div>
                       </div>

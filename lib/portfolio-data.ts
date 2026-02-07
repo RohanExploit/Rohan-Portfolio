@@ -101,6 +101,24 @@ export const ROHAN_DATA = {
       ],
       impact: 'Demonstrates ability to extract valuable insights from large datasets',
     },
+    {
+      id: 6,
+      title: 'Anti-Gravity',
+      subtitle: 'Physics-Based UI Interaction System',
+      description: 'A frontend-only, physics-inspired UI interaction system that simulates gravity-defying motion using deterministic mathematical models.',
+      fullDescription: 'Anti-Gravity is an exploration of how frontend systems can simulate intelligence and physical behavior purely through computation. It features custom motion equations for upward force and inertia, GPU-accelerated rendering for 60 FPS performance, and an event-driven interaction layer that reacts to scroll velocity and cursor movement.',
+      technologies: ['React', 'TypeScript', 'Physics Modeling', 'WebGL', 'Vercel'],
+      github: 'https://github.com/RohanExploit',
+      link: 'https://Rohangaikwad.in',
+      features: [
+        'Deterministic motion modeling (no presets)',
+        'GPU-accelerated rendering pipeline',
+        'Event-driven anti-gravity response',
+        'Component-level isolation',
+        '60 FPS performance optimization',
+      ],
+      impact: 'Demonstrates ability to design custom animation systems and bridge the gap between visual experience and systems thinking.',
+    },
   ],
 
   experience: [
