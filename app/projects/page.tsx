@@ -11,6 +11,7 @@ const projectImages: { [key: number]: string } = {
   3: '/projects/heart-disease.jpg',
   4: '/projects/mushroom-classification.jpg',
   5: '/projects/amazon-analytics.jpg',
+  6: '/projects/portfolio-card.svg',
 }
 
 export default function Projects() {
