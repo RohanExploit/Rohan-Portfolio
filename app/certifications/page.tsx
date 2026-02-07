@@ -45,6 +45,14 @@ export default function Certifications() {
                 data-share-badge-host="https://www.credly.com">
               </div>
             </div>
+            <div className="glass-card p-6 flex items-center justify-center bg-white/5">
+              <div
+                data-iframe-width="150"
+                data-iframe-height="270"
+                data-share-badge-id="0b56ed2a-f7e5-4b5b-989b-7b28d0a68732"
+                data-share-badge-host="https://www.credly.com">
+              </div>
+            </div>
           </div>
           <Script
             type="text/javascript"
