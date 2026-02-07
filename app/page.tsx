@@ -32,8 +32,11 @@ export default function Home() {
           <div className="flex flex-col justify-center">
             <div className="space-y-8 animate-in fade-in slide-in-from-left duration-700">
               <div>
-                <p className="font-mono text-sm text-github-green font-semibold tracking-wider uppercase">Welcome to my portfolio</p>
-                <h1 className="mt-4 font-mono text-5xl font-bold text-text-primary sm:text-7xl tracking-tighter">
+                <p className="font-mono text-sm text-github-green font-semibold tracking-wider uppercase flex items-center gap-2">
+                  <span className="h-px w-8 bg-github-green"></span>
+                  Engineering Intelligence
+                </p>
+                <h1 className="mt-4 font-mono text-5xl font-bold text-text-primary sm:text-7xl tracking-tighter leading-tight">
                   Rohan
                   <span className="block text-accent text-glow">Gaikwad</span>
                 </h1>
@@ -41,15 +44,16 @@ export default function Home() {
 
               <div className="h-8">
                 {mounted && (
-                  <p className="font-mono text-xl text-text-secondary transition-all duration-500 border-l-2 border-accent pl-4">
+                  <p className="font-mono text-xl text-text-secondary transition-all duration-500 border-l-2 border-accent pl-4 flex items-center gap-3">
+                    <span className="text-accent">&gt;</span>
                     {roles[currentRole]}
                   </p>
                 )}
               </div>
 
               <p className="max-w-lg text-lg text-text-secondary leading-relaxed">
-                Building scalable software solutions with a focus on <span className="text-text-primary font-medium">AI, full-stack development</span>, and open-source impact.
-                Currently interning at Destiny Solutions and mentoring at Elite Coders.
+                Architecting <span className="text-text-primary font-medium">high-performance systems</span> and <span className="text-text-primary font-medium">AI-driven solutions</span>.
+                Turning complex problems into elegant, scalable code.
               </p>
 
               {/* CTA Buttons */}

@@ -1,17 +1,17 @@
 export const ROHAN_DATA = {
   about: {
     title: 'About Me',
-    intro: 'I am a passionate full-stack developer with a strong foundation in AI/ML, currently pursuing a B.Tech in Computer Engineering.',
+    intro: 'Software Engineer specializing in scalable intelligence and distributed systems.',
     bio: [
-      'With 1.5+ years of hands-on experience across internships, open-source contributions, and leadership roles, I have developed a deep expertise in building scalable software solutions.',
-      'My journey began with a focus on machine learning and data analytics, but I have evolved into a full-stack engineer capable of architecting complete systems from backend microservices to responsive frontends.',
-      'I am driven by the opportunity to create meaningful impact through technology, whether it is improving civic transparency, advancing healthcare through AI, or building tools that empower developers.',
+      'I architect and build high-performance software solutions, bridging the gap between advanced machine learning research and production-grade engineering.',
+      'With a strong foundation in full-stack development and algorithmic optimization, I have led technical initiatives across internships and open-source communities, delivering robust systems that solve complex real-world problems.',
+      'My engineering philosophy centers on writing clean, maintainable code and designing systems that are secure, scalable, and intuitive by default.',
     ],
     highlights: [
-      { label: 'Role', value: 'Full-Stack Developer & AI Enthusiast' },
+      { label: 'Role', value: 'Software Engineer & System Architect' },
       { label: 'Location', value: 'Satara, Maharashtra, India' },
-      { label: 'Education', value: 'B.Tech Computer Engineering (2023-2027)' },
-      { label: 'Certifications', value: 'Oracle Cloud AI Associate, ISC2 Candidate' },
+      { label: 'Focus', value: 'Scalable Systems, AI/ML, Cloud Architecture' },
+      { label: 'Status', value: 'Open for Engineering Roles' },
     ],
   },
 
@@ -334,9 +334,10 @@ export const ROHAN_DATA = {
     {
       id: 2,
       name: 'Elite Coders Winter of Code',
-      description: 'Project Administrator managing repository architecture and developer guidance',
+      image: '/projects/ecwoc.jpg',
+      description: 'Project Administrator managing repository architecture, CI/CD pipelines, and developer guidance for large-scale open source initiatives.',
       contributions: [
-        'Designed modular system architecture',
+        'Designed modular system architecture for high-traffic repositories',
         'Managed GitHub workflows and CI/CD pipelines',
         'Reviewed and merged 50+ pull requests',
         'Mentored 20+ junior developers',
