@@ -40,33 +40,42 @@ export default function Achievements() {
   const awards = achievements.filter((a) => a.type === 'Award')
 
   return (
-    <div className="min-h-screen bg-obsidian">
+    <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12">
-          <p className="font-mono text-sm text-accent">/achievements</p>
-          <h1 className="mt-2 font-mono text-4xl font-bold text-text-primary">Certifications & Recognition</h1>
-          <p className="mt-4 text-text-secondary">
-            Professional certifications, program achievements, and industry recognition.
+        <div className="mb-16">
+          <p className="font-mono text-sm text-accent uppercase tracking-widest font-bold">/achievements</p>
+          <h1 className="mt-2 font-mono text-5xl font-bold text-text-primary">Certifications & Trophies</h1>
+          <p className="mt-6 text-xl text-text-secondary leading-relaxed max-w-2xl">
+            A testament to continuous learning, community participation, and technical excellence.
           </p>
         </div>
 
-        {/* Certifications */}
+        {/* Certifications Grid */}
         {certifications.length > 0 && (
-          <div className="mb-16">
-            <h2 className="mb-6 font-mono text-2xl font-bold text-text-primary">Professional Certifications</h2>
-            <div className="space-y-4">
+          <div className="mb-20">
+            <h2 className="mb-10 font-mono text-2xl font-bold text-text-primary flex items-center gap-4">
+              <span className="h-px w-8 bg-accent"></span>
+              Professional Certifications
+            </h2>
+            <div className="grid gap-6 md:grid-cols-2">
               {certifications.map((achievement) => (
                 <div
                   key={achievement.id}
-                  className={`flex gap-4 rounded-lg border p-6 transition-all duration-300 ${getTypeColor(achievement.type)} hover:scale-105`}
+                  className={`flex gap-6 glass-card p-8 transition-all duration-500 hover-lift border-accent/30 hover:border-accent`}
                 >
-                  <div className="flex-shrink-0 text-accent">{getTypeIcon(achievement.type)}</div>
+                  <div className="flex-shrink-0 text-accent bg-accent/10 h-14 w-14 rounded-2xl flex items-center justify-center">
+                    {getTypeIcon(achievement.type)}
+                  </div>
                   <div className="flex-1">
-                    <h3 className="font-mono font-bold text-text-primary">{achievement.title}</h3>
-                    <p className="mt-1 text-sm text-text-secondary">{achievement.issuer}</p>
-                    <p className="mt-2 font-mono text-xs text-text-tertiary">{achievement.date}</p>
-                    <p className="mt-2 text-sm text-text-secondary">{achievement.description}</p>
+                    <h3 className="font-mono text-xl font-bold text-text-primary leading-tight group-hover:text-glow transition-all">
+                      {achievement.title}
+                    </h3>
+                    <p className="mt-2 text-accent font-bold text-sm tracking-wide uppercase">{achievement.issuer}</p>
+                    <p className="mt-1 font-mono text-xs text-text-tertiary flex items-center gap-2">
+                      <Zap className="h-3 w-3" /> {achievement.date}
+                    </p>
+                    <p className="mt-4 text-sm text-text-secondary leading-relaxed line-clamp-3">{achievement.description}</p>
                   </div>
                 </div>
               ))}
@@ -76,20 +85,29 @@ export default function Achievements() {
 
         {/* Programs & Leadership */}
         {programs.length > 0 && (
-          <div className="mb-16">
-            <h2 className="mb-6 font-mono text-2xl font-bold text-text-primary">Programs & Leadership</h2>
-            <div className="space-y-4">
+          <div className="mb-20">
+            <h2 className="mb-10 font-mono text-2xl font-bold text-text-primary flex items-center gap-4">
+              <span className="h-px w-8 bg-accent"></span>
+              Programs & Leadership
+            </h2>
+            <div className="grid gap-6">
               {programs.map((achievement) => (
                 <div
                   key={achievement.id}
-                  className={`flex gap-4 rounded-lg border p-6 transition-all duration-300 ${getTypeColor(achievement.type)} hover:scale-105`}
+                  className={`flex flex-col md:flex-row gap-8 glass-card p-8 transition-all duration-500 hover:border-accent group`}
                 >
-                  <div className="flex-shrink-0 text-accent">{getTypeIcon(achievement.type)}</div>
-                  <div className="flex-1">
-                    <h3 className="font-mono font-bold text-text-primary">{achievement.title}</h3>
-                    <p className="mt-1 text-sm text-text-secondary">{achievement.issuer}</p>
-                    <p className="mt-2 font-mono text-xs text-text-tertiary">{achievement.date}</p>
-                    <p className="mt-2 text-sm text-text-secondary">{achievement.description}</p>
+                  <div className="flex-shrink-0 text-accent h-20 w-20 rounded-3xl bg-accent/5 flex items-center justify-center border border-accent/20 group-hover:bg-accent group-hover:text-white transition-all duration-500">
+                    {getTypeIcon(achievement.type)}
+                  </div>
+                  <div className="flex-1 space-y-3">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                      <h3 className="font-mono text-2xl font-bold text-text-primary">{achievement.title}</h3>
+                      <span className="font-mono text-xs text-accent bg-accent/10 px-3 py-1 rounded-full border border-accent/30 uppercase tracking-widest font-bold">
+                        {achievement.date}
+                      </span>
+                    </div>
+                    <p className="text-accent font-bold text-lg">{achievement.issuer}</p>
+                    <p className="text-text-secondary leading-relaxed">{achievement.description}</p>
                   </div>
                 </div>
               ))}
@@ -97,38 +115,40 @@ export default function Achievements() {
           </div>
         )}
 
-        {/* Stats */}
-        <div className="rounded-lg border border-slate-600 bg-steel p-8">
-          <h2 className="mb-6 font-mono text-2xl font-bold text-text-primary">Recognition Summary</h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              { label: 'Certifications', count: certifications.length },
-              { label: 'Programs', count: programs.length },
-              { label: 'Total Achievements', count: achievements.length },
-            ].map((stat, index) => (
-              <div key={index} className="rounded-lg border border-accent/20 bg-accent/5 p-6 text-center">
-                <p className="font-mono text-3xl font-bold text-accent">{stat.count}</p>
-                <p className="mt-2 font-mono text-sm text-text-secondary">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+        {/* Recognition Stats */}
+        <div className="grid gap-6 md:grid-cols-3 mb-20">
+          {[
+            { label: 'Verified Certs', count: certifications.length },
+            { label: 'Global Programs', count: programs.length },
+            { label: 'Total Honors', count: achievements.length },
+          ].map((stat, index) => (
+            <div key={index} className="glass-card p-10 text-center hover-lift border-accent/10 hover:border-accent">
+              <p className="font-mono text-5xl font-bold text-accent mb-2">{stat.count}</p>
+              <p className="font-mono text-sm text-text-secondary uppercase tracking-widest font-bold">{stat.label}</p>
+            </div>
+          ))}
         </div>
 
         {/* Testimonials */}
         {ROHAN_DATA.testimonials.length > 0 && (
-          <div className="mt-16">
-            <h2 className="mb-6 font-mono text-2xl font-bold text-text-primary">Recognition</h2>
-            <div className="grid gap-6 md:grid-cols-2">
+          <div className="mt-20">
+            <h2 className="mb-10 font-mono text-3xl font-bold text-text-primary text-center">Global Recognition</h2>
+            <div className="grid gap-8 md:grid-cols-2">
               {ROHAN_DATA.testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="rounded-lg border border-slate-600 bg-steel p-6">
-                  <div className="mb-4 flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-accent text-accent" />
-                    ))}
+                <div key={testimonial.id} className="glass-card p-10 relative overflow-hidden group">
+                  <div className="absolute top-4 right-8 text-8xl text-accent/5 font-serif select-none">"</div>
+                  <div className="relative z-10">
+                    <div className="mb-6 flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 fill-accent text-accent animate-pulse" style={{ animationDelay: `${i * 100}ms` }} />
+                      ))}
+                    </div>
+                    <p className="text-lg italic text-text-secondary leading-relaxed mb-8">{`"${testimonial.quote}"`}</p>
+                    <div className="border-l-4 border-accent pl-6">
+                      <p className="font-mono text-lg font-bold text-text-primary group-hover:text-glow transition-all">{testimonial.author}</p>
+                      <p className="text-sm text-accent font-bold uppercase tracking-widest mt-1">{testimonial.role}</p>
+                    </div>
                   </div>
-                  <p className="italic text-text-secondary">{`"${testimonial.quote}"`}</p>
-                  <p className="mt-4 font-mono text-sm text-accent">{testimonial.author}</p>
-                  <p className="text-xs text-text-tertiary">{testimonial.role}</p>
                 </div>
               ))}
             </div>

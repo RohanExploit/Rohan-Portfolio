@@ -38,22 +38,19 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-4 md:flex">
-            <div className="flex items-center gap-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`px-3 py-2 font-mono text-sm transition-all duration-300 ${
-                    isActive(item.href)
-                      ? 'text-github-green'
-                      : 'text-text-secondary hover:text-github-green'
+          <div className="hidden md:flex md:items-center md:space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`font-mono text-sm font-medium transition-colors ${isActive(item.href)
+                    ? 'text-github-green'
+                    : 'text-text-secondary hover:text-github-green'
                   }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+              >
+                {item.label}
+              </Link>
+            ))}
             <a
               href={ROHAN_DATA.contact.resume}
               target="_blank"
@@ -63,6 +60,9 @@ export function Navigation() {
               <Download className="h-4 w-4" />
               Resume
             </a>
+            <div className="pl-4 border-l border-border">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -87,11 +87,10 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 font-mono text-sm transition-all duration-300 ${
-                  isActive(item.href)
+                className={`block px-3 py-2 font-mono text-sm transition-all duration-300 ${isActive(item.href)
                     ? 'text-github-green'
                     : 'text-text-secondary hover:text-github-green'
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>

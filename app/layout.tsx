@@ -75,11 +75,10 @@ export default function RootLayout({
         className={`${jetbrainsMono.variable} ${inter.variable} bg-obsidian text-text-primary tracking-tight antialiased`}
       >
         <ThemeProvider
-          enableSystem={false}
+          enableSystem={true}
           attribute="class"
           storageKey="theme"
-          defaultTheme="dark"
-          forcedTheme="dark"
+          defaultTheme="light"
         >
           <div className="flex min-h-screen w-full flex-col">
             <Navigation />

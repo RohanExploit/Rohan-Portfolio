@@ -24,31 +24,31 @@ export default function Home() {
   }, [mounted])
 
   return (
-    <div className="min-h-screen bg-obsidian">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           {/* Left Content */}
           <div className="flex flex-col justify-center">
-            <div className="space-y-6">
+            <div className="space-y-8 animate-in fade-in slide-in-from-left duration-700">
               <div>
-                <p className="font-mono text-sm text-github-green">Welcome to my portfolio</p>
-                <h1 className="mt-4 font-mono text-4xl font-bold text-text-primary sm:text-5xl">
+                <p className="font-mono text-sm text-github-green font-semibold tracking-wider uppercase">Welcome to my portfolio</p>
+                <h1 className="mt-4 font-mono text-5xl font-bold text-text-primary sm:text-7xl tracking-tighter">
                   Rohan
-                  <span className="block text-github-green">Gaikwad</span>
+                  <span className="block text-accent text-glow">Gaikwad</span>
                 </h1>
               </div>
 
-              <div className="h-12">
+              <div className="h-8">
                 {mounted && (
-                  <p className="font-mono text-lg text-text-secondary transition-opacity duration-500">
+                  <p className="font-mono text-xl text-text-secondary transition-all duration-500 border-l-2 border-accent pl-4">
                     {roles[currentRole]}
                   </p>
                 )}
               </div>
 
-              <p className="max-w-lg text-text-secondary">
-                Building scalable software solutions with a focus on AI, full-stack development, and open-source impact.
+              <p className="max-w-lg text-lg text-text-secondary leading-relaxed">
+                Building scalable software solutions with a focus on <span className="text-text-primary font-medium">AI, full-stack development</span>, and open-source impact.
                 Currently interning at Destiny Solutions and mentoring at Elite Coders.
               </p>
 
@@ -56,7 +56,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link
                   href="/projects"
-                  className="inline-flex items-center gap-2 rounded-lg border border-github-green bg-github-green px-6 py-3 font-mono text-sm font-semibold text-obsidian transition-all duration-300 hover:bg-github-green-dark hover:border-github-green-dark"
+                  className="btn-primary"
                 >
                   View My Work
                   <ArrowRight className="h-4 w-4" />
@@ -65,7 +65,7 @@ export default function Home() {
                   href={ROHAN_DATA.contact.resume}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-info bg-info/10 px-6 py-3 font-mono text-sm font-semibold text-info transition-all duration-300 hover:bg-info/20"
+                  className="btn-outline"
                 >
                   Download Resume
                   <ArrowRight className="h-4 w-4" />
@@ -73,77 +73,40 @@ export default function Home() {
               </div>
 
               {/* Social Links */}
-              <div className="flex gap-4 pt-4">
-                <a
-                  href="https://github.com/RohanExploit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text-secondary hover:text-github-green transition-colors"
-                  aria-label="GitHub"
-                >
-                  <Github className="h-6 w-6" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/rohanvijaygaikwad"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text-secondary hover:text-info transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-6 w-6" />
-                </a>
-                <a
-                  href="https://x.com/rohan_critic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text-secondary hover:text-accent-secondary transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="h-6 w-6" />
-                </a>
-                <a
-                  href={`mailto:${ROHAN_DATA.contact.email}`}
-                  className="text-text-secondary hover:text-accent-secondary transition-colors"
-                  aria-label="Email"
-                >
-                  <Mail className="h-6 w-6" />
-                </a>
-                <a
-                  href={`tel:${ROHAN_DATA.contact.phone}`}
-                  className="text-text-secondary hover:text-github-green transition-colors"
-                  aria-label="Phone"
-                >
-                  <Phone className="h-6 w-6" />
-                </a>
+              <div className="flex gap-6 pt-6 items-center">
+                <a href="https://github.com/RohanExploit" target="_blank" className="text-text-tertiary hover:text-accent transition-all hover:scale-110"><Github className="h-6 w-6" /></a>
+                <a href="https://linkedin.com/in/rohanvijaygaikwad" target="_blank" className="text-text-tertiary hover:text-info transition-all hover:scale-110"><Linkedin className="h-6 w-6" /></a>
+                <a href="https://x.com/rohan_critic" target="_blank" className="text-text-tertiary hover:text-accent-secondary transition-all hover:scale-110"><Twitter className="h-6 w-6" /></a>
+                <a href={`mailto:${ROHAN_DATA.contact.email}`} className="text-text-tertiary hover:text-error transition-all hover:scale-110"><Mail className="h-6 w-6" /></a>
               </div>
             </div>
           </div>
 
           {/* Right Side - Stats/Highlights */}
-          <div className="flex flex-col justify-center gap-6">
-            <div className="group rounded-lg border border-slate-600 bg-steel p-6 transition-all duration-300 hover:border-github-green hover:bg-steel">
-              <p className="font-mono text-xs uppercase text-github-green">Experience</p>
-              <h3 className="mt-2 font-mono text-2xl font-bold text-text-primary">1.5+ Years</h3>
-              <p className="mt-2 text-sm text-text-secondary">
+          <div className="flex flex-col justify-center gap-6 animate-in fade-in slide-in-from-right duration-700">
+            <div className="glass-card hover-lift p-8 group">
+              <p className="font-mono text-xs uppercase text-accent font-bold tracking-widest">Experience</p>
+              <h3 className="mt-2 font-mono text-3xl font-bold text-text-primary group-hover:text-accent transition-colors">1.5+ Years</h3>
+              <p className="mt-2 text-text-secondary leading-relaxed">
                 Across internships, open-source contributions, and leadership roles
               </p>
             </div>
 
-            <div className="group rounded-lg border border-slate-600 bg-steel p-6 transition-all duration-300 hover:border-github-green hover:bg-steel">
-              <p className="font-mono text-xs uppercase text-info">Projects</p>
-              <h3 className="mt-2 font-mono text-2xl font-bold text-text-primary">15+</h3>
-              <p className="mt-2 text-sm text-text-secondary">
+            <div className="glass-card hover-lift p-8 group">
+              <p className="font-mono text-xs uppercase text-info font-bold tracking-widest">Projects</p>
+              <h3 className="mt-2 font-mono text-3xl font-bold text-text-primary group-hover:text-info transition-colors">15+</h3>
+              <p className="mt-2 text-text-secondary leading-relaxed">
                 From AI models to full-stack web applications
               </p>
             </div>
 
-            <div className="group rounded-lg border border-slate-600 bg-steel p-6 transition-all duration-300 hover:border-github-green hover:bg-steel">
-              <p className="font-mono text-xs uppercase text-github-green">Tech Stack</p>
-              <div className="mt-3 flex flex-wrap gap-2">
+            <div className="glass-card hover-lift p-8 group">
+              <p className="font-mono text-xs uppercase text-accent font-bold tracking-widest">Tech Stack</p>
+              <div className="mt-4 flex flex-wrap gap-2">
                 {['Python', 'React', 'TypeScript', 'Docker', 'ML'].map((tech) => (
                   <span
                     key={tech}
-                    className="inline-block rounded-full border border-github-green/30 bg-github-green/10 px-3 py-1 font-mono text-xs text-github-green font-medium"
+                    className="inline-block rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 font-mono text-xs text-accent font-semibold transition-all hover:bg-accent/10"
                   >
                     {tech}
                   </span>
@@ -155,10 +118,11 @@ export default function Home() {
       </div>
 
       {/* Featured Sections */}
-      <div className="border-t border-slate-600 bg-steel py-20">
+      <div className="border-y border-border bg-surface/50 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="font-mono text-3xl font-bold text-text-primary">Featured Areas</h2>
+          <div className="mb-16 text-center">
+            <h2 className="font-mono text-4xl font-bold text-text-primary tracking-tight">Featured Areas</h2>
+            <div className="mt-4 h-1 w-20 bg-accent mx-auto rounded-full" />
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
@@ -168,8 +132,8 @@ export default function Home() {
                 description: 'Explore my portfolio of full-stack applications, AI models, and open-source contributions.',
                 href: '/projects',
                 icon: '◊',
-                color: 'text-github-green',
-                hoverColor: 'hover:border-github-green',
+                color: 'text-accent',
+                borderColor: 'group-hover:border-accent',
               },
               {
                 title: 'Experience',
@@ -177,7 +141,7 @@ export default function Home() {
                 href: '/experience',
                 icon: '▪',
                 color: 'text-info',
-                hoverColor: 'hover:border-info',
+                borderColor: 'group-hover:border-info',
               },
               {
                 title: 'Certifications',
@@ -185,20 +149,22 @@ export default function Home() {
                 href: '/certifications',
                 icon: '★',
                 color: 'text-accent-secondary',
-                hoverColor: 'hover:border-accent-secondary',
+                borderColor: 'group-hover:border-accent-secondary',
               },
             ].map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className={`group rounded-lg border border-slate-600 bg-obsidian p-6 transition-all duration-300 ${item.hoverColor} hover:bg-steel`}
+                className={`group glass-card p-8 flex flex-col justify-between hover-lift border-transparent ${item.borderColor}`}
               >
-                <div className={`text-2xl ${item.color}`}>{item.icon}</div>
-                <h3 className={`mt-4 font-mono text-lg font-bold text-text-primary group-hover:${item.color}`}>
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm text-text-secondary">{item.description}</p>
-                <div className={`mt-4 flex items-center gap-2 text-sm ${item.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}>
+                <div>
+                  <div className={`text-3xl ${item.color} mb-6`}>{item.icon}</div>
+                  <h3 className={`font-mono text-xl font-bold text-text-primary group-hover:${item.color} transition-colors`}>
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-text-secondary leading-relaxed">{item.description}</p>
+                </div>
+                <div className={`mt-8 flex items-center gap-2 text-sm font-bold ${item.color} opacity-0 -translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0`}>
                   Explore <ArrowRight className="h-4 w-4" />
                 </div>
               </Link>
