@@ -8,7 +8,7 @@ import { useState } from 'react'
 const projectImages: { [key: number]: string } = {
   1: '/projects/vishwaguru.jpg',
   2: '/projects/baliraj.jpg',
-  3: '/projects/heart-disease.jpg',
+  3: '/projects/heart-disease.png',
   4: '/projects/mushroom-classification.jpg',
   5: '/projects/amazon-analytics.jpg',
 }
