@@ -1,7 +1,7 @@
 'use client'
 
 import { ROHAN_DATA } from '@/lib/portfolio-data'
-import { Award, Calendar, Building2 } from 'lucide-react'
+import { Award, Calendar, Building2, ExternalLink } from 'lucide-react'
 import Script from 'next/script'
 
 export default function Certifications() {
@@ -95,6 +95,16 @@ export default function Certifications() {
                     <p className="mt-4 text-text-secondary leading-relaxed text-sm">
                       {cert.description}
                     </p>
+                    {cert.link && (
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+                      >
+                        Verify Credential <ExternalLink className="h-3 w-3" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -135,6 +145,16 @@ export default function Certifications() {
                     <p className="mt-4 text-text-secondary leading-relaxed text-sm">
                       {program.description}
                     </p>
+                    {program.link && (
+                      <a
+                        href={program.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-info hover:underline"
+                      >
+                        View Program <ExternalLink className="h-3 w-3" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
