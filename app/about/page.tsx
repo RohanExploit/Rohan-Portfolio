@@ -2,6 +2,7 @@ import { ROHAN_DATA } from '@/lib/portfolio-data'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import GitHubShowcase from '../components/github-showcase'
 
 export const metadata = {
   title: 'About - Rohan Gaikwad',
@@ -88,6 +89,11 @@ export default function About() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* GitHub Showcase */}
+        <div className="mb-20">
+          <GitHubShowcase />
         </div>
 
         {/* CTA */}
