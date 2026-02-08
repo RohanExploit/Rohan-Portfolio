@@ -1,39 +1,42 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { Menu, X, Download } from 'lucide-react'
-import { useState } from 'react'
-import { ROHAN_DATA } from '@/lib/portfolio-data'
-import { ThemeToggle } from './theme-toggle'
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, Download } from "lucide-react";
+import { useState } from "react";
+import { ROHAN_DATA } from "@/lib/portfolio-data";
+import { ThemeToggle } from "./theme-toggle";
 
 export function Navigation() {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: '/', label: 'Home', icon: '◆' },
-    { href: '/about', label: 'About', icon: '◈' },
-    { href: '/projects', label: 'Projects', icon: '◊' },
-    { href: '/experience', label: 'Experience', icon: '▪' },
-    { href: '/skills', label: 'Skills', icon: '■' },
-    { href: '/certifications', label: 'Certifications', icon: '★' },
-    { href: '/open-source', label: 'Open Source', icon: '◈' },
-    { href: '/contact', label: 'Contact', icon: '✉' },
-  ]
+    { href: "/", label: "Home", icon: "◆" },
+    { href: "/about", label: "About", icon: "◈" },
+    { href: "/projects", label: "Projects", icon: "◊" },
+    { href: "/experience", label: "Experience", icon: "▪" },
+    { href: "/skills", label: "Skills", icon: "■" },
+    { href: "/certifications", label: "Certifications", icon: "★" },
+    { href: "/open-source", label: "Open Source", icon: "◈" },
+    { href: "/contact", label: "Contact", icon: "✉" },
+  ];
 
   const isActive = (href: string) => {
-    if (href === '/' && pathname === '/') return true
-    if (href !== '/' && pathname.startsWith(href)) return true
-    return false
-  }
+    if (href === "/" && pathname === "/") return true;
+    if (href !== "/" && pathname.startsWith(href)) return true;
+    return false;
+  };
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 font-mono text-xl font-bold hover:opacity-80 transition-opacity">
+          <Link
+            href="/"
+            className="flex items-center gap-2 font-mono text-xl font-bold hover:opacity-80 transition-opacity"
+          >
             <span className="text-accent">&lt;RG</span>
             <span className="text-text-primary">/&gt;</span>
           </Link>
@@ -44,10 +47,11 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`font-mono text-sm font-medium transition-colors ${isActive(item.href)
-                  ? 'text-accent'
-                  : 'text-text-secondary hover:text-accent'
-                  }`}
+                className={`font-mono text-sm font-medium transition-colors ${
+                  isActive(item.href)
+                    ? "text-accent"
+                    : "text-text-secondary hover:text-accent"
+                }`}
               >
                 {item.label}
               </Link>
@@ -91,10 +95,11 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 font-mono text-sm transition-all duration-300 ${isActive(item.href)
-                  ? 'text-accent'
-                  : 'text-text-secondary hover:text-accent'
-                  }`}
+                className={`block px-3 py-2 font-mono text-sm transition-all duration-300 ${
+                  isActive(item.href)
+                    ? "text-accent"
+                    : "text-text-secondary hover:text-accent"
+                }`}
               >
                 {item.label}
               </Link>
@@ -113,5 +118,5 @@ export function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }
