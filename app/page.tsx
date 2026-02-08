@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { ArrowRight, Github, Linkedin, Mail, Twitter, Phone } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { ROHAN_DATA } from '@/lib/portfolio-data'
+import ParticlesBackground from './components/particles'
+import TerminalHero from './components/terminal-hero'
+import GitHubStats from './components/github-stats'
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -12,43 +15,26 @@ export default function Home() {
     setMounted(true)
   }, [])
 
-  const roles = ['Developer', 'AI Enthusiast', 'Open Source Contributor']
-  const [currentRole, setCurrentRole] = useState(0)
-
-  useEffect(() => {
-    if (!mounted) return
-    const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [mounted])
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      {/* Particle Background */}
+      <ParticlesBackground />
+
       {/* Hero Section */}
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 relative z-10">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           {/* Left Content */}
           <div className="flex flex-col justify-center">
             <div className="space-y-8 animate-in fade-in slide-in-from-left duration-700">
               <div>
-                <p className="font-mono text-sm text-github-green font-semibold tracking-wider uppercase flex items-center gap-2">
-                  <span className="h-px w-8 bg-github-green"></span>
+                <p className="font-mono text-sm text-accent font-semibold tracking-wider uppercase flex items-center gap-2">
+                  <span className="h-px w-8 bg-accent"></span>
                   Engineering Intelligence
                 </p>
                 <h1 className="mt-4 font-mono text-5xl font-bold text-text-primary sm:text-7xl tracking-tighter leading-tight">
                   Rohan
                   <span className="block text-accent text-glow">Gaikwad</span>
                 </h1>
-              </div>
-
-              <div className="h-8">
-                {mounted && (
-                  <p className="font-mono text-xl text-text-secondary transition-all duration-500 border-l-2 border-accent pl-4 flex items-center gap-3">
-                    <span className="text-accent">&gt;</span>
-                    {roles[currentRole]}
-                  </p>
-                )}
               </div>
 
               <p className="max-w-lg text-lg text-text-secondary leading-relaxed">
@@ -86,35 +72,23 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Side - Stats/Highlights */}
+          {/* Right Side - Terminal */}
           <div className="flex flex-col justify-center gap-6 animate-in fade-in slide-in-from-right duration-700">
-            <div className="glass-card hover-lift p-8 group">
-              <p className="font-mono text-xs uppercase text-accent font-bold tracking-widest">Experience</p>
-              <h3 className="mt-2 font-mono text-3xl font-bold text-text-primary group-hover:text-accent transition-colors">1.5+ Years</h3>
-              <p className="mt-2 text-text-secondary leading-relaxed">
-                Across internships, open-source contributions, and leadership roles
-              </p>
-            </div>
+            <TerminalHero />
 
-            <div className="glass-card hover-lift p-8 group">
-              <p className="font-mono text-xs uppercase text-info font-bold tracking-widest">Projects</p>
-              <h3 className="mt-2 font-mono text-3xl font-bold text-text-primary group-hover:text-info transition-colors">15+</h3>
-              <p className="mt-2 text-text-secondary leading-relaxed">
-                From AI models to full-stack web applications
-              </p>
-            </div>
-
-            <div className="glass-card hover-lift p-8 group">
-              <p className="font-mono text-xs uppercase text-accent font-bold tracking-widest">Tech Stack</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {['Python', 'React', 'TypeScript', 'Docker', 'ML'].map((tech) => (
-                  <span
-                    key={tech}
-                    className="inline-block rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 font-mono text-xs text-accent font-semibold transition-all hover:bg-accent/10"
-                  >
-                    {tech}
-                  </span>
-                ))}
+            {/* Quick Stats Row */}
+            <div className="grid grid-cols-3 gap-4">
+              <div className="glass-card p-4 text-center hover-lift">
+                <h3 className="font-mono text-2xl font-bold text-accent">1.5+</h3>
+                <p className="text-xs text-text-secondary mt-1">Years</p>
+              </div>
+              <div className="glass-card p-4 text-center hover-lift">
+                <h3 className="font-mono text-2xl font-bold text-info">15+</h3>
+                <p className="text-xs text-text-secondary mt-1">Projects</p>
+              </div>
+              <div className="glass-card p-4 text-center hover-lift">
+                <h3 className="font-mono text-2xl font-bold text-success">10+</h3>
+                <p className="text-xs text-text-secondary mt-1">Certs</p>
               </div>
             </div>
           </div>
@@ -175,6 +149,11 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* GitHub Stats Section */}
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 relative z-10">
+        <GitHubStats />
       </div>
     </div>
   )
