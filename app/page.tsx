@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { ArrowRight, Github, Linkedin, Mail, Twitter, Phone } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { ROHAN_DATA } from '@/lib/portfolio-data'
-import ParticlesBackground from './components/particles'
-import TerminalHero from './components/terminal-hero'
-import GitHubStats from './components/github-stats'
+import MatrixRain from './components/matrix-rain'
+import GlitchTerminal from './components/terminal-hero'
+import AsciiArt from './components/ascii-art'
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -17,8 +17,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background relative">
-      {/* Particle Background */}
-      <ParticlesBackground />
+      {/* Matrix Rain Background */}
+      <MatrixRain />
 
       {/* Hero Section */}
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 relative z-10">
@@ -74,23 +74,10 @@ export default function Home() {
 
           {/* Right Side - Terminal */}
           <div className="flex flex-col justify-center gap-6 animate-in fade-in slide-in-from-right duration-700">
-            <TerminalHero />
+            <GlitchTerminal />
 
-            {/* Quick Stats Row */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="glass-card p-4 text-center hover-lift">
-                <h3 className="font-mono text-2xl font-bold text-accent">1.5+</h3>
-                <p className="text-xs text-text-secondary mt-1">Years</p>
-              </div>
-              <div className="glass-card p-4 text-center hover-lift">
-                <h3 className="font-mono text-2xl font-bold text-info">15+</h3>
-                <p className="text-xs text-text-secondary mt-1">Projects</p>
-              </div>
-              <div className="glass-card p-4 text-center hover-lift">
-                <h3 className="font-mono text-2xl font-bold text-success">10+</h3>
-                <p className="text-xs text-text-secondary mt-1">Certs</p>
-              </div>
-            </div>
+            {/* ASCII Art Card */}
+            <AsciiArt />
           </div>
         </div>
       </div>
@@ -151,10 +138,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* GitHub Stats Section */}
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 relative z-10">
-        <GitHubStats />
-      </div>
     </div>
   )
 }
