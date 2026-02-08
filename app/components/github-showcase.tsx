@@ -91,7 +91,7 @@ export default function GitHubShowcase() {
 
             {/* GitHub Activity */}
             <div className="space-y-6">
-                <h3 className="font-mono text-2xl font-bold text-accent text-center flex items-center justify-center gap-4">
+                <h3 className="font-mono text-2xl font-bold text-text-primary text-center flex items-center justify-center gap-4">
                     <span className="h-px w-12 bg-accent"></span>
                     GitHub Activity
                     <span className="h-px w-12 bg-accent"></span>
