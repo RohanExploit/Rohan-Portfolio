@@ -42,7 +42,7 @@ export function Spotlight({
       mouseX.set(event.clientX - left);
       mouseY.set(event.clientY - top);
     },
-    [mouseX, mouseY, parentElement],
+    [mouseX, mouseY, parentElement]
   );
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export function Spotlight({
       parentElement.removeEventListener("mousemove", handleMouseMove);
       parentElement.removeEventListener("mouseenter", () => setIsHovered(true));
       parentElement.removeEventListener("mouseleave", () =>
-        setIsHovered(false),
+        setIsHovered(false)
       );
     };
   }, [parentElement, handleMouseMove]);
@@ -68,7 +68,7 @@ export function Spotlight({
         "pointer-events-none absolute rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops),transparent_80%)] blur-xl transition-opacity duration-200",
         "from-zinc-50 via-zinc-100 to-zinc-200",
         isHovered ? "opacity-100" : "opacity-0",
-        className,
+        className
       )}
       style={{
         width: size,

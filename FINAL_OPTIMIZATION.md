@@ -3,12 +3,14 @@
 ## Latest Updates & Enhancements
 
 ### 1. Contact Information Added
+
 - **Phone**: +917057200895 (clickable tel: links)
 - **Email**: itzrohan007@gmail.com (mailto links)
 - **Location**: Satara, Maharashtra, India
 - **Resume**: Direct Google Drive download link
 
 **Implementation**:
+
 - Phone number integrated in 3 locations:
   - Contact page (primary section with description)
   - Homepage social links
@@ -18,9 +20,10 @@
 ---
 
 ### 2. Profile Photo Added
+
 - **Location**: About page (centered, high-quality)
 - **Image**: Professional presentation photo from event
-- **Optimization**: 
+- **Optimization**:
   - Using Next.js `Image` component with optimization
   - Responsive sizing with proper aspect ratio
   - Border styling with GitHub green accent
@@ -31,7 +34,9 @@
 ---
 
 ### 3. Dead Links & Scraped Materials Removed
+
 **Deleted 14 unlinked documentation files**:
+
 - BUG_FIXES_AND_IMPROVEMENTS.md
 - BUILD_CHECKLIST.md
 - COLOR_REFERENCE.md
@@ -48,6 +53,7 @@
 - START_HERE.md
 
 **Remaining Essential Docs**:
+
 - README.md - Project overview
 - DEPLOYMENT.md - Deployment guide
 - MAINTENANCE_GUIDE.md - Long-term maintenance
@@ -55,21 +61,23 @@
 ---
 
 ### 4. Every Click is Meaningful
+
 **Comprehensive Link Audit Results**: ✓ PASSED
 
 #### All Navigation Links
-| Page | Links | Status |
-|------|-------|--------|
-| Homepage | Projects, Resume, GitHub, LinkedIn, Twitter, Email, Phone | ✓ Active |
-| Navigation | All 8 pages, Resume | ✓ Active |
-| About | Projects link, Contact link, CTA buttons | ✓ Active |
-| Projects | GitHub repos (5 projects), Expand buttons | ✓ Active |
-| Experience | Timeline items, navigation | ✓ Active |
-| Skills | Tech badges, navigation | ✓ Active |
-| Certifications | Cert items, navigation | ✓ Active |
-| Open Source | Contribution links, navigation | ✓ Active |
-| Contact | Email, Phone, Social links (4), Resume | ✓ Active |
-| Footer | All quick links, social links, navigation | ✓ Active |
+
+| Page           | Links                                                     | Status   |
+| -------------- | --------------------------------------------------------- | -------- |
+| Homepage       | Projects, Resume, GitHub, LinkedIn, Twitter, Email, Phone | ✓ Active |
+| Navigation     | All 8 pages, Resume                                       | ✓ Active |
+| About          | Projects link, Contact link, CTA buttons                  | ✓ Active |
+| Projects       | GitHub repos (5 projects), Expand buttons                 | ✓ Active |
+| Experience     | Timeline items, navigation                                | ✓ Active |
+| Skills         | Tech badges, navigation                                   | ✓ Active |
+| Certifications | Cert items, navigation                                    | ✓ Active |
+| Open Source    | Contribution links, navigation                            | ✓ Active |
+| Contact        | Email, Phone, Social links (4), Resume                    | ✓ Active |
+| Footer         | All quick links, social links, navigation                 | ✓ Active |
 
 **Zero Dead Links**: No placeholder links, example URLs, or broken references found.
 
@@ -80,6 +88,7 @@
 #### Implemented Improvements
 
 **Performance**:
+
 - ✓ Image optimization with Next.js Image component
 - ✓ Proper image formats (WebP, AVIF)
 - ✓ Font optimization with next/font
@@ -87,6 +96,7 @@
 - ✓ Removed unused CSS and JavaScript
 
 **Accessibility**:
+
 - ✓ Proper ARIA labels on all interactive elements
 - ✓ Semantic HTML structure
 - ✓ Color contrast ratios meet WCAG AA
@@ -95,6 +105,7 @@
 - ✓ Focus indicators on all links
 
 **Best Practices**:
+
 - ✓ Security headers configured
 - ✓ HTTPS enforced
 - ✓ No console errors or warnings
@@ -102,6 +113,7 @@
 - ✓ Responsive design verified
 
 **SEO**:
+
 - ✓ OpenGraph tags added
 - ✓ Twitter card metadata
 - ✓ Sitemap.xml created
@@ -110,6 +122,7 @@
 - ✓ Canonical URLs set
 
 #### Next.js Configuration Updates
+
 ```javascript
 // next.config.mjs
 - Image remotePatterns configured
@@ -120,6 +133,7 @@
 ```
 
 #### Metadata Enhancements
+
 ```typescript
 // app/layout.tsx
 - OpenGraph data with preview image
@@ -131,12 +145,14 @@
 ```
 
 #### PWA Support
+
 - Created `/public/manifest.json`
 - App name, icons, colors configured
 - Standalone display mode enabled
 - Start URL optimized
 
 **Expected Lighthouse Scores**:
+
 - Performance: 90+
 - Accessibility: 95+
 - Best Practices: 95+
@@ -147,6 +163,7 @@
 ### 6. Clean, Production-Ready Codebase
 
 **Final File Structure**:
+
 ```
 app/
 ├── layout.tsx (optimized)
@@ -206,21 +223,22 @@ Before deploying to rohangaikwad.in:
 
 **All Contact Channels Now Available**:
 
-| Channel | Value | Link Type | Status |
-|---------|-------|-----------|--------|
-| Email | itzrohan007@gmail.com | mailto: | ✓ Active |
-| Phone | +917057200895 | tel: | ✓ Active |
-| GitHub | RohanExploit | https | ✓ Active |
-| LinkedIn | rohanvijaygaikwad | https | ✓ Active |
-| Twitter | @rohan_critic | https | ✓ Active |
-| Resume | Google Drive | https | ✓ Active |
-| Location | Satara, India | Display | ✓ Active |
+| Channel  | Value                 | Link Type | Status   |
+| -------- | --------------------- | --------- | -------- |
+| Email    | itzrohan007@gmail.com | mailto:   | ✓ Active |
+| Phone    | +917057200895         | tel:      | ✓ Active |
+| GitHub   | RohanExploit          | https     | ✓ Active |
+| LinkedIn | rohanvijaygaikwad     | https     | ✓ Active |
+| Twitter  | @rohan_critic         | https     | ✓ Active |
+| Resume   | Google Drive          | https     | ✓ Active |
+| Location | Satara, India         | Display   | ✓ Active |
 
 ---
 
 ## Summary
 
 Your portfolio is now:
+
 - ✓ **Complete** - All contact information added
 - ✓ **Linked** - Zero dead links, every click is meaningful
 - ✓ **Optimized** - Lighthouse-ready with 90+ scores

@@ -1,40 +1,45 @@
-import { ROHAN_DATA } from '@/lib/portfolio-data'
-import { Briefcase } from 'lucide-react'
+import { ROHAN_DATA } from "@/lib/portfolio-data";
+import { Briefcase } from "lucide-react";
 
 export const metadata = {
-  title: 'Experience - Rohan Gaikwad',
-  description: 'Professional experience and career journey.',
-}
+  title: "Experience - Rohan Gaikwad",
+  description: "Professional experience and career journey.",
+};
 
 export default function Experience() {
-  const { experience } = ROHAN_DATA
+  const { experience } = ROHAN_DATA;
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'Internship':
-        return 'bg-github-green/10 text-github-green'
-      case 'Leadership':
-        return 'bg-github-green/10 text-github-green'
-      case 'Open Source':
-        return 'bg-info/10 text-info'
-      case 'Project-Based':
-        return 'bg-accent-secondary/10 text-accent-secondary'
-      case 'Mentorship':
-        return 'bg-github-green/10 text-github-green'
+      case "Internship":
+        return "bg-github-green/10 text-github-green";
+      case "Leadership":
+        return "bg-github-green/10 text-github-green";
+      case "Open Source":
+        return "bg-info/10 text-info";
+      case "Project-Based":
+        return "bg-accent-secondary/10 text-accent-secondary";
+      case "Mentorship":
+        return "bg-github-green/10 text-github-green";
       default:
-        return 'bg-github-green/10 text-github-green'
+        return "bg-github-green/10 text-github-green";
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16">
-          <p className="font-mono text-sm text-accent uppercase tracking-widest font-bold">/experience</p>
-          <h1 className="mt-2 font-mono text-5xl font-bold text-text-primary">Work & Leadership</h1>
+          <p className="font-mono text-sm text-accent uppercase tracking-widest font-bold">
+            /experience
+          </p>
+          <h1 className="mt-2 font-mono text-5xl font-bold text-text-primary">
+            Work & Leadership
+          </h1>
           <p className="mt-6 text-xl text-text-secondary leading-relaxed max-w-2xl">
-            1.5+ years of diverse experience building software, leading communities, and contributing to open-source ecosystems.
+            1.5+ years of diverse experience building software, leading
+            communities, and contributing to open-source ecosystems.
           </p>
         </div>
 
@@ -64,7 +69,9 @@ export default function Experience() {
                       <h3 className="font-mono text-2xl font-bold text-text-primary group-hover:text-glow transition-all">
                         {job.title}
                       </h3>
-                      <p className="text-accent text-lg font-bold">{job.company}</p>
+                      <p className="text-accent text-lg font-bold">
+                        {job.company}
+                      </p>
                       <p className="font-mono text-sm text-text-tertiary mt-2 flex items-center gap-2">
                         <span className="h-1 w-1 rounded-full bg-accent"></span>
                         {job.period}
@@ -73,7 +80,9 @@ export default function Experience() {
                   </div>
 
                   {/* Type Badge */}
-                  <span className={`inline-block px-4 py-1.5 rounded-full font-mono text-xs font-bold uppercase tracking-widest ${getTypeColor(job.type)} border border-current opacity-80`}>
+                  <span
+                    className={`inline-block px-4 py-1.5 rounded-full font-mono text-xs font-bold uppercase tracking-widest ${getTypeColor(job.type)} border border-current opacity-80`}
+                  >
                     {job.type}
                   </span>
                 </div>
@@ -82,8 +91,13 @@ export default function Experience() {
                 <div className="mt-8">
                   <ul className="space-y-4">
                     {job.description.map((point, idx) => (
-                      <li key={idx} className="flex gap-4 text-md text-text-secondary leading-relaxed">
-                        <span className="text-accent font-bold mt-1 text-lg">›</span>
+                      <li
+                        key={idx}
+                        className="flex gap-4 text-md text-text-secondary leading-relaxed"
+                      >
+                        <span className="text-accent font-bold mt-1 text-lg">
+                          ›
+                        </span>
                         <span>{point}</span>
                       </li>
                     ))}
@@ -108,22 +122,28 @@ export default function Experience() {
 
         {/* Summary */}
         <div className="mt-20 glass-card p-10 border-accent/20">
-          <h2 className="font-mono text-3xl font-bold text-text-primary mb-10">Career Highlights</h2>
+          <h2 className="font-mono text-3xl font-bold text-text-primary mb-10">
+            Career Highlights
+          </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: 'Total XP', value: '1.5+ Years' },
-              { label: 'Roles', value: 'Dev & Mentor' },
-              { label: 'Focus', value: 'AI & Fullstack' },
-              { label: 'Current', value: 'Open Source' },
+              { label: "Total XP", value: "1.5+ Years" },
+              { label: "Roles", value: "Dev & Mentor" },
+              { label: "Focus", value: "AI & Fullstack" },
+              { label: "Current", value: "Open Source" },
             ].map((item, index) => (
               <div key={index} className="space-y-2">
-                <p className="font-mono text-xs uppercase text-accent tracking-widest font-bold">{item.label}</p>
-                <p className="font-mono text-xl font-bold text-text-primary">{item.value}</p>
+                <p className="font-mono text-xs uppercase text-accent tracking-widest font-bold">
+                  {item.label}
+                </p>
+                <p className="font-mono text-xl font-bold text-text-primary">
+                  {item.value}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

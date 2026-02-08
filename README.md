@@ -5,6 +5,7 @@ A high-end, modern portfolio website showcasing the work, skills, and achievemen
 ## Design Philosophy: Obsidian & Steel with GitHub Green
 
 The portfolio features a sophisticated dark theme aesthetic with:
+
 - **Deep Black Background** (#0D0D0D) - Obsidian
 - **High-Contrast White Text** - Maximum readability
 - **Slate-Grey Borders** (#2A2A2A) - Subtle accents
@@ -23,6 +24,7 @@ The portfolio features a sophisticated dark theme aesthetic with:
 ## Features
 
 ### Multi-Page Architecture
+
 - **Home** - Hero section with role carousel and featured areas
 - **About** - Personal introduction, core values, and background
 - **Projects** - Detailed portfolio of 5+ projects with expandable descriptions
@@ -32,6 +34,7 @@ The portfolio features a sophisticated dark theme aesthetic with:
 - **Contact** - Contact form with social links and availability info
 
 ### Interactive Elements
+
 - Responsive navigation with mobile menu
 - Smooth page transitions and hover effects
 - Role carousel on homepage
@@ -39,6 +42,7 @@ The portfolio features a sophisticated dark theme aesthetic with:
 - Timeline-based experience display
 
 ### Contact Information
+
 - **Email**: itzrohan007@gmail.com
 - **Phone**: +917057200895 (Clickable tel: links)
 - **GitHub**: https://github.com/RohanExploit
@@ -49,6 +53,7 @@ The portfolio features a sophisticated dark theme aesthetic with:
 - Functional contact form
 
 ### Technical Stack
+
 - **Framework**: Next.js 15 with React 19
 - **Styling**: Tailwind CSS v4 with custom design tokens
 - **Typography**: JetBrains Mono + Inter fonts
@@ -62,11 +67,13 @@ The portfolio features a sophisticated dark theme aesthetic with:
 
 1. Clone or download this project
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -97,7 +104,9 @@ lib/
 ## Customization
 
 ### Updating Content
+
 Edit `/lib/portfolio-data.ts` to update:
+
 - Personal information
 - Project details
 - Experience history
@@ -105,12 +114,15 @@ Edit `/lib/portfolio-data.ts` to update:
 - Achievements and certifications
 
 ### Styling
+
 Design tokens are defined in `app/globals.css`:
+
 - Colors: Update CSS custom properties for theme customization
 - Fonts: Already configured in `app/layout.tsx`
 - Spacing: Uses Tailwind's scale system
 
 ### Adding New Sections
+
 1. Create a new directory: `app/new-section/`
 2. Create `page.tsx` with your content
 3. Update navigation in `app/components/navigation.tsx`
@@ -119,11 +131,13 @@ Design tokens are defined in `app/globals.css`:
 ## Deployment
 
 Deploy to Vercel with one click:
+
 ```bash
 npm run build
 ```
 
 Or use the Vercel CLI:
+
 ```bash
 vercel
 ```

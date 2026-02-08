@@ -1,23 +1,26 @@
-import { ROHAN_DATA } from '@/lib/portfolio-data'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-import Image from 'next/image'
-import GitHubShowcase from '../components/github-showcase'
+import { ROHAN_DATA } from "@/lib/portfolio-data";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import GitHubShowcase from "../components/github-showcase";
 
 export const metadata = {
-  title: 'About - Rohan Gaikwad',
-  description: 'Learn more about Rohan Gaikwad, a full-stack developer and AI enthusiast.',
-}
+  title: "About - Rohan Gaikwad",
+  description:
+    "Learn more about Rohan Gaikwad, a full-stack developer and AI enthusiast.",
+};
 
 export default function About() {
-  const { about } = ROHAN_DATA
+  const { about } = ROHAN_DATA;
 
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16">
-          <p className="font-mono text-sm text-accent uppercase tracking-widest font-bold">/about</p>
+          <p className="font-mono text-sm text-accent uppercase tracking-widest font-bold">
+            /about
+          </p>
           <h1 className="mt-2 font-mono text-5xl font-bold text-text-primary transition-all underline decoration-accent/30 underline-offset-8">
             {about.title}
           </h1>
@@ -55,9 +58,16 @@ export default function About() {
         {/* Highlights Grid */}
         <div className="mb-20 grid gap-6 md:grid-cols-2">
           {about.highlights.map((item, index) => (
-            <div key={index} className="glass-card p-8 hover-lift border-transparent hover:border-accent group">
-              <p className="font-mono text-xs uppercase text-accent tracking-widest font-bold mb-4">{item.label}</p>
-              <p className="font-mono text-2xl font-bold text-text-primary group-hover:text-glow transition-all">{item.value}</p>
+            <div
+              key={index}
+              className="glass-card p-8 hover-lift border-transparent hover:border-accent group"
+            >
+              <p className="font-mono text-xs uppercase text-accent tracking-widest font-bold mb-4">
+                {item.label}
+              </p>
+              <p className="font-mono text-2xl font-bold text-text-primary group-hover:text-glow transition-all">
+                {item.value}
+              </p>
             </div>
           ))}
         </div>
@@ -71,21 +81,28 @@ export default function About() {
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
-                title: 'Impact-Driven',
-                description: 'Building technology that solves real-world problems and creates meaningful change.',
+                title: "Impact-Driven",
+                description:
+                  "Building technology that solves real-world problems and creates meaningful change.",
               },
               {
-                title: 'Continuous Learning',
-                description: 'Always expanding expertise through challenging projects and emerging technologies.',
+                title: "Continuous Learning",
+                description:
+                  "Always expanding expertise through challenging projects and emerging technologies.",
               },
               {
-                title: 'Community First',
-                description: 'Contributing to open-source and mentoring the next generation of developers.',
+                title: "Community First",
+                description:
+                  "Contributing to open-source and mentoring the next generation of developers.",
               },
             ].map((value, index) => (
               <div key={index} className="space-y-4">
-                <h3 className="font-mono text-xl font-bold text-accent">{value.title}</h3>
-                <p className="text-md text-text-secondary leading-relaxed">{value.description}</p>
+                <h3 className="font-mono text-xl font-bold text-accent">
+                  {value.title}
+                </h3>
+                <p className="text-md text-text-secondary leading-relaxed">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>
@@ -98,10 +115,7 @@ export default function About() {
 
         {/* CTA */}
         <div className="flex flex-wrap gap-6 items-center justify-center pt-10 border-t border-border">
-          <Link
-            href="/projects"
-            className="btn-primary"
-          >
+          <Link href="/projects" className="btn-primary">
             Explore My Work
             <ArrowRight className="h-4 w-4" />
           </Link>
@@ -109,11 +123,11 @@ export default function About() {
             href="/contact"
             className="font-mono text-sm font-bold text-text-secondary hover:text-accent transition-colors flex items-center gap-2 group"
           >
-            Let's Collaborate
+            Let&apos;s Collaborate
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }

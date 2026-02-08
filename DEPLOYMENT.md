@@ -35,17 +35,20 @@ Visit: `http://localhost:3000`
 ### Option 1: Vercel (Recommended)
 
 **Step 1: Connect Domain**
+
 1. Go to [Vercel Dashboard](https://vercel.com/dashboard)
 2. Create new project from GitHub repository
 3. Select your Git repository
 4. Deploy
 
 **Step 2: Add Custom Domain**
+
 1. In Vercel Dashboard → Settings → Domains
 2. Add `rohangaikwad.in`
 3. Update DNS records with nameservers provided by Vercel
 
 **DNS Configuration (if using external registrar):**
+
 ```
 Nameservers:
 ns1.vercel-dns.com
@@ -76,6 +79,7 @@ CMD ["npm", "start"]
 ```
 
 Build and run:
+
 ```bash
 docker build -t rohan-portfolio .
 docker run -p 3000:3000 rohan-portfolio
@@ -86,6 +90,7 @@ docker run -p 3000:3000 rohan-portfolio
 ## Environment Variables
 
 No environment variables required for basic deployment. All configuration is handled through:
+
 - `lib/portfolio-data.ts` - Content and information
 - `app/globals.css` - Theme colors and styling
 - `app/layout.tsx` - Metadata and SEO
@@ -105,6 +110,7 @@ No environment variables required for basic deployment. All configuration is han
 ## Performance Optimization
 
 The portfolio includes:
+
 - Image optimization with Next.js Image component
 - CSS-in-JS with Tailwind for minimal bundle size
 - Code splitting per route
@@ -112,6 +118,7 @@ The portfolio includes:
 - Caching headers configured
 
 **Performance Targets:**
+
 - Lighthouse Score: 95+
 - First Contentful Paint: < 1.5s
 - Cumulative Layout Shift: < 0.1
@@ -121,19 +128,25 @@ The portfolio includes:
 ## Customization After Deploy
 
 ### Update Content
+
 Edit `lib/portfolio-data.ts`:
+
 - Change project descriptions
 - Update skills and experience
 - Add/remove certifications
 
 ### Change Colors
+
 Edit `app/globals.css`:
+
 - `--github-green`: Primary accent
 - `--info`: Secondary accent (blue)
 - `--background`: Background color
 
 ### Update Contact Info
+
 In `lib/portfolio-data.ts`:
+
 ```typescript
 contact: {
   email: 'itzrohan007@gmail.com',
@@ -147,11 +160,13 @@ contact: {
 ## Monitoring & Analytics
 
 ### Add Google Analytics
+
 1. Create account at [Google Analytics](https://analytics.google.com)
 2. Get Measurement ID (G-XXXX)
 3. Add to `app/layout.tsx`
 
 ### Monitor Uptime
+
 - Use [Uptime Robot](https://uptimerobot.com)
 - Or Vercel's built-in monitoring
 
@@ -160,6 +175,7 @@ contact: {
 ## Common Issues & Fixes
 
 ### Deployment fails with git error
+
 ```bash
 git remote add origin https://github.com/RohanExploit/rohan-portfolio.git
 git branch -M main
@@ -167,11 +183,13 @@ git push -u origin main
 ```
 
 ### Domain not resolving
+
 - Wait 24-48 hours for DNS propagation
 - Clear browser cache (Ctrl+Shift+Del)
 - Try accessing via IP temporarily
 
 ### Contact form not sending
+
 - Check firewall/spam settings
 - Verify email configuration
 - Use third-party service like Formspree
@@ -192,6 +210,7 @@ git push -u origin main
 ## Backup & Recovery
 
 Keep backups of:
+
 1. Source code (GitHub)
 2. Database/content (portfolio-data.ts)
 3. Domain registration credentials
@@ -202,16 +221,19 @@ Keep backups of:
 ## Support & Maintenance
 
 ### Regular Updates
+
 - Check Next.js updates monthly
 - Update dependencies: `npm update`
 - Review security advisories: `npm audit`
 
 ### Monitoring
+
 - Check Vercel Analytics dashboard
 - Review error logs
 - Monitor Page Speed Insights
 
 ### Content Updates
+
 - Update projects quarterly
 - Refresh skills annually
 - Add new certifications as earned
@@ -249,6 +271,7 @@ Before going live, ensure:
 ## Questions?
 
 For deployment help:
+
 - [Vercel Docs](https://vercel.com/docs)
 - [Next.js Docs](https://nextjs.org/docs)
 - [Deploy Issues](https://github.com/vercel/next.js/issues)

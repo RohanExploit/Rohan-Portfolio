@@ -3,28 +3,33 @@
 ## Regular Maintenance Schedule
 
 ### Daily
+
 - Monitor for errors in console
 - Check analytics dashboard
 - Respond to contact form submissions
 
-### Weekly  
+### Weekly
+
 - Verify all links are working
 - Check Google Search Console
 - Review performance metrics
 
 ### Monthly
+
 - Update content as needed
 - Check for dependency updates: `npm update`
 - Review security advisories: `npm audit fix`
 - Backup portfolio data
 
 ### Quarterly
+
 - Update project descriptions
 - Add new achievements/certifications
 - Refresh skill assessments
 - Update resume if changed
 
 ### Annually
+
 - Full security audit
 - Dependency major version updates
 - Consider design refresh
@@ -42,17 +47,17 @@ Edit `/vercel/share/v0-project/lib/portfolio-data.ts`:
 projects: [
   {
     id: 1,
-    title: 'Project Name',
-    subtitle: 'Short description',
-    description: 'Full description',
-    fullDescription: 'Detailed explanation',
-    technologies: ['Tech1', 'Tech2'],
-    github: 'https://github.com/...',
-    features: ['Feature 1', 'Feature 2'],
-    impact: 'Project impact',
+    title: "Project Name",
+    subtitle: "Short description",
+    description: "Full description",
+    fullDescription: "Detailed explanation",
+    technologies: ["Tech1", "Tech2"],
+    github: "https://github.com/...",
+    features: ["Feature 1", "Feature 2"],
+    impact: "Project impact",
   },
   // Add more projects...
-]
+];
 ```
 
 ### Adding Experience
@@ -61,17 +66,17 @@ projects: [
 experience: [
   {
     id: 1,
-    title: 'Job Title',
-    company: 'Company Name',
-    type: 'Internship', // or 'Leadership', 'Mentorship'
-    description: 'Job description',
-    skills: ['Skill1', 'Skill2'],
-    start: 'Jan 2024',
-    end: 'Dec 2024',
-    link: 'https://company.com',
+    title: "Job Title",
+    company: "Company Name",
+    type: "Internship", // or 'Leadership', 'Mentorship'
+    description: "Job description",
+    skills: ["Skill1", "Skill2"],
+    start: "Jan 2024",
+    end: "Dec 2024",
+    link: "https://company.com",
   },
   // Add more experiences...
-]
+];
 ```
 
 ### Updating Skills
@@ -95,15 +100,15 @@ skills: {
 achievements: [
   {
     id: 1,
-    title: 'Certification Name',
-    issuer: 'Issuing Organization',
-    date: 'Month Year',
-    type: 'Certification', // or 'Program'
-    description: 'What it covers',
-    link: 'https://certificate.link',
+    title: "Certification Name",
+    issuer: "Issuing Organization",
+    date: "Month Year",
+    type: "Certification", // or 'Program'
+    description: "What it covers",
+    link: "https://certificate.link",
   },
   // Add more achievements...
-]
+];
 ```
 
 ---
@@ -116,8 +121,8 @@ Edit `app/globals.css`:
 
 ```css
 :root {
-  --github-green: #238636;  /* Change this */
-  --github-green-dark: #1a7f37;  /* And this */
+  --github-green: #238636; /* Change this */
+  --github-green-dark: #1a7f37; /* And this */
 }
 ```
 
@@ -125,8 +130,8 @@ Edit `app/globals.css`:
 
 ```css
 :root {
-  --info: #1f6feb;  /* Change this */
-  --accent-dark: #0d419d;  /* And this */
+  --info: #1f6feb; /* Change this */
+  --accent-dark: #0d419d; /* And this */
 }
 ```
 
@@ -134,10 +139,10 @@ Edit `app/globals.css`:
 
 ```css
 :root {
-  --background: #0d0d0d;  /* Main black */
-  --surface: #1a1a1a;  /* Card background */
-  --text-primary: #ffffff;  /* Main text */
-  --text-secondary: #b0b0b0;  /* Secondary text */
+  --background: #0d0d0d; /* Main black */
+  --surface: #1a1a1a; /* Card background */
+  --text-primary: #ffffff; /* Main text */
+  --text-secondary: #b0b0b0; /* Secondary text */
 }
 ```
 
@@ -148,6 +153,7 @@ Edit `app/globals.css`:
 ### Change Email Address
 
 In `lib/portfolio-data.ts`:
+
 ```typescript
 contact: {
   email: 'newemail@example.com',  // Update here
@@ -158,6 +164,7 @@ contact: {
 ### Update Resume Link
 
 In `lib/portfolio-data.ts`:
+
 ```typescript
 contact: {
   resume: 'https://drive.google.com/file/d/NEW_ID/view',
@@ -168,6 +175,7 @@ contact: {
 ### Update Social Links
 
 In `lib/portfolio-data.ts`:
+
 ```typescript
 contact: {
   social: [
@@ -181,6 +189,7 @@ contact: {
 ### Update About Me
 
 In `lib/portfolio-data.ts`:
+
 ```typescript
 about: {
   title: 'About Me',
@@ -202,19 +211,23 @@ about: {
 ## Deployment After Changes
 
 ### Local Testing
+
 ```bash
 npm run dev
 # Test at http://localhost:3000
 ```
 
 ### Build Production
+
 ```bash
 npm run build
 npm start
 ```
 
 ### Deploy to Vercel
+
 Push to GitHub:
+
 ```bash
 git add .
 git commit -m "Update portfolio content"
@@ -263,8 +276,9 @@ npm start
 ### Image Optimization
 
 Use Next.js Image component:
+
 ```tsx
-import Image from 'next/image'
+import Image from "next/image";
 
 <Image
   src="/projects/example.jpg"
@@ -272,28 +286,30 @@ import Image from 'next/image'
   width={800}
   height={600}
   quality={85}
-/>
+/>;
 ```
 
 ### Font Optimization
 
 Already configured with `next/font`:
+
 ```tsx
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-})
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 ```
 
 ### Code Splitting
 
 Already optimized by Next.js with dynamic imports:
-```tsx
-import dynamic from 'next/dynamic'
 
-const HeavyComponent = dynamic(() => import('../components/Heavy'), {
+```tsx
+import dynamic from "next/dynamic";
+
+const HeavyComponent = dynamic(() => import("../components/Heavy"), {
   loading: () => <p>Loading...</p>,
-})
+});
 ```
 
 ---
@@ -329,8 +345,9 @@ npm install @sentry/nextjs
 ```
 
 Configure in next.config.mjs:
+
 ```javascript
-import * as Sentry from '@sentry/nextjs';
+import * as Sentry from "@sentry/nextjs";
 
 export const config = Sentry.captureNextjsServerExceptionMiddleware(nextConfig);
 ```
@@ -342,17 +359,19 @@ export const config = Sentry.captureNextjsServerExceptionMiddleware(nextConfig);
 ### Update Metadata
 
 In `app/layout.tsx`:
+
 ```typescript
 export const metadata: Metadata = {
-  title: 'Updated Title',
-  description: 'Updated description',
-  keywords: ['updated', 'keywords'],
-}
+  title: "Updated Title",
+  description: "Updated description",
+  keywords: ["updated", "keywords"],
+};
 ```
 
 ### Update Open Graph Tags
 
 Add to metadata:
+
 ```typescript
 openGraph: {
   title: 'Share Title',
@@ -375,6 +394,7 @@ openGraph: {
 ### Automated Backups
 
 Push to GitHub regularly:
+
 ```bash
 git add .
 git commit -m "Backup: [date]"
@@ -465,9 +485,9 @@ git push origin feature/new-project
 ### Console Debugging
 
 ```tsx
-console.log("[Portfolio] Info:", data)
-console.warn("[Portfolio] Warning:", message)
-console.error("[Portfolio] Error:", error)
+console.log("[Portfolio] Info:", data);
+console.warn("[Portfolio] Warning:", message);
+console.error("[Portfolio] Error:", error);
 ```
 
 ### Network Debugging
@@ -555,6 +575,7 @@ npm install formspree
 ## Getting Help
 
 If issues arise:
+
 1. Check error message carefully
 2. Search issue in GitHub
 3. Check documentation

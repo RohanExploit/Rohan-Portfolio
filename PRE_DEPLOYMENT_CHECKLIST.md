@@ -166,6 +166,7 @@ Before deploying to **rohangaikwad.in**, verify all items below:
 ## Deployment Steps
 
 ### 1. Prepare for Deployment
+
 ```bash
 npm install
 npm run build  # Verify no errors
@@ -173,6 +174,7 @@ npm run lint   # Check code quality
 ```
 
 ### 2. Deploy to Vercel
+
 ```bash
 # Push to GitHub
 git add .
@@ -184,12 +186,14 @@ git push origin main
 ```
 
 ### 3. Configure Domain
+
 - Go to Vercel project settings
 - Add domain: rohangaikwad.in
 - Update DNS records at registrar
 - Wait for SSL certificate (usually < 24 hours)
 
 ### 4. Verify Live Site
+
 - Visit https://rohangaikwad.in
 - Run Lighthouse audit
 - Test all functionality

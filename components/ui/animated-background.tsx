@@ -57,7 +57,7 @@ export function AnimatedBackground({
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         [key: string]: any;
       }>,
-      index,
+      index
     ) => {
       const id = child.props["data-id"];
 
@@ -96,8 +96,8 @@ export function AnimatedBackground({
             )}
           </AnimatePresence>
           <div className="z-10">{child.props.children}</div>
-        </>,
+        </>
       );
-    },
+    }
   );
 }
