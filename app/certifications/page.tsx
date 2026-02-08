@@ -1,24 +1,29 @@
-'use client'
+"use client";
 
-import { ROHAN_DATA } from '@/lib/portfolio-data'
-import { Award, Calendar, Building2, ExternalLink } from 'lucide-react'
-import Script from 'next/script'
+import { ROHAN_DATA } from "@/lib/portfolio-data";
+import { Award, Calendar, Building2, ExternalLink } from "lucide-react";
+import Script from "next/script";
 
 export default function Certifications() {
-  const { achievements } = ROHAN_DATA
+  const { achievements } = ROHAN_DATA;
 
-  const certifications = achievements.filter(a => a.type === 'Certification')
-  const programs = achievements.filter(a => a.type === 'Program')
+  const certifications = achievements.filter((a) => a.type === "Certification");
+  const programs = achievements.filter((a) => a.type === "Program");
 
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16">
-          <p className="font-mono text-sm text-accent uppercase tracking-widest font-bold">/certifications-awards</p>
-          <h1 className="mt-2 font-mono text-5xl font-bold text-text-primary">Certifications & Programs</h1>
+          <p className="font-mono text-sm text-accent uppercase tracking-widest font-bold">
+            /certifications-awards
+          </p>
+          <h1 className="mt-2 font-mono text-5xl font-bold text-text-primary">
+            Certifications & Programs
+          </h1>
           <p className="mt-6 max-w-2xl text-lg text-text-secondary leading-relaxed">
-            Professional credentials and continuous learning milestones validating technical expertise.
+            Professional credentials and continuous learning milestones
+            validating technical expertise.
           </p>
         </div>
 
@@ -34,24 +39,24 @@ export default function Certifications() {
                 data-iframe-width="150"
                 data-iframe-height="270"
                 data-share-badge-id="8c81a506-7025-49ba-90a4-f76c51c46962"
-                data-share-badge-host="https://www.credly.com">
-              </div>
+                data-share-badge-host="https://www.credly.com"
+              ></div>
             </div>
             <div className="glass-card p-6 flex items-center justify-center bg-white/5">
               <div
                 data-iframe-width="150"
                 data-iframe-height="270"
                 data-share-badge-id="5b571c09-e5a0-481f-8693-d428d1c0a4e7"
-                data-share-badge-host="https://www.credly.com">
-              </div>
+                data-share-badge-host="https://www.credly.com"
+              ></div>
             </div>
             <div className="glass-card p-6 flex items-center justify-center bg-white/5">
               <div
                 data-iframe-width="150"
                 data-iframe-height="270"
                 data-share-badge-id="0b56ed2a-f7e5-4b5b-989b-7b28d0a68732"
-                data-share-badge-host="https://www.credly.com">
-              </div>
+                data-share-badge-host="https://www.credly.com"
+              ></div>
             </div>
           </div>
           <Script
@@ -165,22 +170,32 @@ export default function Certifications() {
         {/* Summary Stats */}
         <div className="mt-20 grid gap-6 border-t border-border pt-12 md:grid-cols-4">
           {[
-            { label: 'Total Certifications', value: certifications.length, icon: '★' },
-            { label: 'Programs', value: programs.length, icon: '◆' },
-            { label: 'Issuers', value: '8+', icon: '◈' },
-            { label: 'Year Range', value: '2024-2025', icon: '📅' },
+            {
+              label: "Total Certifications",
+              value: certifications.length,
+              icon: "★",
+            },
+            { label: "Programs", value: programs.length, icon: "◆" },
+            { label: "Issuers", value: "8+", icon: "◈" },
+            { label: "Year Range", value: "2024-2025", icon: "📅" },
           ].map((stat, index) => (
             <div
               key={index}
               className="glass-card p-8 text-center hover-lift border-transparent hover:border-accent group"
             >
-              <div className="mb-3 text-2xl text-accent opacity-50 group-hover:opacity-100 transition-opacity">{stat.icon}</div>
-              <p className="font-mono text-xs text-text-secondary uppercase tracking-widest font-bold">{stat.label}</p>
-              <p className="mt-2 font-mono text-3xl font-bold text-text-primary group-hover:text-glow transition-all">{stat.value}</p>
+              <div className="mb-3 text-2xl text-accent opacity-50 group-hover:opacity-100 transition-opacity">
+                {stat.icon}
+              </div>
+              <p className="font-mono text-xs text-text-secondary uppercase tracking-widest font-bold">
+                {stat.label}
+              </p>
+              <p className="mt-2 font-mono text-3xl font-bold text-text-primary group-hover:text-glow transition-all">
+                {stat.value}
+              </p>
             </div>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
