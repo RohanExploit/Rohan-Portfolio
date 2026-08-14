@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { Reveal, RevealStagger, RevealItem } from "../components/reveal";
 
 export const metadata = {
   title: "Bulk Ops for Confluence — Documentation",
@@ -71,9 +72,9 @@ export default function BulkOps() {
         </div>
 
         {/* Operations */}
-        <div className="mb-16 grid gap-6 md:grid-cols-2">
+        <RevealStagger className="mb-16 grid gap-6 md:grid-cols-2">
           {operations.map((op, index) => (
-            <div
+            <RevealItem
               key={index}
               className="glass-card p-8 hover-lift border-transparent hover:border-accent group"
             >
@@ -84,12 +85,12 @@ export default function BulkOps() {
                 {op.name}
               </h2>
               <p className="text-text-secondary leading-relaxed">{op.detail}</p>
-            </div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealStagger>
 
         {/* Guarantees */}
-        <div className="mb-16 glass-card p-10 border-accent/20">
+        <Reveal className="mb-16 glass-card p-10 border-accent/20">
           <h2 className="font-mono text-2xl font-bold text-text-primary mb-8 flex items-center gap-4">
             <span className="h-px w-12 bg-accent"></span>
             How it behaves
@@ -104,10 +105,10 @@ export default function BulkOps() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         {/* Support & links */}
-        <div className="glass-card p-8 border-accent/20">
+        <Reveal className="glass-card p-8 border-accent/20">
           <h2 className="font-mono text-xl font-bold text-accent mb-4">
             Support &amp; privacy
           </h2>
@@ -129,7 +130,7 @@ export default function BulkOps() {
             </Link>{" "}
             for exactly what it accesses and stores.
           </p>
-        </div>
+        </Reveal>
 
         {/* Back link */}
         <div className="mt-12 pt-8 border-t border-border">

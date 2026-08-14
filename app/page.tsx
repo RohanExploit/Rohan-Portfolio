@@ -6,6 +6,7 @@ import { ROHAN_DATA } from "@/lib/portfolio-data";
 import MatrixRain from "./components/matrix-rain";
 import GlitchTerminal from "./components/terminal-hero";
 import AsciiArt from "./components/ascii-art";
+import { Reveal, RevealStagger, RevealItem } from "./components/reveal";
 
 export default function Home() {
   return (
@@ -105,14 +106,14 @@ export default function Home() {
       {/* Featured Sections */}
       <div className="border-y border-border bg-surface/50 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 text-center">
+          <Reveal className="mb-16 text-center">
             <h2 className="font-mono text-4xl font-bold text-text-primary tracking-tight">
               Featured Areas
             </h2>
             <div className="mt-4 h-1 w-20 bg-accent mx-auto rounded-full" />
-          </div>
+          </Reveal>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <RevealStagger className="grid gap-8 md:grid-cols-3">
             {[
               {
                 title: "Projects",
@@ -142,32 +143,33 @@ export default function Home() {
                 borderColor: "group-hover:border-accent-secondary",
               },
             ].map((item, index) => (
-              <Link
-                key={index}
-                href={item.href}
-                className={`group glass-card p-8 flex flex-col justify-between hover-lift border-transparent ${item.borderColor}`}
-              >
-                <div>
-                  <div className={`text-3xl ${item.color} mb-6`}>
-                    {item.icon}
-                  </div>
-                  <h3
-                    className={`font-mono text-xl font-bold text-text-primary group-hover:${item.color} transition-colors`}
-                  >
-                    {item.title}
-                  </h3>
-                  <p className="mt-4 text-text-secondary leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-                <div
-                  className={`mt-8 flex items-center gap-2 text-sm font-bold ${item.color} opacity-0 -translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0`}
+              <RevealItem key={index} className="h-full">
+                <Link
+                  href={item.href}
+                  className={`group glass-card p-8 flex h-full flex-col justify-between hover-lift border-transparent ${item.borderColor}`}
                 >
-                  Explore <ArrowRight className="h-4 w-4" />
-                </div>
-              </Link>
+                  <div>
+                    <div className={`text-3xl ${item.color} mb-6`}>
+                      {item.icon}
+                    </div>
+                    <h3
+                      className={`font-mono text-xl font-bold text-text-primary group-hover:${item.color} transition-colors`}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="mt-4 text-text-secondary leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                  <div
+                    className={`mt-8 flex items-center gap-2 text-sm font-bold ${item.color} opacity-0 -translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0`}
+                  >
+                    Explore <ArrowRight className="h-4 w-4" />
+                  </div>
+                </Link>
+              </RevealItem>
             ))}
-          </div>
+          </RevealStagger>
         </div>
       </div>
     </div>
