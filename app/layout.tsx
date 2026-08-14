@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Inter } from "next/font/google";
+import { JetBrains_Mono, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "./components/navigation";
 import { Footer } from "./components/footer";
@@ -82,6 +82,12 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -90,7 +96,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body
-        className={`${jetbrainsMono.variable} ${inter.variable} bg-obsidian text-text-primary tracking-tight antialiased`}
+        className={`${jetbrainsMono.variable} ${inter.variable} ${spaceGrotesk.variable} bg-obsidian text-text-primary tracking-tight antialiased`}
       >
         <ThemeProvider
           enableSystem={true}

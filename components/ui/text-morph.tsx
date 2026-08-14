@@ -14,13 +14,22 @@ export type TextMorphProps = {
 
 export function TextMorph({
   children,
-  as: Component = "p",
+  as = "p",
   className,
   style,
   variants,
   transition,
 }: TextMorphProps) {
   const uniqueId = useId();
+
+  // React 19's bare `ElementType` infers `children: never` for a polymorphic
+  // tag; parameterize it with the props we actually pass so it type-checks.
+  const Component = as as React.ElementType<{
+    className?: string;
+    style?: React.CSSProperties;
+    "aria-label"?: string;
+    children?: React.ReactNode;
+  }>;
 
   const characters = useMemo(() => {
     const charCounts: Record<string, number> = {};
