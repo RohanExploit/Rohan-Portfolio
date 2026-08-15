@@ -117,7 +117,10 @@ export default function Support() {
           </p>
           <ul className="space-y-3">
             {includeList.map((item, i) => (
-              <li key={i} className="flex gap-3 text-text-secondary leading-relaxed">
+              <li
+                key={i}
+                className="flex gap-3 text-text-secondary leading-relaxed"
+              >
                 <CheckCircle2 className="h-5 w-5 shrink-0 text-accent mt-0.5" />
                 <span>{item}</span>
               </li>
