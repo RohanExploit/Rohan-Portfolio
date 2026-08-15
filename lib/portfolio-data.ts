@@ -587,8 +587,7 @@ export const ROHAN_DATA = {
         icon: "Twitter",
       },
     ],
-    resume:
-      "https://drive.google.com/file/d/1alaSYAR5b2zUzTa0ZMlaSnZY-RDQ68Og/view?usp=sharing",
+    resume: "/rohan-gaikwad-resume.pdf",
   },
 
   profilePhoto:
