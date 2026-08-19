@@ -2,11 +2,11 @@ export const ROHAN_DATA = {
   about: {
     title: "About Me",
     intro:
-      "Software Engineer specializing in scalable intelligence and distributed systems.",
+      "Computer Science and Engineering undergraduate specializing in intelligent systems and full-stack development.",
     bio: [
-      "I architect and build high-performance software solutions, bridging the gap between advanced machine learning research and production-grade engineering.",
-      "With a strong foundation in full-stack development and algorithmic optimization, I have led technical initiatives across internships and open-source communities, delivering robust systems that solve complex real-world problems.",
-      "My engineering philosophy centers on writing clean, maintainable code and designing systems that are secure, scalable, and intuitive by default.",
+      "I'm a B.Tech in Computer Science and Engineering student at Dr. Babasaheb Ambedkar Technological University (Yashoda Technical Campus).",
+      "My technical interests include building scalable AI solutions that connect specific problems with modern machine learning and computer vision. Whether I am deploying ML pipelines, engineering RESTful APIs, or developing smart frontend interfaces, I rely on a systems-driven method for problem-solving.",
+      "I’m currently focused on creating AI products that make a real-world difference, especially in agriculture and autonomous decision-making systems.",
     ],
     highlights: [
       { label: "Role", value: "Software Engineer & System Architect" },
