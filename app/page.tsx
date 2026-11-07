@@ -11,13 +11,13 @@ import {
   Twitter,
   Sparkles,
   Trophy,
+  ExternalLink,
+  Award,
 } from "lucide-react";
 import { ROHAN_DATA } from "@/lib/portfolio-data";
 import { Reveal, RevealStagger, RevealItem } from "./components/reveal";
 import { LivePdfViewer } from "./components/live-pdf-viewer";
 
-// The 3D signature is client + WebGL only. Lazy so it never blocks first paint,
-// and a quiet blueprint placeholder holds the frame while three.js loads.
 const ArchitectureLattice = dynamic(
   () => import("./components/architecture-lattice"),
   {
@@ -33,6 +33,8 @@ const ArchitectureLattice = dynamic(
 );
 
 export default function Home() {
+  const featuredProjects = ROHAN_DATA.projects.slice(0, 6);
+
   return (
     <div className="min-h-screen bg-background">
       {/* ---------------- Hero ---------------- */}
@@ -40,7 +42,6 @@ export default function Home() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1.15fr] lg:gap-14">
           {/* Left: identity */}
           <div className="animate-in fade-in slide-in-from-left-4 duration-700">
-            {/* Identity & Profile Photo */}
             <div className="flex items-center gap-4">
               <Link href="/about" className="group relative block">
                 <div className="relative h-16 w-16 sm:h-20 sm:w-20 overflow-hidden rounded-2xl border-2 border-cyan-wire/50 shadow-xl shadow-cyan-wire/10 transition-transform group-hover:scale-105">
@@ -83,16 +84,16 @@ export default function Home() {
                   Anthropic Claude for Startups Cohort
                 </span>
                 <span className="font-mono text-xs text-amber-400/80 group-hover:translate-x-0.5 transition-transform">
-                  Live PDF Preview →
+                  Official Dossier →
                 </span>
               </Link>
             </div>
 
             <p className="mt-6 max-w-md text-lg leading-relaxed text-text-secondary">
               I design systems that hold up under load and the intelligence that
-              runs on them — turning tangled problems into architecture you can
-              reason about. Winner at Claude Impact Lab Mumbai 2026 &amp; SIH
-              2026 Finalist.
+              runs on them — turning complex constraints into deterministic
+              architecture. 1st Place Winner at Claude Impact Lab Mumbai 2026
+              &amp; SIH 2026 Finalist.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -100,7 +101,7 @@ export default function Home() {
                 href="/projects"
                 className="group inline-flex items-center gap-2 rounded-md bg-cyan-wire px-5 py-3 text-sm font-semibold text-blueprint transition-transform hover:-translate-y-0.5"
               >
-                View Top Projects
+                Explore All 9 Systems
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
@@ -108,7 +109,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 rounded-md border border-amber-500/40 px-5 py-3 text-sm font-semibold text-amber-300 transition-colors hover:border-amber-400 hover:bg-amber-500/10"
               >
                 <Sparkles className="h-4 w-4 text-amber-400" />
-                Live PDF on Scroll
+                Live Selection PDF
               </Link>
               <a
                 href={ROHAN_DATA.contact.resume}
@@ -158,10 +159,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right: the signature — a live system-architecture graph */}
+          {/* Right: live system-architecture graph */}
           <div className="animate-in fade-in slide-in-from-right-4 duration-700">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-cyan-wire/25 bg-blueprint">
-              {/* blueprint grid */}
               <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0 opacity-[0.35]"
@@ -171,13 +171,11 @@ export default function Home() {
                   backgroundSize: "32px 32px",
                 }}
               />
-              {/* corner registration marks */}
               <span className="absolute left-3 top-3 h-3 w-3 border-l border-t border-cyan-wire/40" />
               <span className="absolute right-3 top-3 h-3 w-3 border-r border-t border-cyan-wire/40" />
               <span className="absolute bottom-3 left-3 h-3 w-3 border-b border-l border-cyan-wire/40" />
               <span className="absolute bottom-3 right-3 h-3 w-3 border-b border-r border-cyan-wire/40" />
 
-              {/* labels */}
               <p className="absolute left-4 top-4 font-mono text-[10px] uppercase tracking-[0.2em] text-cyan-wire/70">
                 sys.arch // rohan.graph
               </p>
@@ -191,7 +189,6 @@ export default function Home() {
                 move to orbit
               </p>
 
-              {/* the 3D artifact */}
               <div className="absolute inset-0">
                 <ArchitectureLattice />
               </div>
@@ -200,23 +197,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- Grand Entrance: Winner Ceremony Showcase ---------------- */}
+      {/* ---------------- Entrance Feature: Claude Impact Lab Mumbai 2026 Winner ---------------- */}
       <section className="border-t border-border bg-gradient-to-b from-surface/60 via-background to-surface/30 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="mb-10 text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-1.5 text-xs font-mono font-bold text-amber-400">
               <Trophy className="h-4 w-4 text-amber-400" />
-              GRAND ENTRANCE // 1ST PLACE CHAMPIONSHIP
+              CLAUDE IMPACT LAB MUMBAI 2026 · 1ST PLACE WINNER
             </div>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold tracking-tight text-text-primary">
-              Winner · Claude Impact Lab Mumbai 2026
+              KHOJ — Kumbh Mela 2027 Edge AI
             </h2>
             <p className="mt-4 text-base sm:text-lg text-text-secondary leading-relaxed">
-              Awarded 1st place on stage at Somaiya Vidyavihar University for
-              architecting{" "}
-              <span className="font-semibold text-text-primary">KHOJ</span> —
-              the non-biometric, edge-accelerated missing-person identification
-              platform designed for 50-kiosk deployment at{" "}
+              Awarded 1st place on stage at Somaiya Vidyavihar University,
+              Mumbai for architecting{" "}
+              <span className="font-semibold text-text-primary">KHOJ</span> — a
+              non-biometric, edge-accelerated missing-person identification
+              platform designed for 50-kiosk choke-point deployment at{" "}
               <span className="text-amber-400 font-semibold">
                 Kumbh Mela 2027
               </span>{" "}
@@ -224,16 +221,13 @@ export default function Home() {
             </p>
           </Reveal>
 
-          {/* Grand Entrance Visual Stage Showcase */}
           <Reveal className="mx-auto max-w-6xl">
             <div className="group relative overflow-hidden rounded-2xl border-2 border-amber-500/40 bg-blueprint shadow-2xl shadow-amber-500/10">
-              {/* Corner blueprint marks */}
               <span className="absolute left-3 top-3 z-10 h-4 w-4 border-l-2 border-t-2 border-amber-400/80" />
               <span className="absolute right-3 top-3 z-10 h-4 w-4 border-r-2 border-t-2 border-amber-400/80" />
               <span className="absolute bottom-3 left-3 z-10 h-4 w-4 border-b-2 border-l-2 border-amber-400/80" />
               <span className="absolute bottom-3 right-3 z-10 h-4 w-4 border-b-2 border-r-2 border-amber-400/80" />
 
-              {/* Ceremony Stage Image */}
               <div className="relative aspect-[16/9] w-full overflow-hidden bg-black/50">
                 <Image
                   src={
@@ -244,21 +238,18 @@ export default function Home() {
                   priority
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-102"
                 />
-                {/* Subtle gradient vignette */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blueprint/95 via-transparent to-black/30" />
 
-                {/* Floating Top Badge */}
                 <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex flex-wrap gap-2 z-10">
                   <span className="inline-flex items-center gap-1.5 rounded-md bg-black/80 px-3 py-1 font-mono text-xs font-bold text-amber-300 border border-amber-500/50 backdrop-blur-md">
                     <Trophy className="h-3.5 w-3.5 text-amber-400" />
-                    TEAM 2 — WINNER
+                    TEAM 2 — 1ST PLACE WINNER
                   </span>
                   <span className="hidden sm:inline-flex items-center gap-1.5 rounded-md bg-black/80 px-3 py-1 font-mono text-xs text-cyan-wire border border-cyan-wire/40 backdrop-blur-md">
                     Anthropic PBC × Somaiya Vidyavihar
                   </span>
                 </div>
 
-                {/* Bottom Overlay Info */}
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 z-10">
                   <div className="rounded-xl border border-white/10 bg-black/80 p-4 sm:p-6 backdrop-blur-md">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -279,7 +270,7 @@ export default function Home() {
                           href="/projects"
                           className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-4 py-2 font-mono text-xs font-bold text-blueprint hover:bg-amber-400 transition-colors"
                         >
-                          Project Architecture
+                          System Architecture
                           <ArrowRight className="h-3.5 w-3.5" />
                         </Link>
                         <Link
@@ -295,47 +286,148 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Architectural Highlights Strip */}
               <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border bg-surface/90 font-mono text-xs">
                 <div className="p-4 sm:p-5">
                   <p className="text-text-tertiary uppercase tracking-wider">
-                    Breakthrough 01
+                    DPDP Act 2023 Compliance
                   </p>
                   <p className="mt-1 font-bold text-text-primary">
-                    100% DPDP Act 2023 Compliant
+                    Zero Biometric Storage
                   </p>
                   <p className="mt-1 text-text-secondary text-[11px] font-sans">
-                    Non-biometric feature extraction eliminating surveillance
-                    liabilities.
+                    Garment &amp; appearance vector hashes with automatic TTL
+                    memory expiration.
                   </p>
                 </div>
                 <div className="p-4 sm:p-5">
                   <p className="text-text-tertiary uppercase tracking-wider">
-                    Breakthrough 02
+                    Edge Execution
                   </p>
                   <p className="mt-1 font-bold text-text-primary">
-                    Sub-45ms Edge Inference
+                    Sub-45ms Inference Latency
                   </p>
                   <p className="mt-1 text-text-secondary text-[11px] font-sans">
-                    Runs on low-power kiosk hardware with automated memory
-                    purging.
+                    MobileNetV3 + ResNet-50 pipeline optimized for offline kiosk
+                    hardware.
                   </p>
                 </div>
                 <div className="p-4 sm:p-5">
                   <p className="text-text-tertiary uppercase tracking-wider">
-                    Breakthrough 03
+                    Deployment Topology
                   </p>
                   <p className="mt-1 font-bold text-text-primary">
                     50-Kiosk Distributed Mesh
                   </p>
                   <p className="mt-1 text-text-secondary text-[11px] font-sans">
-                    Scalable choke-point topology architected for 50M+ religious
-                    gatherings.
+                    3-tiered matching across choke-points architected for Kumbh
+                    Mela 2027.
                   </p>
                 </div>
               </div>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ---------------- Featured Engineering Systems (with Project Images) ---------------- */}
+      <section className="border-t border-border bg-background py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal className="mb-14 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan-wire font-bold">
+                /production-systems // visual-index
+              </p>
+              <h2 className="mt-3 font-display text-4xl sm:text-5xl font-bold tracking-tight text-text-primary">
+                Featured Engineering Systems
+              </h2>
+              <p className="mt-3 max-w-2xl text-base text-text-secondary">
+                Live production deployments, hackathon-winning platforms, and
+                empirical research manuscripts.
+              </p>
+            </div>
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 rounded-lg border border-cyan-wire/40 bg-cyan-wire/10 px-5 py-2.5 font-mono text-xs font-bold text-cyan-wire hover:bg-cyan-wire/20 transition-colors self-start sm:self-auto"
+            >
+              View All {ROHAN_DATA.projects.length} Systems
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Reveal>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {featuredProjects.map((project) => (
+              <div
+                key={project.id}
+                className="group flex flex-col overflow-hidden rounded-xl border border-border bg-surface/40 transition-all hover:border-cyan-wire/50 hover:shadow-xl hover:shadow-cyan-wire/5"
+              >
+                {/* Project Screenshot */}
+                <Link
+                  href="/projects"
+                  className="relative aspect-[16/10] w-full overflow-hidden bg-[#090d16] border-b border-border/60 block"
+                >
+                  <Image
+                    src={project.image || "/projects/khoj.jpg"}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-contain p-1.5 transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </Link>
+
+                {/* Card Body */}
+                <div className="flex flex-1 flex-col justify-between p-6">
+                  <div>
+                    {project.badge && (
+                      <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-0.5 font-mono text-[10px] font-bold text-amber-400">
+                        <Award className="h-3 w-3" />
+                        {project.badge}
+                      </div>
+                    )}
+                    <h3 className="font-display text-lg font-bold text-text-primary group-hover:text-cyan-wire transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="mt-1 font-mono text-[11px] text-cyan-wire/80 uppercase tracking-wider">
+                      {project.subtitle}
+                    </p>
+                    <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-text-secondary">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-border/50 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-mono text-xs text-text-secondary hover:text-cyan-wire transition-colors"
+                      >
+                        <Github className="h-3.5 w-3.5" />
+                        Code
+                      </a>
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 font-mono text-xs text-emerald-400 hover:text-emerald-300 transition-colors"
+                        >
+                          <ExternalLink className="h-3.5 w-3.5" />
+                          Live App
+                        </a>
+                      )}
+                    </div>
+                    <Link
+                      href="/projects"
+                      className="font-mono text-xs font-semibold text-cyan-wire hover:underline inline-flex items-center gap-1"
+                    >
+                      Specs <ArrowRight className="h-3 w-3" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -373,33 +465,33 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="mb-14">
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan-wire">
-              Explore
+              Index
             </p>
             <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-text-primary">
-              Where the work lives
+              Directory
             </h2>
           </Reveal>
 
           <RevealStagger className="grid gap-6 md:grid-cols-3">
             {[
               {
-                title: "Top Tier Projects",
+                title: "Engineering Systems",
                 description:
-                  "KHOJ (Claude Impact Lab Winner), Q-DARPAN (SIH 2026), ComplianceMind (YC RFS #12), CKD Digital Twin, and competitive ML.",
+                  "KHOJ (Claude Impact Lab Winner), AdaptiveMarket (HackWithHyderabad 3.0), Q-DARPAN (SIH 2026), ComplianceMind (YC RFS #12), and CKD Digital Twin.",
                 href: "/projects",
                 marker: "01",
               },
               {
                 title: "Claude for Startups",
                 description:
-                  "Anthropic founder cohort induction · Full selection dossier, engineering deep-dives, and department commendation.",
+                  "Anthropic founder cohort induction · Full selection dossier, program benefits, and department commendation.",
                 href: "/claude-for-startups",
                 marker: "02",
               },
               {
                 title: "Honors & Credentials",
                 description:
-                  "Hackathon wins, Credly badges, Google Student Ambassador, and professional certifications validating deep expertise.",
+                  "Hackathon wins, Credly badges, Google Student Ambassador, and professional certifications.",
                 href: "/certifications",
                 marker: "03",
               },

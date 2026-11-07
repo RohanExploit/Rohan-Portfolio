@@ -42,8 +42,8 @@ export const ROHAN_DATA = {
         "Docker",
       ],
       github: "https://github.com/RohanExploit",
-      image: "/claude-impact-lab-winner.jpg",
-      badge: "🏆 Winner - Claude Impact Lab Mumbai 2026",
+      image: "/projects/khoj.jpg",
+      badge: "1st Place Winner · Claude Impact Lab Mumbai 2026",
       features: [
         "Zero Facial Recognition: 100% DPDP Act 2023 compliance preserving pilgrim privacy",
         "Edge-Optimized Pipeline: Sub-45ms MobileNetV3 segmentation on low-power kiosk hardware",
@@ -56,6 +56,37 @@ export const ROHAN_DATA = {
     },
     {
       id: 2,
+      title: "AdaptiveMarket — Self-Evolving Strategy Agent",
+      subtitle: "Biomimetic Memory & Competitive Intelligence Engine",
+      description:
+        "Winning submission at HackWithHyderabad 3.0. Autonomous competitive intelligence agent powered by Vectorize Hindsight 5-layer biomimetic memory and Groq LPU (openai/gpt-oss-120b) that mutates pricing, sales battlecards, and product roadmaps.",
+      fullDescription:
+        "AdaptiveMarket replaces static market research scrapers with a stateful Chief Strategy Officer agent grounded in 6-month cumulative memory. Using Vectorize Hindsight's 5-layer biomimetic memory bank and TEMPR 4-way neural retrieval (Semantic + BM25 + Graph + Temporal Recency at 0.94 confidence), the system prevents knee-jerk price-war discounting, defends 85% SaaS gross margins, dynamically rewrites sales objection scripts against competitor outages, and autonomously elevates SOC 2 compliance to P0 on the engineering roadmap.",
+      technologies: [
+        "Next.js 15",
+        "Vectorize Hindsight",
+        "Groq LPU (120B MoE)",
+        "FastAPI",
+        "TEMPR Retrieval",
+        "TypeScript",
+        "Render",
+      ],
+      github: "https://github.com/RohanExploit/adaptive-market",
+      link: "https://adaptive-market-frontend.onrender.com",
+      image: "/projects/adaptive-market.jpg",
+      badge: "Winning Submission · HackWithHyderabad 3.0",
+      features: [
+        "5-Layer Biomimetic Memory: Persistent World Facts, Experience Logs, Observations & Mental Models",
+        "TEMPR 4-Way Neural Fusion: Semantic (0.59) + BM25 + Graph + Temporal Recency retrieval",
+        "Margin Defense Engine: Prevents panic discounting and locks 85% gross margin via SLA packaging",
+        "Autonomous Roadmap Mutation: Elevates SOC 2 Type II from P2 to P0 based on deal-loss audits",
+        "Sub-Second LPU Execution: Powered by Groq openai/gpt-oss-120b (~500+ tok/s)",
+      ],
+      impact:
+        "Live deployed full-stack agentic system demonstrating how cumulative temporal memory outperforms stateless LLMs in enterprise strategy.",
+    },
+    {
+      id: 3,
       title: "Q-DARPAN (SIH 2026 / NTRO ECDAT)",
       subtitle: "Enterprise Cryptographic Discovery & Post-Quantum Risk",
       description:
@@ -73,7 +104,7 @@ export const ROHAN_DATA = {
       ],
       github: "https://github.com/RohanExploit/q-darpan",
       image: "/projects/qdarpan.jpg",
-      badge: "🔒 SIH 2026 Finalist · NTRO ECDAT (Team PRAHARI)",
+      badge: "SIH 2026 Finalist · NTRO ECDAT (Team PRAHARI)",
       features: [
         "CBOM Generation: Automated extraction conforming to CycloneDX 1.7 specification",
         "Quantum-Risk Timeline Indexing: Maps vulnerable key-exchange and signatures against Q-Day horizons",
@@ -85,7 +116,7 @@ export const ROHAN_DATA = {
         "Selected as primary solution for NTRO SIH 2026 problem statement. Provides a turnkey roadmap for sovereign post-quantum cyber defense.",
     },
     {
-      id: 3,
+      id: 4,
       title: "ComplianceMind",
       subtitle: "AI-Native Regulatory Compliance Workspace (YC RFS #12)",
       description:
@@ -104,7 +135,7 @@ export const ROHAN_DATA = {
       github: "https://github.com/RohanExploit/ComplianceMind",
       link: "https://compliance-mind.vercel.app",
       image: "/projects/compliancemind.jpg",
-      badge: "⚡ Live in Production · YC RFS #12",
+      badge: "Live in Production · YC RFS #12",
       features: [
         "Live Production Deployment: Interactive workspace at compliance-mind.vercel.app",
         "Multi-Agent Orchestration: Decomposed auditor, verifier, and synthesizer agents",
@@ -116,7 +147,7 @@ export const ROHAN_DATA = {
         "Reduces audit prep cycles from weeks to minutes with zero hallucination via grounded citation retrieval.",
     },
     {
-      id: 4,
+      id: 5,
       title: "CKD Digital Twin",
       subtitle:
         "Chronic Kidney Disease Policy Simulator & Patient Risk Predictor",
@@ -136,7 +167,7 @@ export const ROHAN_DATA = {
       github: "https://github.com/RohanExploit/ckd-digital-twin",
       link: "https://ckd-digital-twin.vercel.app",
       image: "/projects/ckd-digital-twin.jpg",
-      badge: "🏥 Live in Production · Team Hare",
+      badge: "Live in Production · Team Hare",
       features: [
         "Live Production Deployment: Deployed at ckd-digital-twin.vercel.app",
         "Biomarker Trajectory Engine: Simulates longitudinal eGFR, serum creatinine, and ACR variations",
@@ -148,7 +179,7 @@ export const ROHAN_DATA = {
         "Enables data-driven preventative interventions before irreversible renal decline occurs.",
     },
     {
-      id: 5,
+      id: 6,
       title: "Campus Brain Android (Offline RAG)",
       subtitle: "Zero-Network On-Device SLM Knowledge Router",
       description:
@@ -166,7 +197,7 @@ export const ROHAN_DATA = {
       ],
       github: "https://github.com/RohanExploit/campus-brain-android",
       image: "/projects/campus-brain.jpg",
-      badge: "📱 88.9% QA Benchmark · 100% Offline",
+      badge: "88.9% QA Benchmark · 100% Offline",
       features: [
         "4-Route Retrieval: Dynamic routing between FACT, LOCAL, GLOBAL, and TABULAR stores",
         "100% Offline Operation: Native Android client with zero external network requirement",
@@ -178,7 +209,7 @@ export const ROHAN_DATA = {
         "Proves high-accuracy enterprise RAG can run at the edge without cloud subscriptions or latency overhead.",
     },
     {
-      id: 6,
+      id: 7,
       title: "VishwaGuru",
       subtitle: "Open-Source AI Civic Governance & Grievance Platform",
       description:
@@ -196,7 +227,7 @@ export const ROHAN_DATA = {
       ],
       github: "https://github.com/RohanExploit/VishwaGuru",
       image: "/projects/vishwaguru.jpg",
-      badge: "🇮🇳 15+ Stars · GSSoC & ECWoC Project Admin",
+      badge: "15+ Stars · GSSoC & ECWoC Project Admin",
       features: [
         "Multilingual Voice & Text: Broad vernacular language coverage for accessible civic reporting",
         "Autonomous Department Triage: Geocoding + NLP classification to map complaints to administrative zones",
@@ -208,13 +239,13 @@ export const ROHAN_DATA = {
         "Democratizes access to governance and empowers grassroots youth civic participation across India.",
     },
     {
-      id: 7,
-      title: "Kaggle Competitive ML Engines",
+      id: 8,
+      title: "Kaggle Competitive ML & ARC Prize 2026",
       subtitle: "Top 14 & Top 20 Global Competitive Machine Learning Stacks",
       description:
-        "Top 14 finish in Kaggle Playground Series s6e10 (0.96225 Public LB) and Top 20 competitive engine in Kaggle 'Name That LLM' with multi-model LoRA24 ensembles.",
+        "Top 14 finish in Kaggle Playground Series S6E10 (0.96225 Public LB), Top 20 competitive engine in Kaggle 'Name That LLM' with 24-LoRA ensembles, and symbolic DSL solver for ARC-AGI-2.",
       fullDescription:
-        "Engineered state-of-the-art competitive ML pipelines for highly contested international benchmarks. In S6E10 (Predicting Airline Satisfaction), built a 5-fold nested cross-validation super-stack blending CatBoost, LightGBM, and XGBoost with engineered feature interactions (0.96225 LB). In 'Name That LLM' (2026), built a Top 20 competitive engine using ATLAS stylometry residual modeling, Qwen3.8-27B GSQ3, and a 24-adapter LoRA ensemble.",
+        "Engineered state-of-the-art competitive ML pipelines for highly contested international benchmarks. In S6E10 (Predicting Airline Satisfaction), built a 5-fold nested cross-validation super-stack blending CatBoost, LightGBM, and XGBoost with multi-seed residual consensus (0.96225 LB). In 'Name That LLM' (2026), built a Top 20 competitive engine using ATLAS stylometry residual modeling, Qwen3.8-27B GSQ3, and a 24-adapter LoRA ensemble.",
       technologies: [
         "Python",
         "CatBoost",
@@ -222,51 +253,51 @@ export const ROHAN_DATA = {
         "XGBoost",
         "PyTorch",
         "LoRA Ensembles",
-        "Nested Cross-Validation",
+        "ARC-AGI-2 DSL",
       ],
       github:
         "https://github.com/RohanExploit/kaggle-s6e10-airline-satisfaction",
       image: "/projects/kaggle-s6e10.jpg",
-      badge: "🏆 Top 14 & Top 20 Competitive ML",
+      badge: "Top 14 & Top 20 Competitive ML",
       features: [
         "Top 14 Global Finish: S6E10 score of 0.96225 Public LB & 0.962225 5-Fold Nested CV",
-        "SOTA Ensembling: Weighted rank-averaged blending with out-of-fold calibration",
+        "Multi-Seed Residual Consensus: Rank-averaged blending with out-of-fold calibration (PAS_E54)",
         "Name That LLM Top 20: 24-LoRA model stack capturing fine-grained token distribution residuals",
-        "ATLAS Stylometry: Feature extraction capturing syntactic anomalies and vocabulary entropy",
+        "ARC Prize 2026 (ARC-AGI-2): Bidirectional program synthesis DSL with test-time transduction",
         "Production ML Rigor: Strict zero-leakage cross-validation and reproducible pipeline execution",
       ],
       impact:
         "Validates algorithmic and modeling mastery against thousands of international data science teams.",
     },
     {
-      id: 8,
-      title: "Quantensor (Regime Intelligence)",
-      subtitle: "Market Anomaly Detection & Regime Transition Modeling",
+      id: 9,
+      title: "Quantensor (Regime & Microstructure Study)",
+      subtitle: "Fixed-Band Neutrality Collapse & Market Regime Modeling",
       description:
-        "Quantitative finance ML platform detecting regime shifts (momentum to mean-reversion) on Indian equity markets. Closure research paper prepared for arXiv and IEEE CIFEr.",
+        "Quantitative finance research & ML platform proving the h^(-1/2) neutrality collapse law and detecting regime shifts across 48 NSE equities and EURUSD. Manuscript prepared for arXiv & IEEE CIFEr.",
       fullDescription:
-        "Quantensor applies machine learning to algorithmic market microstructure. Built on top of DuckDB, FastAPI, and Angel One SmartAPI, it ingests high-frequency NSE feeds and runs regime-shift classification models to detect transitions between trending and mean-reverting phases. A comprehensive research paper detailing the methodology has been prepared for arXiv (q-fin.CP / cs.LG) and IEEE CIFEr.",
+        "Quantensor investigates algorithmic market microstructure and regime classification. Built on DuckDB, FastAPI, and Angel One SmartAPI, it formally proves and empirically verifies Across 48 NSE equities, EURUSD, and Geometric Brownian Motion that fixed-threshold ternary labeling collapses the neutral class at h^(-1/2) and manufactures spurious directional edge under drift. Accompanied by a reproducible LaTeX manuscript prepared for arXiv (q-fin.CP / cs.LG) and IEEE CIFEr.",
       technologies: [
         "Python",
         "FastAPI",
         "DuckDB",
         "XGBoost",
         "Angel One SmartAPI",
-        "yfinance",
-        "Streamlit",
+        "LaTeX / Research",
+        "Market Microstructure",
       ],
       github: "https://github.com/RohanExploit/quantensor-study",
       image: "/projects/quantensor.jpg",
-      badge: "📈 Research Paper Drafted for arXiv & IEEE CIFEr",
+      badge: "Research Manuscript · arXiv & IEEE CIFEr",
       features: [
-        "Regime Shift Detection: Classifies market transition boundaries between momentum and mean-reversion",
-        "DuckDB Analytics Store: Sub-second analytical queries on millions of ticks",
+        "Analytic & Empirical Proof: Demonstrates h^(-1/2) neutral-class collapse across 48 NSE equities & FX",
+        "Spurious Edge Diagnostics: Quantifies manufactured directional edge M_dir under drift",
+        "DuckDB Analytics Store: Sub-second analytical queries on multi-year equity tick & OHLCV series",
         "Broker API Integration: Live order routing and telemetry via Angel One SmartAPI",
-        "Academic Rigor: Formal closure paper targeting IEEE CIFEr publication",
-        "Backtesting Sandbox: Realistic slippage and transaction cost simulation framework",
+        "Reproducible Research Pipeline: Automated figure generation and statistical verification suite",
       ],
       impact:
-        "Bridges theoretical quantitative finance research with low-latency production execution.",
+        "Bridges theoretical quantitative finance microstructure research with low-latency production execution.",
     },
   ],
 
