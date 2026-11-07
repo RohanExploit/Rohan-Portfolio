@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import {
   ArrowRight,
@@ -9,6 +10,7 @@ import {
   Mail,
   Twitter,
   Sparkles,
+  Trophy,
 } from "lucide-react";
 import { ROHAN_DATA } from "@/lib/portfolio-data";
 import { Reveal, RevealStagger, RevealItem } from "./components/reveal";
@@ -34,14 +36,35 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* ---------------- Hero ---------------- */}
-      <section className="mx-auto max-w-7xl px-4 pt-16 pb-24 sm:px-6 lg:px-8 lg:pt-24">
+      <section className="mx-auto max-w-7xl px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-20">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1.15fr] lg:gap-14">
           {/* Left: identity */}
           <div className="animate-in fade-in slide-in-from-left-4 duration-700">
-            <p className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.25em] text-cyan-wire">
-              <span className="h-px w-8 bg-cyan-wire" />
-              Systems Architect · AI Engineer
-            </p>
+            {/* Identity & Profile Photo */}
+            <div className="flex items-center gap-4">
+              <Link href="/about" className="group relative block">
+                <div className="relative h-16 w-16 sm:h-20 sm:w-20 overflow-hidden rounded-2xl border-2 border-cyan-wire/50 shadow-xl shadow-cyan-wire/10 transition-transform group-hover:scale-105">
+                  <Image
+                    src={ROHAN_DATA.profilePhoto}
+                    alt="Rohan Gaikwad - Systems Architect & AI Engineer"
+                    fill
+                    priority
+                    className="object-cover"
+                  />
+                </div>
+                <span className="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-background">
+                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                </span>
+              </Link>
+              <div>
+                <p className="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-cyan-wire">
+                  Systems Architect · AI Engineer
+                </p>
+                <p className="font-mono text-xs text-text-tertiary mt-0.5">
+                  Satara / Pune, India · Available for roles
+                </p>
+              </div>
+            </div>
 
             <h1 className="mt-6 font-display text-6xl font-bold leading-[0.92] tracking-tight text-text-primary sm:text-7xl">
               Rohan
@@ -174,6 +197,145 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ---------------- Grand Entrance: Winner Ceremony Showcase ---------------- */}
+      <section className="border-t border-border bg-gradient-to-b from-surface/60 via-background to-surface/30 py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal className="mb-10 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-1.5 text-xs font-mono font-bold text-amber-400">
+              <Trophy className="h-4 w-4 text-amber-400" />
+              GRAND ENTRANCE // 1ST PLACE CHAMPIONSHIP
+            </div>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold tracking-tight text-text-primary">
+              Winner · Claude Impact Lab Mumbai 2026
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-text-secondary leading-relaxed">
+              Awarded 1st place on stage at Somaiya Vidyavihar University for
+              architecting{" "}
+              <span className="font-semibold text-text-primary">KHOJ</span> —
+              the non-biometric, edge-accelerated missing-person identification
+              platform designed for 50-kiosk deployment at{" "}
+              <span className="text-amber-400 font-semibold">
+                Kumbh Mela 2027
+              </span>{" "}
+              under India&apos;s DPDP Act 2023.
+            </p>
+          </Reveal>
+
+          {/* Grand Entrance Visual Stage Showcase */}
+          <Reveal className="mx-auto max-w-6xl">
+            <div className="group relative overflow-hidden rounded-2xl border-2 border-amber-500/40 bg-blueprint shadow-2xl shadow-amber-500/10">
+              {/* Corner blueprint marks */}
+              <span className="absolute left-3 top-3 z-10 h-4 w-4 border-l-2 border-t-2 border-amber-400/80" />
+              <span className="absolute right-3 top-3 z-10 h-4 w-4 border-r-2 border-t-2 border-amber-400/80" />
+              <span className="absolute bottom-3 left-3 z-10 h-4 w-4 border-b-2 border-l-2 border-amber-400/80" />
+              <span className="absolute bottom-3 right-3 z-10 h-4 w-4 border-b-2 border-r-2 border-amber-400/80" />
+
+              {/* Ceremony Stage Image */}
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-black/50">
+                <Image
+                  src={
+                    ROHAN_DATA.winnerPhoto || "/claude-impact-lab-winner.jpg"
+                  }
+                  alt="Claude Impact Lab Mumbai 2026 Winner Ceremony Stage - Rohan Gaikwad and Team 2"
+                  fill
+                  priority
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-102"
+                />
+                {/* Subtle gradient vignette */}
+                <div className="absolute inset-0 bg-gradient-to-t from-blueprint/95 via-transparent to-black/30" />
+
+                {/* Floating Top Badge */}
+                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex flex-wrap gap-2 z-10">
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-black/80 px-3 py-1 font-mono text-xs font-bold text-amber-300 border border-amber-500/50 backdrop-blur-md">
+                    <Trophy className="h-3.5 w-3.5 text-amber-400" />
+                    TEAM 2 — WINNER
+                  </span>
+                  <span className="hidden sm:inline-flex items-center gap-1.5 rounded-md bg-black/80 px-3 py-1 font-mono text-xs text-cyan-wire border border-cyan-wire/40 backdrop-blur-md">
+                    Anthropic PBC × Somaiya Vidyavihar
+                  </span>
+                </div>
+
+                {/* Bottom Overlay Info */}
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 z-10">
+                  <div className="rounded-xl border border-white/10 bg-black/80 p-4 sm:p-6 backdrop-blur-md">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                      <div>
+                        <p className="font-mono text-xs uppercase tracking-wider text-amber-400 font-bold">
+                          KHOJ / Kho-Ya-Paya · Kumbh Mela 2027
+                        </p>
+                        <h3 className="mt-1 font-display text-xl sm:text-2xl font-bold text-white">
+                          Privacy-Preserving Missing Pilgrim Resolution Engine
+                        </h3>
+                        <p className="mt-1 text-xs sm:text-sm text-gray-300">
+                          Zero facial recognition · MobileNetV3 edge
+                          segmentation · Ephemeral TTL vector hashes
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap items-center gap-3">
+                        <Link
+                          href="/projects"
+                          className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-4 py-2 font-mono text-xs font-bold text-blueprint hover:bg-amber-400 transition-colors"
+                        >
+                          Project Architecture
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
+                        <Link
+                          href="/claude-for-startups"
+                          className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-4 py-2 font-mono text-xs font-semibold text-white hover:bg-white/20 transition-colors"
+                        >
+                          Startup Dossier
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Architectural Highlights Strip */}
+              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border bg-surface/90 font-mono text-xs">
+                <div className="p-4 sm:p-5">
+                  <p className="text-text-tertiary uppercase tracking-wider">
+                    Breakthrough 01
+                  </p>
+                  <p className="mt-1 font-bold text-text-primary">
+                    100% DPDP Act 2023 Compliant
+                  </p>
+                  <p className="mt-1 text-text-secondary text-[11px] font-sans">
+                    Non-biometric feature extraction eliminating surveillance
+                    liabilities.
+                  </p>
+                </div>
+                <div className="p-4 sm:p-5">
+                  <p className="text-text-tertiary uppercase tracking-wider">
+                    Breakthrough 02
+                  </p>
+                  <p className="mt-1 font-bold text-text-primary">
+                    Sub-45ms Edge Inference
+                  </p>
+                  <p className="mt-1 text-text-secondary text-[11px] font-sans">
+                    Runs on low-power kiosk hardware with automated memory
+                    purging.
+                  </p>
+                </div>
+                <div className="p-4 sm:p-5">
+                  <p className="text-text-tertiary uppercase tracking-wider">
+                    Breakthrough 03
+                  </p>
+                  <p className="mt-1 font-bold text-text-primary">
+                    50-Kiosk Distributed Mesh
+                  </p>
+                  <p className="mt-1 text-text-secondary text-[11px] font-sans">
+                    Scalable choke-point topology architected for 50M+ religious
+                    gatherings.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

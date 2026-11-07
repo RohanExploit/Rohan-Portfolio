@@ -42,7 +42,7 @@ export const ROHAN_DATA = {
         "Docker",
       ],
       github: "https://github.com/RohanExploit",
-      image: "/projects/khoj.jpg",
+      image: "/claude-impact-lab-winner.jpg",
       badge: "🏆 Winner - Claude Impact Lab Mumbai 2026",
       features: [
         "Zero Facial Recognition: 100% DPDP Act 2023 compliance preserving pilgrim privacy",
@@ -677,6 +677,6 @@ export const ROHAN_DATA = {
     claudePdf: "/claude-for-startups.pdf",
   },
 
-  profilePhoto:
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile%20photo-IUkJLFFn1HXs8tLuGH52CML8IR36Pu.jpg",
+  profilePhoto: "/rohan-profile.jpg",
+  winnerPhoto: "/claude-impact-lab-winner.jpg",
 };
