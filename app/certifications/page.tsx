@@ -1,14 +1,16 @@
 "use client";
 
 import { ROHAN_DATA } from "@/lib/portfolio-data";
-import { Award, Calendar, Building2, ExternalLink } from "lucide-react";
+import { Award, Calendar, Building2, ExternalLink, Sparkles, Trophy, FileText } from "lucide-react";
+import Link from "next/link";
 import Script from "next/script";
 
 export default function Certifications() {
   const { achievements } = ROHAN_DATA;
 
-  const certifications = achievements.filter((a) => a.type === "Certification");
-  const programs = achievements.filter((a) => a.type === "Program");
+  const awards = achievements.filter((a: any) => a.type === "Award" || a.featured);
+  const certifications = achievements.filter((a: any) => a.type === "Certification");
+  const programs = achievements.filter((a: any) => a.type === "Program" && !a.featured);
 
   return (
     <div className="min-h-screen bg-background">
@@ -19,12 +21,79 @@ export default function Certifications() {
             /certifications-awards
           </p>
           <h1 className="mt-2 font-mono text-5xl font-bold text-text-primary">
-            Certifications & Programs
+            Honors, Awards & Credentials
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-text-secondary leading-relaxed">
-            Professional credentials and continuous learning milestones
-            validating technical expertise.
+            International recognitions, hackathon podiums, startup selections,
+            and continuous learning milestones validating deep technical expertise.
           </p>
+        </div>
+
+        {/* Featured Honors & Awards */}
+        <div className="mb-20">
+          <h2 className="mb-8 font-mono text-2xl font-bold text-text-primary flex items-center gap-4">
+            <span className="h-px w-8 bg-amber-400"></span>
+            Featured Honors & Hackathon Podiums
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {awards.map((award: any, index: number) => (
+              <div
+                key={index}
+                className="group glass-card p-8 hover-lift flex flex-col h-full border-amber-500/30 hover:border-amber-400 bg-surface/50"
+              >
+                <div className="flex items-start gap-6">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-400 group-hover:bg-amber-400 group-hover:text-black transition-all duration-300">
+                    <Trophy className="h-7 w-7" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-amber-400">
+                        {award.type === "Program" ? "Selection" : "Award"}
+                      </span>
+                    </div>
+                    <h3 className="font-mono text-xl font-bold text-text-primary group-hover:text-accent transition-colors">
+                      {award.title}
+                    </h3>
+                    <div className="mt-3 flex flex-wrap gap-4 text-sm">
+                      <div className="flex items-center gap-2 text-text-secondary">
+                        <Building2 className="h-4 w-4 text-accent" />
+                        <span className="font-semibold">{award.issuer}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-text-secondary">
+                        <Calendar className="h-4 w-4 text-accent" />
+                        <span>{award.date}</span>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-text-secondary leading-relaxed text-sm">
+                      {award.description}
+                    </p>
+                    {award.link && (
+                      <div className="mt-5">
+                        {award.link.startsWith("/") ? (
+                          <Link
+                            href={award.link}
+                            className="inline-flex items-center gap-2 rounded-lg bg-amber-500/10 border border-amber-500/30 px-3.5 py-1.5 font-mono text-xs font-semibold text-amber-400 hover:bg-amber-500/20 transition-all"
+                          >
+                            <FileText className="h-3.5 w-3.5" />
+                            Live Document & Verification →
+                          </Link>
+                        ) : (
+                          <a
+                            href={award.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+                          >
+                            Verify Credential <ExternalLink className="h-3 w-3" />
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Verified Credentials (Credly) */}
@@ -67,14 +136,14 @@ export default function Certifications() {
           />
         </div>
 
-        {/* Certifications Section */}
+        {/* Professional Certifications Section */}
         <div className="mb-20">
           <h2 className="mb-8 font-mono text-2xl font-bold text-text-primary flex items-center gap-4">
             <span className="h-px w-8 bg-accent"></span>
             Professional Certifications
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {certifications.map((cert, index) => (
+            {certifications.map((cert: any, index: number) => (
               <div
                 key={index}
                 className="group glass-card p-8 hover-lift flex flex-col h-full border-accent/20 hover:border-accent"
@@ -124,26 +193,26 @@ export default function Certifications() {
             Programs & Recognition
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {programs.map((program, index) => (
+            {programs.map((program: any, index: number) => (
               <div
                 key={index}
                 className="group glass-card p-8 hover-lift flex flex-col h-full border-info/20 hover:border-info"
               >
                 <div className="flex items-start gap-6">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-info/10 text-info group-hover:bg-info group-hover:text-white transition-all duration-300">
-                    <Award className="h-7 w-7" />
+                    <Sparkles className="h-7 w-7" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-mono text-xl font-bold text-text-primary group-hover:text-info transition-colors">
+                    <h3 className="font-mono text-xl font-bold text-text-primary group-hover:text-accent transition-colors">
                       {program.title}
                     </h3>
                     <div className="mt-3 flex flex-wrap gap-4 text-sm">
                       <div className="flex items-center gap-2 text-text-secondary">
-                        <Building2 className="h-4 w-4 text-info" />
+                        <Building2 className="h-4 w-4 text-accent" />
                         <span className="font-semibold">{program.issuer}</span>
                       </div>
                       <div className="flex items-center gap-2 text-text-secondary">
-                        <Calendar className="h-4 w-4 text-info" />
+                        <Calendar className="h-4 w-4 text-accent" />
                         <span>{program.date}</span>
                       </div>
                     </div>
@@ -155,9 +224,9 @@ export default function Certifications() {
                         href={program.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-info hover:underline"
+                        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
                       >
-                        View Program <ExternalLink className="h-3 w-3" />
+                        Program Details <ExternalLink className="h-3 w-3" />
                       </a>
                     )}
                   </div>
@@ -165,35 +234,6 @@ export default function Certifications() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Summary Stats */}
-        <div className="mt-20 grid gap-6 border-t border-border pt-12 md:grid-cols-4">
-          {[
-            {
-              label: "Total Certifications",
-              value: certifications.length,
-              icon: "★",
-            },
-            { label: "Programs", value: programs.length, icon: "◆" },
-            { label: "Issuers", value: "8+", icon: "◈" },
-            { label: "Year Range", value: "2024-2025", icon: "📅" },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="glass-card p-8 text-center hover-lift border-transparent hover:border-accent group"
-            >
-              <div className="mb-3 text-2xl text-accent opacity-50 group-hover:opacity-100 transition-opacity">
-                {stat.icon}
-              </div>
-              <p className="font-mono text-xs text-text-secondary uppercase tracking-widest font-bold">
-                {stat.label}
-              </p>
-              <p className="mt-2 font-mono text-3xl font-bold text-text-primary group-hover:text-glow transition-all">
-                {stat.value}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { ArrowRight, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Twitter, Sparkles } from "lucide-react";
 import { ROHAN_DATA } from "@/lib/portfolio-data";
 import { Reveal, RevealStagger, RevealItem } from "./components/reveal";
 
@@ -41,10 +41,26 @@ export default function Home() {
               <span className="text-text-primary/40">Gaikwad</span>
             </h1>
 
-            <p className="mt-7 max-w-md text-lg leading-relaxed text-text-secondary">
+            {/* Claude for Startups Live Preview Pill */}
+            <div className="mt-6">
+              <Link
+                href="/claude-for-startups"
+                className="group inline-flex items-center gap-2.5 rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-2 backdrop-blur-md transition-all hover:border-amber-400 hover:bg-amber-500/20 shadow-lg shadow-amber-500/5"
+              >
+                <span className="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
+                <span className="font-mono text-xs font-bold text-amber-300">
+                  Anthropic Claude for Startups Cohort
+                </span>
+                <span className="font-mono text-xs text-amber-400/80 group-hover:translate-x-0.5 transition-transform">
+                  Live PDF Preview →
+                </span>
+              </Link>
+            </div>
+
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-text-secondary">
               I design systems that hold up under load and the intelligence that
               runs on them — turning tangled problems into architecture you can
-              reason about.
+              reason about. Winner at Claude Impact Lab Mumbai 2026 &amp; SIH 2026 Finalist.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -52,8 +68,15 @@ export default function Home() {
                 href="/projects"
                 className="group inline-flex items-center gap-2 rounded-md bg-cyan-wire px-5 py-3 text-sm font-semibold text-blueprint transition-transform hover:-translate-y-0.5"
               >
-                View the work
+                View Top Projects
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+              <Link
+                href="/claude-for-startups"
+                className="inline-flex items-center gap-2 rounded-md border border-amber-500/40 px-5 py-3 text-sm font-semibold text-amber-300 transition-colors hover:border-amber-400 hover:bg-amber-500/10"
+              >
+                <Sparkles className="h-4 w-4 text-amber-400" />
+                Claude Selection
               </Link>
               <a
                 href={ROHAN_DATA.contact.resume}
@@ -160,23 +183,23 @@ export default function Home() {
           <RevealStagger className="grid gap-6 md:grid-cols-3">
             {[
               {
-                title: "Projects",
+                title: "Top Tier Projects",
                 description:
-                  "Full-stack systems, ML models, and open-source — from deepfake detection to civic platforms.",
+                  "KHOJ (Claude Impact Lab Winner), Q-DARPAN (SIH 2026), ComplianceMind (YC RFS #12), CKD Digital Twin, and competitive ML.",
                 href: "/projects",
                 marker: "01",
               },
               {
-                title: "Experience",
+                title: "Claude for Startups",
                 description:
-                  "Internships, mentorship, and the professional path that shaped how I build.",
-                href: "/experience",
+                  "Anthropic founder cohort induction · Interactive live PDF preview, technical session breakdown, and faculty verification.",
+                href: "/claude-for-startups",
                 marker: "02",
               },
               {
-                title: "Certifications",
+                title: "Honors & Credentials",
                 description:
-                  "Credentials and programs that mark continuous, deliberate learning.",
+                  "Hackathon wins, Credly badges, Google Student Ambassador, and professional certifications validating deep expertise.",
                 href: "/certifications",
                 marker: "03",
               },

@@ -15,6 +15,7 @@ export function Navigation() {
     { href: "/", label: "Home", icon: "◆" },
     { href: "/about", label: "About", icon: "◈" },
     { href: "/projects", label: "Projects", icon: "◊" },
+    { href: "/claude-for-startups", label: "Claude for Startups", icon: "🌟" },
     { href: "/experience", label: "Experience", icon: "▪" },
     { href: "/skills", label: "Skills", icon: "■" },
     { href: "/certifications", label: "Certifications", icon: "★" },
