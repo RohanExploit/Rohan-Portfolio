@@ -81,6 +81,7 @@ export default function Projects() {
                       src={imgSrc}
                       alt={project.title}
                       fill
+                      unoptimized
                       sizes="(max-width: 1024px) 100vw, 540px"
                       className="object-contain p-2 transition-transform duration-500 group-hover:scale-[1.02]"
                     />
@@ -300,6 +301,7 @@ export default function Projects() {
                 }
                 alt={previewProject.title}
                 fill
+                unoptimized
                 sizes="100vw"
                 className="object-contain p-2"
               />

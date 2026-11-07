@@ -118,33 +118,34 @@ export const ROHAN_DATA = {
     {
       id: 4,
       title: "ComplianceMind",
-      subtitle: "AI-Native Regulatory Compliance Workspace (YC RFS #12)",
+      subtitle:
+        "4-Agent Financial Compliance System (Y Combinator Fall 2026 × Moss Sprint)",
       description:
-        "Production AI workspace built targeting YC Request for Startups (RFS #12). Features multi-agent legal verification, Moss knowledge retrieval, and human-in-the-loop audit generation.",
+        "Runner-Up for Best Demo & Presentation at the Y Combinator Fall 2026 × Moss Zero Latency Builder Sprint (Bangalore). A 4-agent system for financial compliance where agents communicate directly to detect short selling, fraud, and regulatory violations.",
       fullDescription:
-        "ComplianceMind re-engineers enterprise regulatory audits from manual multi-week consultant engagements into continuous autonomous oversight. Deployed live in production, the system orchestrates a swarm of specialized agentic workers that ingest statutory frameworks (SOC 2, ISO 27001, HIPAA, GDPR, DPDP Act), parse internal operational artifacts, detect compliance drift, and generate evidence binders with cited legal provenance.",
+        "Built at the Y Combinator Fall 2026 × Moss Zero Latency Builder Sprint in Bangalore with one goal: build something real. ComplianceMind is a 4-agent financial compliance system where agents actively talk to each other instead of throwing four separate AI responses at the user. One agent handles regulations, one works with market and transaction data, one looks for suspicious activity like short selling and financial fraud, and the fourth puts everything together to give stakeholders the exact reasoning behind each finding.",
       technologies: [
+        "4-Agent Inter-Communication",
+        "Moss Zero-Latency Retrieval",
         "Next.js 14",
         "TypeScript",
-        "Multi-Agent Swarm",
-        "Moss Retrieval",
-        "Tailwind CSS",
+        "Financial Fraud Detection",
         "FastAPI",
         "Vercel",
       ],
       github: "https://github.com/RohanExploit/ComplianceMind",
       link: "https://compliance-mind.vercel.app",
       image: "/projects/compliancemind.jpg",
-      badge: "Live in Production · YC RFS #12",
+      badge: "Runner-Up Best Demo · YC Fall 2026 × Moss Sprint Bangalore",
       features: [
-        "Live Production Deployment: Interactive workspace at compliance-mind.vercel.app",
-        "Multi-Agent Orchestration: Decomposed auditor, verifier, and synthesizer agents",
-        "Moss Knowledge Retrieval: High-precision retrieval with strict clause-level citation attribution",
-        "Automated Gap Analysis: Instant scoring against SOC 2, HIPAA, ISO 27001, and Indian DPDP Act",
-        "Exportable Evidence Binders: Audit-ready PDF and JSON evidence packages",
+        "Agent 1 (Regulations): Continuously indexes and verifies statutory financial compliance rules",
+        "Agent 2 (Market & Transaction Data): Streams and correlates high-volume market and ledger activity",
+        "Agent 3 (Fraud & Short-Selling Detection): Identifies market manipulation, structuring, and insider anomalies",
+        "Agent 4 (Stakeholder Reasoning Synthesis): Cross-examines agent findings into unified, auditable reasoning",
+        "Inter-Agent Protocol: Direct agent-to-agent message passing rather than isolated LLM outputs",
       ],
       impact:
-        "Reduces audit prep cycles from weeks to minutes with zero hallucination via grounded citation retrieval.",
+        "Runner-Up for Best Demo & Presentation at Y Combinator Fall 2026 × Moss Zero Latency Builder Sprint, Bangalore. Deployed live at compliance-mind.vercel.app.",
     },
     {
       id: 5,
@@ -709,5 +710,6 @@ export const ROHAN_DATA = {
   },
 
   profilePhoto: "/rohan-profile.jpg",
-  winnerPhoto: "/claude-impact-lab-winner.jpg",
+  winnerPhoto: "/claude-impact-lab-winner.png",
+  ycMossPhoto: "/yc-moss-sprint-winner.jpg",
 };
