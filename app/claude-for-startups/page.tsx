@@ -55,9 +55,9 @@ export default function ClaudeForStartupsPage() {
           </h1>
 
           <p className="mt-4 text-lg text-text-secondary max-w-3xl leading-relaxed">
-            Official selection and onboarding into Anthropic&apos;s flagship founder
-            program, recognizing pioneering systems architecture and AI engineering
-            on the Claude platform.
+            Official selection and onboarding into Anthropic&apos;s flagship
+            founder program, recognizing pioneering systems architecture and AI
+            engineering on the Claude platform.
           </p>
         </div>
 
@@ -154,15 +154,26 @@ export default function ClaudeForStartupsPage() {
                     claude-for-startups.pdf (Interactive Document Viewer)
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-xs font-mono text-accent">
-                  <CheckCircle2 className="h-4 w-4" /> Live Stream
+                <div className="flex items-center gap-3 text-xs font-mono">
+                  <button
+                    onClick={() => setIsFullscreen(!isFullscreen)}
+                    className="inline-flex items-center gap-1 text-text-secondary hover:text-accent transition-colors"
+                  >
+                    <Maximize2 className="h-3.5 w-3.5" />
+                    {isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+                  </button>
+                  <span className="text-accent flex items-center gap-1">
+                    <CheckCircle2 className="h-4 w-4" /> Live Stream
+                  </span>
                 </div>
               </div>
 
               {/* PDF Viewer Frame */}
               <div
                 className={`w-full overflow-hidden rounded-b-xl bg-neutral-900 transition-all ${
-                  isFullscreen ? "fixed inset-4 z-50 h-[calc(100vh-2rem)]" : "h-[780px]"
+                  isFullscreen
+                    ? "fixed inset-4 z-50 h-[calc(100vh-2rem)]"
+                    : "h-[780px]"
                 }`}
               >
                 <object
@@ -193,7 +204,8 @@ export default function ClaudeForStartupsPage() {
 
             <p className="text-center font-mono text-xs text-text-tertiary">
               Official PDF confirmation rendered directly in-browser · Includes
-              original transmission headers and university department commendation.
+              original transmission headers and university department
+              commendation.
             </p>
           </div>
         )}
@@ -210,7 +222,8 @@ export default function ClaudeForStartupsPage() {
                       Anthropic Onboarding Dispatch
                     </h3>
                     <p className="font-mono text-xs text-text-tertiary mt-1">
-                      From: Claude for Startups &lt;startups@mail.anthropic.com&gt;
+                      From: Claude for Startups
+                      &lt;startups@mail.anthropic.com&gt;
                     </p>
                     <p className="font-mono text-xs text-text-tertiary">
                       To: Rohan Gaikwad &lt;212_2023_cse@yes.edu.in&gt;
@@ -227,16 +240,16 @@ export default function ClaudeForStartupsPage() {
                   &ldquo;Hi Rohan,
                 </p>
                 <p>
-                  We&apos;re glad to welcome Rohan&apos;s Individual Org to Claude for Startups.
-                  We built this program because some of the most ambitious work on
-                  Claude is coming from founders like you, and we want to support it
-                  early.
+                  We&apos;re glad to welcome Rohan&apos;s Individual Org to
+                  Claude for Startups. We built this program because some of the
+                  most ambitious work on Claude is coming from founders like
+                  you, and we want to support it early.
                 </p>
                 <p>
-                  Claude for Startups gives you a direct line to the people who build
-                  Claude, early access to what we ship, and a community of founders
-                  working on similar problems. With Claude for Startups, you&apos;ll
-                  always build in good company.&rdquo;
+                  Claude for Startups gives you a direct line to the people who
+                  build Claude, early access to what we ship, and a community of
+                  founders working on similar problems. With Claude for
+                  Startups, you&apos;ll always build in good company.&rdquo;
                 </p>
                 <p className="font-mono text-xs text-text-tertiary pt-2">
                   — The Claude for Startups Team, Anthropic PBC
@@ -253,7 +266,8 @@ export default function ClaudeForStartupsPage() {
                 </p>
                 <div className="mt-4 pt-4 border-t border-accent/10 flex flex-col sm:flex-row justify-between text-xs font-mono text-text-secondary">
                   <span>
-                    Dr. (Sou.) S V Balshetwar · Associate Professor & HOD, CSE Department
+                    Dr. (Sou.) S V Balshetwar · Associate Professor & HOD, CSE
+                    Department
                   </span>
                   <span>Yashoda Technical Campus, Satara</span>
                 </div>
@@ -270,8 +284,8 @@ export default function ClaudeForStartupsPage() {
                   Live Working Sessions
                 </h4>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  Technical deep dives and collaborative working sessions led by the
-                  engineering team that builds Claude.
+                  Technical deep dives and collaborative working sessions led by
+                  the engineering team that builds Claude.
                 </p>
               </div>
 
@@ -283,8 +297,8 @@ export default function ClaudeForStartupsPage() {
                   Founder Events & Summits
                 </h4>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  Priority invitations to Anthropic Hackathons, Builder Days, Founder
-                  Days, and community-run builder collectives.
+                  Priority invitations to Anthropic Hackathons, Builder Days,
+                  Founder Days, and community-run builder collectives.
                 </p>
               </div>
 

@@ -2,7 +2,14 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { ArrowRight, Github, Linkedin, Mail, Twitter, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+  Sparkles,
+} from "lucide-react";
 import { ROHAN_DATA } from "@/lib/portfolio-data";
 import { Reveal, RevealStagger, RevealItem } from "./components/reveal";
 
@@ -60,7 +67,8 @@ export default function Home() {
             <p className="mt-6 max-w-md text-lg leading-relaxed text-text-secondary">
               I design systems that hold up under load and the intelligence that
               runs on them — turning tangled problems into architecture you can
-              reason about. Winner at Claude Impact Lab Mumbai 2026 &amp; SIH 2026 Finalist.
+              reason about. Winner at Claude Impact Lab Mumbai 2026 &amp; SIH
+              2026 Finalist.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">

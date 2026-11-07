@@ -2,8 +2,23 @@
 
 import { ROHAN_DATA } from "@/lib/portfolio-data";
 import Image from "next/image";
-import { Github, ExternalLink, Sparkles, Award } from "lucide-react";
+import { Github, ExternalLink, Award } from "lucide-react";
 import { useState } from "react";
+
+interface ProjectItem {
+  id: number;
+  title: string;
+  subtitle: string;
+  description: string;
+  fullDescription: string;
+  technologies: string[];
+  github: string;
+  link?: string;
+  image?: string;
+  badge?: string;
+  features: string[];
+  impact: string;
+}
 
 const projectImages: { [key: number]: string } = {
   1: "/projects/khoj.jpg",
@@ -17,7 +32,7 @@ const projectImages: { [key: number]: string } = {
 };
 
 export default function Projects() {
-  const { projects } = ROHAN_DATA;
+  const projects = ROHAN_DATA.projects as ProjectItem[];
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   return (
@@ -40,7 +55,7 @@ export default function Projects() {
 
         {/* Projects List */}
         <div className="space-y-12">
-          {projects.map((project: any, idx) => (
+          {projects.map((project: ProjectItem, idx: number) => (
             <div
               key={project.id}
               className="group overflow-hidden glass-card hover-lift animate-in fade-in slide-in-from-bottom duration-700 border-border hover:border-accent/50"
@@ -50,7 +65,11 @@ export default function Projects() {
                 {/* Image Section */}
                 <div className="relative h-72 lg:h-auto lg:w-2/5 overflow-hidden bg-surface-alt">
                   <Image
-                    src={project.image || projectImages[project.id] || "/projects/khoj.jpg"}
+                    src={
+                      project.image ||
+                      projectImages[project.id] ||
+                      "/projects/khoj.jpg"
+                    }
                     alt={project.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -136,7 +155,9 @@ export default function Projects() {
                       }
                       className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-text-tertiary hover:text-accent transition-colors ml-auto"
                     >
-                      {expandedId === project.id ? "Show less" : "Full architecture & features →"}
+                      {expandedId === project.id
+                        ? "Show less"
+                        : "Full architecture & features →"}
                     </button>
                   </div>
 
@@ -158,12 +179,19 @@ export default function Projects() {
                             Key Architectural Highlights
                           </h4>
                           <ul className="space-y-2.5 text-text-secondary">
-                            {project.features.map((feature: string, fIdx: number) => (
-                              <li key={fIdx} className="flex gap-2.5 items-start">
-                                <span className="text-accent text-sm">✦</span>
-                                <span className="text-xs sm:text-sm">{feature}</span>
-                              </li>
-                            ))}
+                            {project.features.map(
+                              (feature: string, fIdx: number) => (
+                                <li
+                                  key={fIdx}
+                                  className="flex gap-2.5 items-start"
+                                >
+                                  <span className="text-accent text-sm">✦</span>
+                                  <span className="text-xs sm:text-sm">
+                                    {feature}
+                                  </span>
+                                </li>
+                              )
+                            )}
                           </ul>
                         </div>
                         <div>
@@ -189,8 +217,16 @@ export default function Projects() {
         <div className="mt-24 grid gap-8 border-t border-border pt-16 md:grid-cols-3">
           {[
             { label: "Top-Tier Production Projects", value: "8+", icon: "◊" },
-            { label: "Hackathon & Benchmark Wins", value: "1st Place", icon: "★" },
-            { label: "Kaggle Global Ranking Score", value: "0.96225", icon: "▪" },
+            {
+              label: "Hackathon & Benchmark Wins",
+              value: "1st Place",
+              icon: "★",
+            },
+            {
+              label: "Kaggle Global Ranking Score",
+              value: "0.96225",
+              icon: "▪",
+            },
           ].map((stat, index) => (
             <div
               key={index}

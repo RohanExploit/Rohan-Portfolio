@@ -16,6 +16,16 @@ const eslintConfig = [
     "plugin:prettier/recommended"
   ),
   ...compat.extends("plugin:mdx/recommended"),
+  {
+    rules: {
+      "prettier/prettier": [
+        "error",
+        {
+          endOfLine: "auto",
+        },
+      ],
+    },
+  },
 ];
 
 export default eslintConfig;

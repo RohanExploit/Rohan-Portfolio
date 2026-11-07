@@ -10,9 +10,15 @@ export const ROHAN_DATA = {
     ],
     highlights: [
       { label: "Role", value: "Systems Architect & AI Engineer" },
-      { label: "Recognition", value: "Claude for Startups · Claude Impact Lab Winner" },
+      {
+        label: "Recognition",
+        value: "Claude for Startups · Claude Impact Lab Winner",
+      },
       { label: "Location", value: "Satara / Pune, Maharashtra, India" },
-      { label: "Focus", value: "Edge AI, Post-Quantum Security, Multi-Agent RAG" },
+      {
+        label: "Focus",
+        value: "Edge AI, Post-Quantum Security, Multi-Agent RAG",
+      },
       { label: "Status", value: "Open for High-Impact Engineering Roles" },
     ],
   },
@@ -112,7 +118,8 @@ export const ROHAN_DATA = {
     {
       id: 4,
       title: "CKD Digital Twin",
-      subtitle: "Chronic Kidney Disease Policy Simulator & Patient Risk Predictor",
+      subtitle:
+        "Chronic Kidney Disease Policy Simulator & Patient Risk Predictor",
       description:
         "Healthcare digital twin and clinical simulation platform built by Team Hare. Simulates patient-specific disease progression trajectories and models regional health policy interventions.",
       fullDescription:
@@ -217,7 +224,8 @@ export const ROHAN_DATA = {
         "LoRA Ensembles",
         "Nested Cross-Validation",
       ],
-      github: "https://github.com/RohanExploit/kaggle-s6e10-airline-satisfaction",
+      github:
+        "https://github.com/RohanExploit/kaggle-s6e10-airline-satisfaction",
       image: "/projects/kaggle-s6e10.jpg",
       badge: "🏆 Top 14 & Top 20 Competitive ML",
       features: [
@@ -387,7 +395,14 @@ export const ROHAN_DATA = {
     technical: [
       {
         category: "Languages",
-        items: ["Python", "TypeScript", "JavaScript", "SQL", "Kotlin", "HTML/CSS"],
+        items: [
+          "Python",
+          "TypeScript",
+          "JavaScript",
+          "SQL",
+          "Kotlin",
+          "HTML/CSS",
+        ],
       },
       {
         category: "AI & Machine Learning",
@@ -425,7 +440,13 @@ export const ROHAN_DATA = {
       },
       {
         category: "Databases & Data Engines",
-        items: ["DuckDB", "PostgreSQL", "Supabase", "MongoDB", "Pandas / NumPy"],
+        items: [
+          "DuckDB",
+          "PostgreSQL",
+          "Supabase",
+          "MongoDB",
+          "Pandas / NumPy",
+        ],
       },
       {
         category: "DevOps & Cloud",
@@ -553,7 +574,8 @@ export const ROHAN_DATA = {
       title: "JPMorgan Chase - CADP Program",
       issuer: "JPMorgan Chase & Co.",
       date: "Sep 2024",
-      description: "Corporate Analyst Development Program certification in financial analytics and software engineering.",
+      description:
+        "Corporate Analyst Development Program certification in financial analytics and software engineering.",
       type: "Program",
     },
     {
@@ -561,7 +583,8 @@ export const ROHAN_DATA = {
       title: "BCG Generative AI Program",
       issuer: "Boston Consulting Group",
       date: "Aug 2024",
-      description: "Generative AI strategic transformation and production LLM application design.",
+      description:
+        "Generative AI strategic transformation and production LLM application design.",
       type: "Certification",
     },
   ],
@@ -569,8 +592,7 @@ export const ROHAN_DATA = {
   testimonials: [
     {
       id: 1,
-      quote:
-        "Namaskar!!! Good, Keep it up rohan. Dhanyawad.",
+      quote: "Namaskar!!! Good, Keep it up rohan. Dhanyawad.",
       author: "Dr. S V Balshetwar",
       role: "Associate Professor & HOD, CSE Department, Yashoda Technical Campus",
     },
@@ -618,7 +640,13 @@ export const ROHAN_DATA = {
         "Mentored 20+ junior developers",
         "Established coding standards and best practices",
       ],
-      technologies: ["Git", "System Design", "Code Review", "Leadership", "DevOps"],
+      technologies: [
+        "Git",
+        "System Design",
+        "Code Review",
+        "Leadership",
+        "DevOps",
+      ],
       link: "https://github.com/RohanExploit",
     },
   ],

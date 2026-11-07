@@ -1,16 +1,41 @@
 "use client";
 
 import { ROHAN_DATA } from "@/lib/portfolio-data";
-import { Award, Calendar, Building2, ExternalLink, Sparkles, Trophy, FileText } from "lucide-react";
+import {
+  Award,
+  Calendar,
+  Building2,
+  ExternalLink,
+  Trophy,
+  FileText,
+  Sparkles,
+} from "lucide-react";
 import Link from "next/link";
 import Script from "next/script";
 
-export default function Certifications() {
-  const { achievements } = ROHAN_DATA;
+interface AchievementItem {
+  id: number;
+  title: string;
+  issuer: string;
+  date: string;
+  description: string;
+  type: string;
+  link?: string;
+  featured?: boolean;
+}
 
-  const awards = achievements.filter((a: any) => a.type === "Award" || a.featured);
-  const certifications = achievements.filter((a: any) => a.type === "Certification");
-  const programs = achievements.filter((a: any) => a.type === "Program" && !a.featured);
+export default function Certifications() {
+  const achievements = ROHAN_DATA.achievements as AchievementItem[];
+
+  const awards = achievements.filter(
+    (a: AchievementItem) => a.type === "Award" || a.featured
+  );
+  const certifications = achievements.filter(
+    (a: AchievementItem) => a.type === "Certification"
+  );
+  const programs = achievements.filter(
+    (a: AchievementItem) => a.type === "Program" && !a.featured
+  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -21,11 +46,12 @@ export default function Certifications() {
             /certifications-awards
           </p>
           <h1 className="mt-2 font-mono text-5xl font-bold text-text-primary">
-            Honors, Awards & Credentials
+            Honors, Awards &amp; Credentials
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-text-secondary leading-relaxed">
             International recognitions, hackathon podiums, startup selections,
-            and continuous learning milestones validating deep technical expertise.
+            and continuous learning milestones validating deep technical
+            expertise.
           </p>
         </div>
 
@@ -33,10 +59,10 @@ export default function Certifications() {
         <div className="mb-20">
           <h2 className="mb-8 font-mono text-2xl font-bold text-text-primary flex items-center gap-4">
             <span className="h-px w-8 bg-amber-400"></span>
-            Featured Honors & Hackathon Podiums
+            Featured Honors &amp; Hackathon Podiums
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {awards.map((award: any, index: number) => (
+            {awards.map((award: AchievementItem, index: number) => (
               <div
                 key={index}
                 className="group glass-card p-8 hover-lift flex flex-col h-full border-amber-500/30 hover:border-amber-400 bg-surface/50"
@@ -75,7 +101,7 @@ export default function Certifications() {
                             className="inline-flex items-center gap-2 rounded-lg bg-amber-500/10 border border-amber-500/30 px-3.5 py-1.5 font-mono text-xs font-semibold text-amber-400 hover:bg-amber-500/20 transition-all"
                           >
                             <FileText className="h-3.5 w-3.5" />
-                            Live Document & Verification →
+                            Live Document &amp; Verification →
                           </Link>
                         ) : (
                           <a
@@ -84,7 +110,8 @@ export default function Certifications() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
                           >
-                            Verify Credential <ExternalLink className="h-3 w-3" />
+                            Verify Credential{" "}
+                            <ExternalLink className="h-3 w-3" />
                           </a>
                         )}
                       </div>
@@ -143,7 +170,7 @@ export default function Certifications() {
             Professional Certifications
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {certifications.map((cert: any, index: number) => (
+            {certifications.map((cert: AchievementItem, index: number) => (
               <div
                 key={index}
                 className="group glass-card p-8 hover-lift flex flex-col h-full border-accent/20 hover:border-accent"
@@ -190,10 +217,10 @@ export default function Certifications() {
         <div>
           <h2 className="mb-8 font-mono text-2xl font-bold text-text-primary flex items-center gap-4">
             <span className="h-px w-8 bg-accent"></span>
-            Programs & Recognition
+            Programs &amp; Recognition
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {programs.map((program: any, index: number) => (
+            {programs.map((program: AchievementItem, index: number) => (
               <div
                 key={index}
                 className="group glass-card p-8 hover-lift flex flex-col h-full border-info/20 hover:border-info"
