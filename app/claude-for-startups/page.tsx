@@ -7,20 +7,18 @@ import {
   Download,
   ExternalLink,
   ArrowLeft,
-  CheckCircle2,
   Sparkles,
   Building,
   User,
   Calendar,
-  Maximize2,
   Award,
   Layers,
   Zap,
 } from "lucide-react";
+import { LivePdfViewer } from "../components/live-pdf-viewer";
 
 export default function ClaudeForStartupsPage() {
   const [activeTab, setActiveTab] = useState<"preview" | "details">("preview");
-  const [isFullscreen, setIsFullscreen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-text-primary">
@@ -108,7 +106,7 @@ export default function ClaudeForStartupsPage() {
                   : "bg-surface border border-border text-text-secondary hover:text-text-primary"
               }`}
             >
-              <FileText className="h-4 w-4" /> Live Document Preview
+              <FileText className="h-4 w-4" /> Live Document Stream
             </button>
             <button
               onClick={() => setActiveTab("details")}
@@ -118,7 +116,7 @@ export default function ClaudeForStartupsPage() {
                   : "bg-surface border border-border text-text-secondary hover:text-text-primary"
               }`}
             >
-              <Layers className="h-4 w-4" /> Selection Details & Letter
+              <Layers className="h-4 w-4" /> Selection Details &amp; Letter
             </button>
           </div>
 
@@ -144,69 +142,10 @@ export default function ClaudeForStartupsPage() {
         {/* Live Preview Tab */}
         {activeTab === "preview" && (
           <div className="space-y-6 animate-in fade-in duration-500">
-            <div className="relative rounded-2xl border border-border bg-surface/30 p-2 shadow-2xl backdrop-blur-xl">
-              <div className="flex items-center justify-between px-4 py-3 border-b border-border/60 bg-surface/70 rounded-t-xl">
-                <div className="flex items-center gap-2">
-                  <span className="h-3 w-3 rounded-full bg-red-500/80" />
-                  <span className="h-3 w-3 rounded-full bg-yellow-500/80" />
-                  <span className="h-3 w-3 rounded-full bg-green-500/80" />
-                  <span className="ml-2 font-mono text-xs text-text-tertiary">
-                    claude-for-startups.pdf (Interactive Document Viewer)
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 text-xs font-mono">
-                  <button
-                    onClick={() => setIsFullscreen(!isFullscreen)}
-                    className="inline-flex items-center gap-1 text-text-secondary hover:text-accent transition-colors"
-                  >
-                    <Maximize2 className="h-3.5 w-3.5" />
-                    {isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
-                  </button>
-                  <span className="text-accent flex items-center gap-1">
-                    <CheckCircle2 className="h-4 w-4" /> Live Stream
-                  </span>
-                </div>
-              </div>
-
-              {/* PDF Viewer Frame */}
-              <div
-                className={`w-full overflow-hidden rounded-b-xl bg-neutral-900 transition-all ${
-                  isFullscreen
-                    ? "fixed inset-4 z-50 h-[calc(100vh-2rem)]"
-                    : "h-[780px]"
-                }`}
-              >
-                <object
-                  data="/claude-for-startups.pdf#toolbar=1&navpanes=0&scrollbar=1"
-                  type="application/pdf"
-                  className="w-full h-full"
-                >
-                  <iframe
-                    src="/claude-for-startups.pdf#toolbar=1"
-                    className="w-full h-full border-none"
-                    title="Claude for Startups Selection PDF"
-                  >
-                    <p className="p-8 text-center text-text-secondary">
-                      Your browser does not support inline PDF viewing. Please{" "}
-                      <a
-                        href="/claude-for-startups.pdf"
-                        download
-                        className="text-accent underline font-semibold"
-                      >
-                        download the PDF
-                      </a>{" "}
-                      to view it directly.
-                    </p>
-                  </iframe>
-                </object>
-              </div>
-            </div>
-
-            <p className="text-center font-mono text-xs text-text-tertiary">
-              Official PDF confirmation rendered directly in-browser · Includes
-              original transmission headers and university department
-              commendation.
-            </p>
+            <LivePdfViewer
+              title="Anthropic Claude for Startups Selection Dossier"
+              pdfUrl="/claude-for-startups.pdf"
+            />
           </div>
         )}
 
@@ -266,8 +205,8 @@ export default function ClaudeForStartupsPage() {
                 </p>
                 <div className="mt-4 pt-4 border-t border-accent/10 flex flex-col sm:flex-row justify-between text-xs font-mono text-text-secondary">
                   <span>
-                    Dr. (Sou.) S V Balshetwar · Associate Professor & HOD, CSE
-                    Department
+                    Dr. (Sou.) S V Balshetwar · Associate Professor &amp; HOD,
+                    CSE Department
                   </span>
                   <span>Yashoda Technical Campus, Satara</span>
                 </div>
@@ -294,7 +233,7 @@ export default function ClaudeForStartupsPage() {
                   <Sparkles className="h-5 w-5" />
                 </div>
                 <h4 className="font-mono font-bold text-text-primary text-base mb-2">
-                  Founder Events & Summits
+                  Founder Events &amp; Summits
                 </h4>
                 <p className="text-sm text-text-secondary leading-relaxed">
                   Priority invitations to Anthropic Hackathons, Builder Days,
@@ -307,7 +246,7 @@ export default function ClaudeForStartupsPage() {
                   <Layers className="h-5 w-5" />
                 </div>
                 <h4 className="font-mono font-bold text-text-primary text-base mb-2">
-                  Early Model Access & Perks
+                  Early Model Access &amp; Perks
                 </h4>
                 <p className="text-sm text-text-secondary leading-relaxed">
                   Practical, build-focused materials from Anthropic, platform

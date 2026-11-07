@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { ROHAN_DATA } from "@/lib/portfolio-data";
 import { Reveal, RevealStagger, RevealItem } from "./components/reveal";
+import { LivePdfViewer } from "./components/live-pdf-viewer";
 
 // The 3D signature is client + WebGL only. Lazy so it never blocks first paint,
 // and a quiet blueprint placeholder holds the frame while three.js loads.
@@ -80,11 +81,11 @@ export default function Home() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
-                href="/claude-for-startups"
+                href="#live-pdf-section"
                 className="inline-flex items-center gap-2 rounded-md border border-amber-500/40 px-5 py-3 text-sm font-semibold text-amber-300 transition-colors hover:border-amber-400 hover:bg-amber-500/10"
               >
                 <Sparkles className="h-4 w-4 text-amber-400" />
-                Claude Selection
+                Live PDF on Scroll
               </Link>
               <a
                 href={ROHAN_DATA.contact.resume}
@@ -176,6 +177,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------------- Live PDF Preview on Scroll ---------------- */}
+      <section
+        id="live-pdf-section"
+        className="border-t border-border bg-surface/30 py-20 sm:py-28"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal className="mb-12 text-center max-w-3xl mx-auto">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-amber-400 font-bold">
+              /selection-credential // live-document
+            </p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl font-bold tracking-tight text-text-primary">
+              Claude for Startups Selection
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-text-secondary leading-relaxed">
+              Live in-browser preview of the official onboarding correspondence
+              from Anthropic PBC, including university departmental
+              acknowledgment. Scroll through all pages in real-time.
+            </p>
+          </Reveal>
+
+          <Reveal className="mx-auto max-w-5xl">
+            <LivePdfViewer
+              title="Anthropic Claude for Startups — Rohan Gaikwad"
+              pdfUrl="/claude-for-startups.pdf"
+            />
+          </Reveal>
+        </div>
+      </section>
+
       {/* ---------------- Featured areas ---------------- */}
       <section className="border-t border-border bg-surface/40 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -200,7 +230,7 @@ export default function Home() {
               {
                 title: "Claude for Startups",
                 description:
-                  "Anthropic founder cohort induction · Interactive live PDF preview, technical session breakdown, and faculty verification.",
+                  "Anthropic founder cohort induction · Full selection dossier, engineering deep-dives, and department commendation.",
                 href: "/claude-for-startups",
                 marker: "02",
               },
